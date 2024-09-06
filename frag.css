@@ -1,0 +1,498 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Ga+Maamli&family=Grey+Qo&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+BE+VLG:wght@100..400&family=Sevillana&family=Yellowtail&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  background-color: white;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.banner {
+  background-image: url("/backgrounds/perfume.webp");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 600px;
+  display: flex;
+  color: white;
+}
+
+.banner2 {
+  display: none;
+  background-image: url("/backgrounds/p2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 600px;
+}
+
+.header-text {
+  font-family: "Grey Qo", cursive;
+  font-size: 70px;
+  margin-left: 500px;
+}
+
+.header-text2 {
+  display: none;
+  font-family: "Grey Qo", cursive;
+}
+
+.dropbtn {
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  border-radius: 30px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-left: 40px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #6d213c;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: #6d213c;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 500px;
+  margin-top: 10px;
+}
+
+.fragnance,
+.Beauty {
+  font-family: "CenturyGothic", "CenturyGothic-fallback", Arial, sans-serif;
+  font-size: 13px;
+  color: grey;
+  text-transform: uppercase;
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.discover,
+.discover1 {
+  margin-top: 12px;
+  padding: 10px;
+  height: 50px;
+  width: 120px;
+  color: grey;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid grey;
+  cursor: pointer;
+}
+
+.discover {
+  margin-left: -15px;
+}
+
+.discover1 {
+  margin-left: -22px;
+}
+
+.discover:hover,
+.discover1:hover {
+  color: black;
+  border: 2px solid black;
+}
+
+#perfumes {
+  margin-top: 80px;
+  background-color: black;
+  height: 600px;
+}
+
+.p1 {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  color: white;
+}
+
+.p2 {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  color: black;
+}
+
+.display {
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+}
+
+.disp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #7ebdc2;
+  color: black;
+  height: 350px;
+  width: 250px;
+  text-align: center;
+  margin-left: 60px;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+}
+
+.like {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: color 0.3s;
+}
+
+.like2 {
+  color: white;
+}
+
+.like1 {
+  color: black;
+}
+
+.text {
+  font-family: "Dancing script", cursive;
+  font-size: 20px;
+}
+.price {
+  margin-top: -10px;
+  font-weight: bold;
+}
+
+.like.filled {
+  color: red; /* Color when filled */
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.d1 {
+  background-image: url("/perfumes/p1.webp");
+}
+
+.d2 {
+  background-image: url("/perfumes/p2.jpg");
+}
+
+.d3 {
+  background-image: url("/perfumes/p3.jpg");
+}
+
+.d4 {
+  background-image: url("/perfumes/p4.webp");
+}
+
+.d5 {
+  background-image: url("/perfumes/p5.avif");
+}
+
+.d6 {
+  background-image: url("/perfumes/p6.webp");
+}
+
+.d7 {
+  background-image: url("/perfumes/p7.webp");
+}
+
+.d8 {
+  background-image: url("/perfumes/p8.jpg");
+}
+
+.d1,
+.d2,
+.d3,
+.d4,
+.d5,
+.d6,
+.d7,
+.d8 {
+  border-radius: 10%;
+  border: 2px solid black;
+  height: 200px;
+  width: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+#beauty {
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.p2 {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  color: black;
+}
+
+.disp1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  height: 350px;
+  width: 250px;
+  text-align: center;
+  margin-left: 60px;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+}
+
+.b1 {
+  background-image: url("/makeup/b1.png");
+}
+
+.b2 {
+  background-image: url("/makeup/b2.webp");
+}
+
+.b3 {
+  background-image: url("/makeup/b3.webp");
+}
+
+.b4 {
+  background-image: url("/makeup/b4.jpg");
+}
+
+.b5 {
+  background-image: url("/makeup/b5.jpeg");
+}
+
+.b6 {
+  background-image: url("/makeup/b6.jpg");
+}
+
+.b7 {
+  background-image: url("/makeup/b7.jpeg");
+}
+
+.b8 {
+  background-image: url("/makeup/b8.jpg");
+}
+
+.b1,
+.b2,
+.b3,
+.b4,
+.b5,
+.b6,
+.b7,
+.b8 {
+  border-radius: 10%;
+  border: 2px solid white;
+  height: 200px;
+  width: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  background-color: black;
+  height: 700px;
+  display: flex;
+}
+
+.map {
+  margin-left: 100px;
+  margin-top: 150px;
+  border: 10px solid white;
+}
+
+.cnt {
+  height: 200px;
+  width: 300px;
+}
+
+.cnt-main {
+  margin-top: 250px;
+  margin-left: 200px;
+  color: white;
+  font-size: 24px;
+}
+
+.link {
+  color: white;
+}
+
+.link:hover {
+  color: #f17086;
+}
+
+#button,
+#button2 {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  border: none;
+  background: none;
+  margin-top: 30px;
+  font-family: "Great Vibes", cursive;
+  margin-left: 700px;
+}
+
+#button::before,
+#button2::before {
+  margin-left: auto;
+}
+
+#button::after,
+#button::before,
+#button2::before,
+#button2::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  transition: 0.5s;
+}
+
+#button:hover::after,
+#button:hover::before,
+#button2:hover::before,
+#button2:hover::after {
+  width: 100%;
+}
+
+#more,
+#more2 {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.cpy {
+  margin-top: 650px;
+  margin-left: -30px;
+  color: white;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 915px) {
+  .header-text2 {
+    display: block;
+    font-size: 45px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 10px;
+  }
+  .banner {
+    display: none;
+  }
+  .banner2 {
+    display: block;
+  }
+  .option {
+    margin-top: 20px;
+    gap: 100px;
+  }
+
+  #perfumes {
+    margin-top: 40px;
+    height: 1550px;
+  }
+  .display {
+    gap: 10px;
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
+  .disp {
+    margin-left: 20px;
+  }
+
+  .p1 {
+    font-size: 40px;
+    padding-top: 10px;
+  }
+  .p2 {
+    font-size: 60px;
+  }
+  .disp1 {
+    margin-left: 20px;
+  }
+  #beauty {
+    height: 1550px;
+    margin-top: 30px;
+  }
+
+  #button,
+  #button2 {
+    display: none;
+  }
+  footer {
+    flex-direction: column;
+  }
+  .map {
+    height: 200px;
+    margin-left: 90px;
+    margin-top: 40px;
+    width: 200px;
+  }
+  .cnt-main {
+    margin-top: 60px;
+    margin-left: 30px;
+  }
+
+  .cpy {
+    margin-top: 120px;
+    margin-left: 20px;
+  }
+}
