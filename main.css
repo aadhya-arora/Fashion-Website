@@ -493,7 +493,8 @@ body {
   #front {
     margin-left: 0;
     width: 100%;
-    background-size: 100% 700px;
+    background-size: cover;
+    min-height: 700px;
     background-image: url("/backgrounds/bg_1.jpg");
     border: none;
     background-attachment: fixed;
@@ -509,9 +510,10 @@ body {
     margin-left: 2px;
   }
   .title1 {
-    margin-left: 2px;
-    margin-top: -150px;
-    font-size: 30px;
-    justify-content: center;
+    margin-left: 10px;
+    font-size: 40px;
+  }
+  .t1 {
+    margin-left: 100px;
   }
 }
