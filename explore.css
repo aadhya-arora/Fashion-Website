@@ -109,3 +109,44 @@ body {
   align-items: center;
   font-size: 50px;
 }
+
+@media screen and (max-width: 915px) {
+  .container {
+    background-image: url("/backgrounds/e1.jpg");
+    min-height: 700px;
+  }
+  .girlies {
+    display: none;
+  }
+  .back {
+    color: white;
+    margin-left: 10px;
+  }
+
+  .heading {
+    margin-top: -20px;
+  }
+  .intro {
+    font-size: 12px;
+    padding: 15px;
+  }
+  .container2 {
+    background-image: url("/backgrounds/e2.jpg");
+  }
+  .quote {
+    padding: 20px;
+  }
+  .container3 {
+    background-image: url("/backgrounds/e3.jpg");
+    opacity: 1;
+  }
+  .caption {
+    font-size: 40px;
+  }
+  .social-links {
+    padding: 10px;
+  }
+  .link {
+    padding: 30px;
+  }
+}

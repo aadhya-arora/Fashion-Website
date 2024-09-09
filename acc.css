@@ -86,7 +86,6 @@ header {
 }
 
 .intro {
-  color: #006d77;
   font-size: 90px;
   font-family: "Grey Qo", cursive;
   text-align: center;
@@ -96,56 +95,13 @@ header {
 .slideshow {
   height: 600px;
   width: 100%;
-  border: 2px solid black;
-  background-size: 100% 600px;
-  animation-name: image;
-  animation-direction: normal;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-delay: -3s;
-  animation-timing-function: linear;
-  background-repeat: no-repeat;
-  background-image: url("/slideshow/s1.jpg");
-}
 
-@keyframes image {
-  0% {
-    background-image: url("/slideshow/s1.jpg");
-  }
-  30% {
-    background-image: url("/slideshow/s2.jpg");
-  }
-  50% {
-    background-image: url("/slideshow/s3.jpg");
-  }
-  70% {
-    background-image: url("/slideshow/s4.jpg");
-  }
-  100% {
-    background-image: url("/slideshow/s5.jpg");
-  }
-}
-.over-slide {
-  font-size: 70px;
-  color: #1764a7;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  height: 100px;
-  width: 35%;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-  box-sizing: border-box;
-  font-family: "Dancing Script", cursive;
+  background-size: 100% 600px;
+  background-repeat: no-repeat;
 }
 
 #option {
+  margin-top: 50px;
   padding: 10px;
   background-color: white;
   height: 400px;
