@@ -209,12 +209,12 @@ body {
 }
 
 #Explore {
-  margin-left: 260px;
+  margin-left: 10px;
 }
 
 .title1 {
   font-size: 70px;
-  margin-left: 400px;
+  margin-left: 260px;
   margin-top: -3px;
   color: #800542;
   font-family: "Grey Qo", cursive;
@@ -449,6 +449,86 @@ body {
   transform: scale(1.2);
   box-shadow: 1px 1px 1px 1px black;
 }
+
+#explore2 {
+  display: none;
+}
+
+.im {
+  margin-left: 30px;
+  display: none;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.im1 {
+  background-image: url("/images/Accessories.JPG");
+  height: 150px;
+  width: 150px;
+  background-size: 150px 150px;
+  border: 2px solid #41122c;
+  border-radius: 10px;
+}
+
+.im2 {
+  background-image: url("/images/Fragnance.JPG");
+  height: 150px;
+  width: 150px;
+  background-size: 150px 150px;
+  border: 2px solid #41122c;
+  border-radius: 10px;
+}
+
+.im-2 {
+  display: none;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+.im3 {
+  background-image: url("/images/sunglasses.jpg");
+  height: 150px;
+  width: 150px;
+  background-size: 150px 150px;
+  border: 2px solid #41122c;
+  border-radius: 10px;
+}
+
+.im1-text,
+.im2-text,
+.im3-text {
+  color: white;
+  display: none;
+  font-family: "Grey Qo", cursive;
+  font-size: 40px;
+  margin-top: 30%;
+  margin-left: 10%;
+}
+
+.im2:hover {
+  background-image: url("");
+  background-color: #41122c;
+  .im2-text {
+    display: flex;
+  }
+}
+
+.im3:hover {
+  background-image: url("");
+  background-color: #41122c;
+  .im3-text {
+    display: flex;
+  }
+}
+
+.im1:hover {
+  background-image: url("");
+  background-color: #41122c;
+  .im1-text {
+    display: flex;
+  }
+}
+
 @media screen and (max-width: 915px) {
   .navbar {
     height: 100px;
@@ -514,6 +594,57 @@ body {
     font-size: 40px;
   }
   .t1 {
-    margin-left: 100px;
+    margin-left: 80px;
+  }
+  .container {
+    display: none;
+  }
+  #explore2 {
+    display: flex;
+  }
+  .im {
+    display: flex;
+  }
+  .im-2 {
+    display: flex;
+  }
+  #abt {
+    margin-left: 0;
+  }
+  .title2 {
+    font-size: 42px;
+  }
+
+  .me {
+    height: 350px;
+    width: 300px;
+    margin-left: 45px;
+  }
+  .paper {
+    display: none;
+  }
+  .myname {
+    margin-left: 80px;
+  }
+  #contact {
+    margin-left: 0;
+  }
+  .cnt-main {
+    width: 300px;
+    margin-left: 40px;
+  }
+  .map {
+    margin-left: 50px;
+    margin-top: 20px;
+    height: 300px;
+    width: 300px;
+  }
+  .cpy {
+    margin-top: 20px;
+    margin-left: 5px;
+  }
+
+  .back_to_top {
+    display: none;
   }
 }
