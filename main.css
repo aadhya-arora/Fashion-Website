@@ -415,7 +415,7 @@ body {
   margin-left: 140px;
 }
 
-#contact {
+/* #contact {
   margin-left: 260px;
   margin-bottom: 30px;
 }
@@ -454,12 +454,112 @@ body {
 .back_to_top:hover {
   transform: scale(1.2);
   box-shadow: 1px 1px 1px 1px black;
-}
+} */
 
 #explore2 {
   display: none;
 }
 
+footer {
+  margin-left: 280px;
+  padding-bottom: 10px;
+}
+
+.foot {
+  margin-top: 50px;
+  display: flex;
+  gap: 120px;
+  flex-direction: row;
+}
+
+.footer-heading {
+  color: #41122c;
+  font-family: "Grey Qo", cursive;
+  font-size: 100px;
+  text-align: center;
+}
+.c-hub {
+  font-weight: lighter;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+.n-heading {
+  font-weight: lighter;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: grey;
+}
+.c-content {
+  color: grey;
+  font-style: italic;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+}
+.input-email {
+  border: none;
+  border-bottom: 2px solid grey;
+}
+
+.input-email:hover {
+  border-bottom: 2px solid black;
+}
+
+.input-email:focus {
+  border: none;
+}
+.c-heading {
+  font-size: 20px;
+}
+.c-heading1 {
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up {
+  margin-top: 20px;
+  background-color: transparent;
+  color: grey;
+  padding: 10px;
+  width: 150px;
+  border: 2px solid grey;
+}
+
+.sign-up:hover {
+  border: 2px solid black;
+  color: black;
+}
+
+.connect {
+  display: flex;
+  flex-direction: row;
+}
+
+.copy {
+  margin-top: 120px;
+  font-size: 10px;
+  color: grey;
+}
+
+.mapping {
+  margin-left: 120px;
+  display: flex;
+  margin-top: 20px;
+  gap: 300px;
+}
+.location {
+  height: 300px;
+  width: 400px;
+}
+.line {
+  width: 900px;
+}
 .title1-2 {
   display: none;
 }
@@ -646,7 +746,7 @@ body {
   .myname {
     margin-left: 80px;
   }
-  #contact {
+  /* #contact {
     margin-left: 0;
   }
   .cnt-main {
@@ -669,5 +769,41 @@ body {
   }
   .expbtn1 {
     display: flex;
+  } */
+  footer {
+    margin-left: 0;
+  }
+  .footer-heading {
+    font-size: 50px;
+  }
+  .line {
+    width: 300px;
+  }
+
+  .foot {
+    margin-top: 10px;
+    margin-left: 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .c-heading1 {
+    margin-left: 0;
+  }
+  .mapping {
+    margin-left: 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .location {
+    width: 350px;
+  }
+  .input-email {
+    width: 250px;
+  }
+  .connect {
+    margin-left: -20px;
+  }
+  .copy {
+    display: none;
   }
 }
