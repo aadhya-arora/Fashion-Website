@@ -638,7 +638,7 @@ body {
   .me {
     height: 350px;
     width: 300px;
-    margin-left: 45px;
+    margin-left: 10%;
   }
   .paper {
     display: none;
