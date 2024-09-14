@@ -222,10 +222,14 @@ body {
 
 .images {
   display: flex;
-  margin-left: 450px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 300px;
 }
 
 .accessory {
+  display: flex;
+  text-align: center;
   background-image: url("/images/Accessories.JPG");
   height: 300px;
   width: 350px;
@@ -236,6 +240,8 @@ body {
 }
 
 .fragnance {
+  display: flex;
+  text-align: center;
   background-image: url("/images/Fragnance.JPG");
   height: 300px;
   width: 350px;
@@ -246,6 +252,8 @@ body {
 }
 
 .sunglasses {
+  display: flex;
+  text-align: center;
   background-image: url("/images/sunglasses.jpg");
   height: 300px;
   width: 350px;
@@ -256,42 +264,28 @@ body {
   margin-left: 700px;
 }
 
-.container {
-  position: relative;
-  width: 50%;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  border-radius: 10px;
-  bottom: 0;
-  left: 10px;
-  right: 0;
-  height: 100%;
-  width: 66%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: #41122c;
-  font-family: "Yellowtail", cursive;
-}
-
-.container:hover .overlay {
-  opacity: 1;
-}
-
 .text {
+  display: none;
   color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  margin-top: 150px;
+  margin-left: 170px;
   animation: glow 1s ease-in-out infinite;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  text-align: center;
   font-size: 45px;
+  font-family: "Yellowtail", cursive;
 }
 
+.fragnance:hover,
+.sunglasses:hover,
+.accessory:hover {
+  background-image: url("");
+  background-color: #41122c;
+  .text {
+    display: flex;
+  }
+}
 #abt {
   margin-left: 260px;
   background-color: #41122c;
@@ -599,6 +593,7 @@ body {
   }
   #Explore {
     margin-left: 2px;
+    display: none;
   }
   .title1 {
     margin-left: 10px;
@@ -608,6 +603,9 @@ body {
     margin-left: 80px;
   }
   .container {
+    display: none;
+  }
+  .images {
     display: none;
   }
   #explore2 {
