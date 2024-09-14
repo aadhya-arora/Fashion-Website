@@ -467,7 +467,7 @@ footer {
     display: flex;
   }
   .dropbtn {
-    display: none;
+    background-color: transparent;
   }
 
   .heading {
@@ -505,22 +505,41 @@ footer {
   }
 
   #sunglasses {
-    height: 1800px;
+    height: 800px;
   }
   .display {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
-  .disp {
-    margin-top: 20px;
-    margin-left: 10px;
+  .disp,
+  .disp1 {
+    height: 260px;
+    width: 170px;
+    margin-top: 10px;
+    margin-left: 5px;
   }
 
+  .d1,
+  .d2,
+  .d3,
+  .d4,
+  .s1,
+  .s2,
+  .s3,
+  .s4 {
+    height: 120px;
+    width: 140px;
+  }
+
+  .text {
+    font-size: 17px;
+  }
   .cta1 {
-    margin-left: 135px;
+    display: none;
   }
 
   #scarf_done {
-    height: 1800px;
+    height: 800px;
   }
   .disp1 {
     margin-top: 20px;

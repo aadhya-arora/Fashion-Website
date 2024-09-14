@@ -582,19 +582,41 @@ header {
     font-size: 40px;
   }
   .disp {
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
     margin-top: 10px;
   }
   .display1 {
-    margin-left: 20px;
+    margin-left: 5px;
+    height: 260px;
+    width: 170px;
+  }
+  .dis1,
+  .dis2,
+  .dis3,
+  .dis4,
+  .wat1,
+  .wat2,
+  .wat3,
+  .wat4,
+  .b1,
+  .b2,
+  .b3,
+  .b4,
+  .e1,
+  .e2,
+  .e3,
+  .e4 {
+    height: 120px;
+    width: 140px;
   }
 
   #neck,
   #watches,
   #Bag,
   #Ear {
-    height: 1600px;
+    height: 650px;
   }
 
   .cta,
