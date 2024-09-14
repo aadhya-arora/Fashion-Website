@@ -212,7 +212,8 @@ body {
   margin-left: 10px;
 }
 
-.title1 {
+.title1,
+.title1-2 {
   font-size: 70px;
   margin-left: 260px;
   margin-top: -3px;
@@ -459,6 +460,12 @@ body {
   display: none;
 }
 
+.title1-2 {
+  display: none;
+}
+.t1-2 {
+  display: none;
+}
 .im {
   margin-left: 30px;
   display: none;
@@ -595,13 +602,16 @@ body {
     margin-left: 2px;
     display: none;
   }
-  .title1 {
+  .title1-2 {
     margin-left: 10px;
     font-size: 40px;
+    display: inline;
   }
-  .t1 {
+  .t1-2 {
     margin-left: 80px;
+    display: inline;
   }
+
   .container {
     display: none;
   }
@@ -612,6 +622,7 @@ body {
     display: flex;
   }
   .im {
+    margin-top: 20px;
     display: flex;
   }
   .im-2 {
