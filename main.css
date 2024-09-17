@@ -334,7 +334,7 @@ body {
   &--alt {
     background-image: linear-gradient(
         90deg,
-        #fff 12px,
+        #d88080 12px,
         0,
         #f078b4 15px,
         0,
@@ -414,47 +414,6 @@ body {
   font-family: "Satisfy", cursive;
   margin-left: 140px;
 }
-
-/* #contact {
-  margin-left: 260px;
-  margin-bottom: 30px;
-}
-
-.cnt-main {
-  width: 300px;
-  margin-top: 40px;
-  margin-left: 100px;
-}
-
-.cnt-head {
-  color: #41122c;
-  font-family: "Rubik", sans-serif;
-  font-size: 40px;
-}
-.cntlk {
-  margin-left: 20px;
-}
-
-.map {
-  margin-left: 600px;
-  margin-top: -250px;
-  border: 10px solid #41122c;
-}
-
-.back_to_top {
-  background-color: transparent;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  font-size: 24px;
-  margin-left: 1200px;
-  cursor: pointer;
-}
-
-.back_to_top:hover {
-  transform: scale(1.2);
-  box-shadow: 1px 1px 1px 1px black;
-} */
 
 #explore2 {
   display: none;
@@ -746,27 +705,7 @@ footer {
   .myname {
     margin-left: 80px;
   }
-  /* #contact {
-    margin-left: 0;
-  }
-  .cnt-main {
-    width: 300px;
-    margin-left: 40px;
-  }
-  .map {
-    margin-left: 50px;
-    margin-top: 20px;
-    height: 300px;
-    width: 300px;
-  }
-  .cpy {
-    margin-top: 20px;
-    margin-left: 5px;
-  }
 
-  .back_to_top {
-    display: none;
-  }*/
   .expbtn1 {
     display: flex;
   }
