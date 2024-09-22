@@ -513,7 +513,7 @@ header {
   background-position: center;
 }
 
-#contact {
+/* #contact {
   background-color: #30343f;
   height: 600px;
   display: flex;
@@ -529,17 +529,17 @@ header {
   margin-left: 200px;
   color: white;
   font-size: 24px;
-}
+} */
 
-.link {
+/* .link {
   color: white;
 }
 
 .link:hover {
   color: #f17086;
-}
+} */
 
-.map {
+/* .map {
   margin-left: 100px;
   margin-top: 80px;
   border: 10px solid white;
@@ -550,8 +550,150 @@ header {
   margin-left: -30px;
   color: white;
   font-size: 10px;
+} */
+
+.footer-heading {
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-size: 50px;
+  text-align: center;
 }
 
+.line {
+  width: 900px;
+}
+.foot {
+  margin-left: 200px;
+  margin-top: 50px;
+  display: flex;
+  gap: 120px;
+  flex-direction: row;
+}
+.c-hub {
+  font-weight: lighter;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-heading {
+  font-size: 20px;
+}
+
+.c-content {
+  color: grey;
+  font-style: italic;
+}
+.c-heading1 {
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.connect {
+  display: flex;
+  flex-direction: row;
+}
+.set {
+  display: inline-block;
+  height: 37px;
+  width: 37px;
+  background-color: #cda9bd;
+  color: #41122c;
+  border-radius: 20px;
+  margin-left: 16px;
+}
+
+.set:hover {
+  animation: glow 1s infinite;
+}
+
+.link0 {
+  color: #41122c;
+  margin-left: 8.5px;
+  margin-top: 6px;
+}
+
+.link2 {
+  color: #41122c;
+  margin-left: 8.5px;
+  margin-top: 6px;
+}
+
+.link1 {
+  color: #41122c;
+  margin-left: 10px;
+  margin-top: 7px;
+}
+.link {
+  color: #41122c;
+  margin-left: 7px;
+  margin-top: 7px;
+}
+
+.link0:hover,
+.link1:hover,
+.link:hover,
+.link2:hover {
+  color: #ff4da6;
+}
+
+.mapping {
+  margin-left: 120px;
+  display: flex;
+  margin-top: 20px;
+  gap: 300px;
+}
+
+.newsletter {
+  margin-left: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.n-heading {
+  font-weight: lighter;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: grey;
+}
+.input-email {
+  border: none;
+  border-bottom: 2px solid grey;
+}
+
+.input-email:hover {
+  border-bottom: 2px solid black;
+}
+
+.input-email:focus {
+  border: none;
+}
+
+.sign-up {
+  margin-top: 20px;
+  background-color: transparent;
+  color: grey;
+  padding: 10px;
+  width: 150px;
+  border: 2px solid grey;
+}
+
+.sign-up:hover {
+  border: 2px solid black;
+  color: black;
+}
+.copy {
+  margin-top: 120px;
+  font-size: 10px;
+  color: grey;
+}
+
+.location {
+  height: 300px;
+  width: 400px;
+}
 @media screen and (max-width: 915px) {
   .intro {
     font-size: 70px;
@@ -625,7 +767,7 @@ header {
   .cta3 {
     display: none;
   }
-  #contact {
+  /* #contact {
     flex-direction: column;
   }
   .map {
@@ -640,5 +782,38 @@ header {
   .cnt-main {
     margin-top: 20px;
     margin-left: 40px;
+  } */
+
+  .foot {
+    margin-left: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .line {
+    width: 300px;
+  }
+  .mapping {
+    margin-left: 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .location {
+    width: 350px;
+  }
+  .input-email {
+    width: 250px;
+    margin-left: -100px;
+  }
+  .connect {
+    margin-left: -20px;
+  }
+  .copy {
+    display: none;
+  }
+  .n-heading {
+    margin-left: -120px;
+  }
+  .sign-up {
+    margin-left: -30px;
   }
 }
