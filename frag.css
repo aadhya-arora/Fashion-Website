@@ -348,36 +348,151 @@ body {
 
 footer {
   background-color: black;
-  height: 700px;
-  display: flex;
+  padding-bottom: 50px;
 }
-
-.map {
-  margin-left: 100px;
-  margin-top: 150px;
-  border: 10px solid white;
-}
-
-.cnt {
-  height: 200px;
-  width: 300px;
-}
-
-.cnt-main {
-  margin-top: 250px;
-  margin-left: 200px;
+.footer-heading {
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-size: 50px;
+  text-align: center;
   color: white;
-  font-size: 24px;
+}
+.line {
+  width: 900px;
+}
+
+.foot {
+  margin-top: 50px;
+  display: flex;
+  margin-left: 50px;
+  gap: 120px;
+  flex-direction: row;
+}
+
+.c-hub {
+  font-weight: lighter;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-heading {
+  font-size: 20px;
+  color: white;
+}
+
+.c-content {
+  color: grey;
+  font-style: italic;
+}
+
+.connect {
+  display: flex;
+  flex-direction: row;
+  margin-left: -20px;
+}
+.set {
+  display: inline-block;
+  height: 37px;
+  width: 37px;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  margin-left: 16px;
+}
+
+.set:hover {
+  animation: glow 1s infinite;
+}
+
+.link0 {
+  color: black;
+  margin-left: 8.5px;
+  margin-top: 6px;
 }
 
 .link {
-  color: white;
+  color: black;
+  margin-left: 7px;
+  margin-top: 7px;
 }
 
-.link:hover {
-  color: #f17086;
+.link1 {
+  color: black;
+  margin-left: 10px;
+  margin-top: 7px;
 }
 
+.link2 {
+  color: black;
+  margin-left: 8.5px;
+  margin-top: 6px;
+}
+
+.link0:hover,
+.link1:hover,
+.link:hover,
+.link2:hover {
+  color: #6d213c;
+}
+
+.mapping {
+  margin-left: 120px;
+  display: flex;
+  margin-top: 20px;
+  gap: 300px;
+}
+
+.newsletter {
+  margin-left: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.n-heading {
+  font-weight: lighter;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: grey;
+}
+.input-email {
+  border: none;
+  border-bottom: 2px solid grey;
+}
+
+.input-email:hover {
+  border-bottom: 2px solid black;
+}
+
+.input-email:focus {
+  border: none;
+}
+
+.sign-up {
+  margin-top: 20px;
+  background-color: transparent;
+  color: grey;
+  padding: 10px;
+  width: 150px;
+  border: 2px solid grey;
+}
+
+.sign-up:hover {
+  border: 2px solid black;
+  color: black;
+}
+.copy {
+  margin-top: 120px;
+  font-size: 10px;
+  color: grey;
+}
+
+.location {
+  height: 300px;
+  width: 400px;
+}
 #button,
 #button2 {
   color: white;
