@@ -8,46 +8,56 @@ likeIcons.forEach((icon) => {
 
 function myFunction() {
   document.getElementById("more").style.display = "flex";
-  document.getElementById("neck").style.height = "1050px";
+  document.getElementById("neck").style.height = "1060px";
+  document.querySelector(".cta").style.display = "none";
+  document.querySelector(".cta4").style.display = "flex";
 }
 
-function myFunction1() {
+function hide() {
   document.getElementById("more").style.display = "none";
   document.getElementById("neck").style.height = "600px";
+  document.querySelector(".cta").style.display = "flex";
+  document.querySelector(".cta4").style.display = "none";
 }
-document.querySelector(".cta").addEventListener("dblclick", myFunction1);
 
 function myFunction2() {
   document.getElementById("more2").style.display = "flex";
-  document.getElementById("watches").style.height = "1050px";
+  document.getElementById("watches").style.height = "1060px";
+  document.querySelector(".cta1").style.display = "none";
+  document.querySelector(".cta5").style.display = "flex";
 }
 
-function myFunction3() {
+function hide1() {
   document.getElementById("more2").style.display = "none";
   document.getElementById("watches").style.height = "600px";
+  document.querySelector(".cta1").style.display = "flex";
+  document.querySelector(".cta5").style.display = "none";
 }
-
-document.querySelector(".cta1").addEventListener("dblclick", myFunction3);
 
 function myFunction4() {
   document.getElementById("more3").style.display = "flex";
-  document.getElementById("Bag").style.height = "1050px";
+  document.getElementById("Bag").style.height = "1060px";
+  document.querySelector(".cta2").style.display = "none";
+  document.querySelector(".cta6").style.display = "flex";
 }
 
-function myFunction5() {
+function hide2() {
   document.getElementById("more3").style.display = "none";
   document.getElementById("Bag").style.height = "600px";
+  document.querySelector(".cta2").style.display = "flex";
+  document.querySelector(".cta6").style.display = "none";
 }
-document.querySelector(".cta2").addEventListener("dblclick", myFunction5);
 
 function myFunction6() {
   document.getElementById("more4").style.display = "flex";
-  document.getElementById("Ear").style.height = "1050px";
+  document.getElementById("Ear").style.height = "1060px";
+  document.querySelector(".cta3").style.display = "none";
+  document.querySelector(".cta7").style.display = "flex";
 }
 
-function myFunction7() {
+function hide3() {
   document.getElementById("more4").style.display = "none";
   document.getElementById("Ear").style.height = "600px";
+  document.querySelector(".cta3").style.display = "flex";
+  document.querySelector(".cta7").style.display = "none";
 }
-
-document.querySelector(".cta3").addEventListener("dblclick", myFunction7);

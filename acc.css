@@ -274,10 +274,21 @@ header {
   font-weight: bold;
 }
 
+.cta4,
+.cta5,
+.cta6,
+.cta7 {
+  display: none;
+}
+
 .cta3,
 .cta2,
 .cta,
-.cta1 {
+.cta1,
+.cta4,
+.cta5,
+.cta6,
+.cta7 {
   margin-top: 50px;
   margin-left: 700px;
   border: none;
@@ -288,7 +299,11 @@ header {
 .cta3 span,
 .cta2 span,
 .cta1 span,
-.cta span {
+.cta span,
+.cta4 span,
+.cta5 span,
+.cta6 span,
+.cta7 span {
   padding-bottom: 7px;
   letter-spacing: 4px;
   font-size: 14px;
@@ -299,7 +314,11 @@ header {
 .cta3 svg,
 .cta2 svg,
 .cta1 svg,
-.cta svg {
+.cta svg,
+.cta4 svg,
+.cta5 svg,
+.cta6 svg,
+.cta7 svg {
   transform: translateX(-8px);
   transition: all 0.3s ease;
 }
@@ -307,14 +326,22 @@ header {
 .cta3:hover svg,
 .cta2:hover svg,
 .cta1:hover svg,
-.cta:hover svg {
+.cta:hover svg,
+.cta4:hover svg,
+.cta5:hover svg,
+.cta6:hover svg,
+.cta7:hover svg {
   transform: translateX(0);
 }
 
 .cta3:active svg,
 .cta2:active svg,
 .cta1:active svg,
-.cta:active svg {
+.cta:active svg,
+.cta4:active svg,
+.cta5:active svg,
+.cta6:active svg,
+.cta7:active svg {
   transform: scale(0.9);
 }
 
@@ -340,7 +367,11 @@ header {
 .cta3:hover .hover-underline-animation:after,
 .cta2:hover .hover-underline-animation:after,
 .cta1:hover .hover-underline-animation:after,
-.cta:hover .hover-underline-animation:after {
+.cta:hover .hover-underline-animation:after,
+.cta4:hover .hover-underline-animation:after,
+.cta5:hover .hover-underline-animation:after,
+.cta6:hover .hover-underline-animation:after,
+.cta7:hover .hover-underline-animation:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -513,8 +544,12 @@ header {
   background-position: center;
 }
 
+footer {
+  background-color: thistle;
+  padding-bottom: 30px;
+}
+
 .footer-heading {
-  margin-top: 30px;
   text-transform: uppercase;
   font-size: 50px;
   text-align: center;
