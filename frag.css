@@ -346,6 +346,70 @@ body {
   background-position: center;
 }
 
+.cta,
+.cta1,
+.cta2,
+.cta3 {
+  margin-top: 50px;
+  margin-left: 700px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta2,
+.cta3 {
+  display: none;
+}
+.cta,
+.cta2 {
+  color: white;
+}
+
+.cta span,
+.cta3 span,
+.cta2 span,
+.cta1 span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.hover-underline-animation {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after,
+.cta2:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  color: white;
+  background-color: white;
+}
+
+.cta1:hover .hover-underline-animation:after,
+.cta3:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  color: black;
+  background-color: black;
+}
+
 footer {
   background-color: black;
   padding-bottom: 50px;
@@ -364,7 +428,7 @@ footer {
 .foot {
   margin-top: 50px;
   display: flex;
-  margin-left: 50px;
+  margin-left: 190px;
   gap: 120px;
   flex-direction: row;
 }
@@ -493,41 +557,6 @@ footer {
   height: 300px;
   width: 400px;
 }
-#button,
-#button2 {
-  color: white;
-  text-decoration: none;
-  font-size: 30px;
-  border: none;
-  background: none;
-  margin-top: 30px;
-  font-family: "Great Vibes", cursive;
-  margin-left: 700px;
-}
-
-#button::before,
-#button2::before {
-  margin-left: auto;
-}
-
-#button::after,
-#button::before,
-#button2::before,
-#button2::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: #f44336;
-  display: block;
-  transition: 0.5s;
-}
-
-#button:hover::after,
-#button:hover::before,
-#button2:hover::before,
-#button2:hover::after {
-  width: 100%;
-}
 
 #more,
 #more2 {
@@ -619,8 +648,10 @@ footer {
     margin-top: 30px;
   }
 
-  #button,
-  #button2 {
+  .cta,
+  .cta1,
+  .cta2,
+  .cta3 {
     display: none;
   }
   .foot {
