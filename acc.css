@@ -92,12 +92,9 @@ header {
   flex: 1;
 }
 
-.slideshow {
-  height: 600px;
-  width: 100%;
-
-  background-size: 100% 600px;
-  background-repeat: no-repeat;
+.vid {
+  width: 1535px;
+  padding: 0;
 }
 
 #option {

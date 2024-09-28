@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Girlies</title>
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="signup.css" />
   </head>
   <body>
-    <header>Login</header>
+    <header>Sign Up</header>
     <form action="index.html">
       <div class="login">
         <div class="name">
@@ -30,13 +30,19 @@
           />
         </div>
 
-        <p class="name">Username</p>
+        <p class="name">Email-ID</p>
         <input
-          type="text"
-          placeholder="Enter Your Username"
+          type="email"
+          placeholder="Enter Your Email"
           class="email"
           required
         />
+
+        <p class="name">Phone Number</p>
+        <input type="tel" placeholder="+91-9xxxxxxxxx" class="email" required />
+
+        <p class="name">Date of Birth</p>
+        <input type="date" class="email" required />
 
         <p class="name">Password</p>
         <input
@@ -46,11 +52,7 @@
           required
         />
         <br />
-
-        <p class="name">OTP</p>
-        <input type="text" placeholder="XX-XX" class="email" required />
-        <br />
-        <button class="btn">Login</button>
+        <button class="btn">Sign Up</button>
       </div>
     </form>
   </body>

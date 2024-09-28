@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to left, #ee7e9c, #ffecd1);
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  font-size: 90px;
+  font-family: "Nerko One", cursive;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/backgrounds/shop1.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.name {
+  display: flex;
+  gap: 150px;
+  font-size: 20px;
+}
+.text {
+  padding: 10px;
+  border: none;
+}
+
+.text:hover,
+.email:hover {
+  border-bottom: 2px solid black;
+}
+.email {
+  width: 400px;
+  padding: 10px;
+  border: none;
+}
+
+.input {
+  margin-top: -10px;
+  display: flex;
+  gap: 60px;
+}
+
+.btn {
+  margin-left: 100px;
+  background-color: #241023;
+  margin-top: 20px;
+  font-size: 20px;
+  height: 50px;
+  width: 200px;
+  border-radius: 9px;
+  margin-bottom: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: all 0.4s linear;
+  background-color: #b191ff;
+  color: black;
+}
+
+@media screen and (max-width: 915px) {
+  header {
+    font-size: 50px;
+    margin-top: 10px;
+  }
+  .name {
+    font-size: 15px;
+    gap: 130px;
+  }
+  .text {
+    padding: 5px;
+  }
+  .email {
+    width: 200px;
+  }
+  .input {
+    gap: 30px;
+  }
+}
