@@ -58,10 +58,12 @@ header {
 }
 
 .text:hover,
-.email:hover {
+.email:hover,
+#input.hover {
   border-bottom: 2px solid black;
 }
-.email {
+.email,
+#input {
   width: 400px;
   padding: 10px;
   border: none;
@@ -86,10 +88,9 @@ header {
   cursor: pointer;
 }
 
-.btn:hover {
-  transition: all 0.4s linear;
-  background-color: #b191ff;
-  color: black;
+#error {
+  color: red;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 915px) {
