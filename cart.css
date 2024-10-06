@@ -340,3 +340,63 @@ body {
   height: 300px;
   width: 400px;
 }
+
+@media screen and (max-width: 915px) {
+  .header-text {
+    margin-left: 60px;
+    font-size: 50px;
+  }
+  .login {
+    margin-left: 50px;
+  }
+  .navigation {
+    gap: 20px;
+    font-size: 12px;
+  }
+
+  .bag {
+    margin-left: 20px;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .line {
+    width: 300px;
+  }
+
+  .gift {
+    height: 200px;
+    width: 200px;
+  }
+
+  .help {
+    width: 350px;
+    height: 450px;
+    margin-left: 10px;
+  }
+
+  .footer {
+    flex-direction: column;
+    margin-left: 120px;
+    gap: 0px;
+  }
+  .customer-service {
+    margin-left: 0;
+  }
+  .date {
+    margin-left: -30px;
+  }
+
+  .half {
+    width: 90%;
+  }
+  .second-half {
+    margin-left: 30px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .location {
+    width: 320px;
+    height: 300px;
+  }
+}
