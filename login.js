@@ -1,29 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let form = document.getElementById("login-form"); // Ensure this ID matches
+  let form = document.getElementById("login-form");
   let errorDiv = document.getElementById("error1");
 
-  // Handle form submission
   form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form from submitting the default way
+    event.preventDefault();
 
-    const usernameInput = document.getElementById("username").value; // Use the correct ID
+    const usernameInput = document.getElementById("username").value;
     const passwordInput = document.getElementById("password").value;
 
-    // Retrieve user data from local storage
-    const storedUserData = JSON.parse(localStorage.getItem("userData")); // Ensure this key matches
+    const storedUserData = JSON.parse(localStorage.getItem("userData"));
 
-    // Validate username and password
     if (storedUserData) {
-      // Check if the username and password match
       if (
-        storedUserData.username === usernameInput && // Compare username
+        storedUserData.username === usernameInput &&
         storedUserData.password === passwordInput
       ) {
-        // Successful login
         alert("Login successful!");
-        window.location.href = "index.html"; // Redirect to home page or another page
+        window.location.href = "index.html";
       } else {
-        // Invalid credentials
         errorDiv.innerText =
           "Incorrect username or password. Please try again.";
       }
