@@ -8,7 +8,8 @@
   </head>
   <body>
     <header>Sign Up</header>
-    <form action="" method="post">
+    <form id="signup-form">
+      <!-- Added ID to the form -->
       <div class="login">
         <div class="name">
           <p>First Name</p>
@@ -21,21 +22,36 @@
             placeholder="Enter Your First Name"
             class="text"
             required
+            id="first-name"
           />
           <input
             type="text"
-            placeholder="Enter Your Last  Name"
+            placeholder="Enter Your Last Name"
             class="text"
             required
+            id="last-name"
+            <!--
+            Added
+            id
+            here
+            --
+          />
           />
         </div>
 
-        <p class="name">Email-ID</p>
+        <p class="name">Username</p>
         <input
-          type="email"
-          placeholder="Enter Your Email"
+          type="text"
+          placeholder="Enter Your Username"
           class="email"
           required
+          id="username"
+          <!--
+          Added
+          id
+          here
+          --
+        />
         />
 
         <p class="name">Phone Number</p>
@@ -50,7 +66,8 @@
         />
 
         <p class="name">Date of Birth</p>
-        <input type="date" class="email" required />
+        <input type="date" id="dob" class="email" required />
+        <!-- Added ID here -->
 
         <p class="name">Password</p>
         <input
@@ -60,13 +77,22 @@
           maxlength="8"
           minlength="8"
           required
+          id="password"
+          <!--
+          Added
+          id
+          here
+          --
+        />
         />
         <br />
+
         <button id="btn">Sign Up</button>
       </div>
     </form>
 
     <div id="error"></div>
-    <script src="signup.js"></script>
+    <!-- Moved script here -->
+    <script type="module" src="signup.js"></script>
   </body>
 </html>

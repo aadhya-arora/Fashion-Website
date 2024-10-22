@@ -11,6 +11,12 @@ body {
   cursor: pointer;
 }
 
+#welcome-msg {
+  color: #7f5d70;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 #modal {
   display: none;
   position: fixed;
