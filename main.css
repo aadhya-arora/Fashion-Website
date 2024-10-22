@@ -12,6 +12,14 @@ body {
   /* font: QUICKSAND */
 }
 
+#welcome-msg {
+  margin-top: 20px;
+  font-size: 50px;
+  color: #7f5d70;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 #modal {
   display: none;
   position: fixed;

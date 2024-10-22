@@ -27,6 +27,7 @@ header {
 }
 
 .login {
+  padding-top: 20px;
   position: relative;
   margin-top: 20px;
   padding-left: 10px;
