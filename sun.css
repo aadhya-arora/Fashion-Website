@@ -2,6 +2,8 @@
 body {
   margin: 0;
   padding: 0;
+  
+  font-family: "Montserrat Alternates", serif;
 }
 .heading {
   font-size: 60px;
@@ -11,14 +13,14 @@ body {
 }
 
 nav {
-  background-color: #9f9f92;
+  background-color: pink;
   padding: 10px;
   display: flex;
   gap: 550px;
 }
 
 .dropbtn {
-  background-color: #9f9f92;
+  background-color: pink;
   color: black;
   margin-top: 20px;
   font-size: 16px;
@@ -115,7 +117,7 @@ nav {
   content: " ";
   width: 0%;
   height: 100%;
-  background: #cb82ed;
+  background: pink;
   position: absolute;
   transition: all 0.4s ease-in-out;
   right: 0;
@@ -210,13 +212,15 @@ nav {
   margin-top: 60px;
   justify-content: center;
   align-items: center;
-  background-color: #3e5641;
+  background-color: pink;
   height: 620px;
 }
 
 .heading-3 {
-  font-family: "Dancing Script", cursive;
-  color: #9ba2ff;
+  /* font-family: "Dancing Script", cursive; */
+  
+  font-family: "Montserrat Alternates", serif;
+  color: #96151e;
   padding-top: 10px;
   font-size: 70px;
   text-align: center;
@@ -236,7 +240,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #cfcfea;
+  background-color: #e36870;;
   color: black;
   height: 350px;
   width: 250px;
@@ -272,7 +276,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #cfcfea;
+  background-color: #e16b73;;
   color: black;
   height: 350px;
   width: 250px;
@@ -303,7 +307,9 @@ nav {
 }
 
 .text {
-  font-family: "Dancing script", cursive;
+  /* font-family: "Dancing script", cursive; */
+  
+  font-family: "Montserrat Alternates", serif;
   font-size: 25px;
 }
 
@@ -442,7 +448,9 @@ nav {
 }
 
 .heading-4 {
-  font-family: "Dancing Script", cursive;
+  /* font-family: "Dancing Script", cursive; */
+  
+  font-family: "Montserrat Alternates", serif;
   padding-top: 10px;
   font-size: 70px;
   text-align: center;
@@ -538,7 +546,9 @@ footer {
 }
 .c-hub {
   font-weight: lighter;
-  font-family: "Quicksand", sans-serif;
+  /* font-family: "Quicksand", sans-serif; */
+  
+  font-family: "Montserrat Alternates", serif;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -755,10 +765,12 @@ footer {
 
   #scarf_done {
     height: 800px;
+
   }
   .disp1 {
     margin-top: 20px;
     margin-left: 10px;
+    background-color: #e88d93;;
   }
 
   .foot {
