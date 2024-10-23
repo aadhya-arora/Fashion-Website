@@ -4,6 +4,8 @@ body {
   background: white;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+
 }
 
 header {
@@ -25,9 +27,11 @@ header {
 }
 
 .banner2-text {
-  font-family: "Grey Qo", cursive;
+  /* font-family: "Grey Qo", cursive; */
   color: white;
   font-size: 70px;
+  font-family: "Montserrat Alternates", sans-serif;
+
 }
 
 .dropbtn {
@@ -66,7 +70,7 @@ header {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #006d77;
+  background-color: #eb4368;
   color: white;
 }
 
@@ -77,7 +81,7 @@ header {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-  color: #006d77;
+  color: #eb4368;
 }
 
 .back {
@@ -107,10 +111,10 @@ header {
 
 .heading {
   font-size: 50px;
-  color: #025158;
+  color: #eb4368;
   text-align: center;
   align-items: center;
-  font-family: "Satisfy", cursive;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 .variety {
@@ -124,6 +128,8 @@ header {
 .Neckpieces {
   background-image: url("/Neckpieces/n2.jpeg");
   color: white;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .Neckpieces,
@@ -138,38 +144,44 @@ header {
   justify-content: center;
   align-items: center;
   background-size: cover;
-  font-family: "Dancing script", cursive;
-  border: 4px solid black;
+  font-family: "Montserrat Alternates", sans-serif;
+  border: 4px solid #eb4368;
 }
 
 .bags {
   color: white;
+  font-size: 25px;
+  font-weight: bold;
   background-image: url("/Bags/b1.jpg");
 }
 
 .Watches {
-  color: black;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
   background-image: url("/watches/w1.webp");
 }
 
 .earrings {
   background-image: url("/Earrings/e1.webp");
+  font-size: 25px;
   color: black;
+  font-weight: bold;
 }
 #neck,
 #Bag {
-  background-color: thistle;
+  background-color: #ffcedd;
   height: 600px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
 }
 
 .heading-1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Satisfy", cursive;
+  font-family: "Montserrat Alternates", sans-serif;
   font-size: 60px;
-  color: #30343f;
+  color: #96151e;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -233,7 +245,7 @@ header {
 }
 
 .like.filled {
-  color: red; /* Color when filled */
+  color: #ff0011; /* Color when filled */
 }
 
 .disp {
@@ -245,12 +257,12 @@ header {
 }
 
 .display1 {
-  border: 2px solid #4a051c;
+  border: 2px solid #96151e;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: pink;
+  background-color: #f1a2ba;
   color: black;
   height: 350px;
   width: 250px;
@@ -263,7 +275,7 @@ header {
 }
 
 .text {
-  font-family: "Dancing script", cursive;
+  font-family: "Montserrat Alternates", sans-serif;
   font-size: 20px;
 }
 .price {
@@ -542,7 +554,7 @@ header {
 }
 
 footer {
-  background-color: thistle;
+  background-color: #ffcedd;
   padding-bottom: 30px;
 }
 
@@ -564,7 +576,7 @@ footer {
 }
 .c-hub {
   font-weight: lighter;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -592,7 +604,7 @@ footer {
   height: 37px;
   width: 37px;
   background-color: #cda9bd;
-  color: #41122c;
+  color: #311e8f;
   border-radius: 20px;
   margin-left: 16px;
 }
@@ -602,24 +614,24 @@ footer {
 }
 
 .link0 {
-  color: #41122c;
+  color: #311e8f;
   margin-left: 8.5px;
   margin-top: 6px;
 }
 
 .link2 {
-  color: #41122c;
+  color: #311e8f;
   margin-left: 8.5px;
   margin-top: 6px;
 }
 
 .link1 {
-  color: #41122c;
+  color: #311e8f;
   margin-left: 10px;
   margin-top: 7px;
 }
 .link {
-  color: #41122c;
+  color: #311e8f;
   margin-left: 7px;
   margin-top: 7px;
 }
@@ -646,7 +658,7 @@ footer {
 
 .n-heading {
   font-weight: lighter;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
   text-transform: uppercase;
   font-size: 20px;
   color: grey;
@@ -686,6 +698,11 @@ footer {
 .location {
   height: 300px;
   width: 400px;
+}
+
+body{
+  font-family: "Montserrat Alternates", sans-serif;
+
 }
 @media screen and (max-width: 915px) {
   .intro {

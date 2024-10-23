@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   cursor: pointer;
+  font-family: "Montserrat Alternates", serif;
 }
 
 .container {
@@ -22,8 +23,9 @@ body {
   margin-top: 250px;
   font-size: 200px;
   color: rgb(245, 112, 134);
-  font-family: "Dancing Script", cursive;
+  font-family: "grey qo", cursive;
   border-radius: 10px;
+  font-weight: 300;
 }
 
 .back {
@@ -37,7 +39,7 @@ body {
   align-items: center;
   color: #2c0735;
   font-size: 50px;
-  font-family: "Dancing Script", cursive;
+  /* font-family: "Dancing Script", cursive; */
   padding: 5px;
 }
 
@@ -46,6 +48,7 @@ body {
   font-size: 18px;
   color: white;
   padding: 30px;
+  padding-bottom: 50px;
   text-align: center;
   background-color: #777;
 }
@@ -66,7 +69,7 @@ body {
   padding: 40px;
   color: #2c0735;
   background-color: #777;
-  font-family: "Dancing Script", cursive;
+  /* font-family: "Dancing Script", cursive; */
   font-size: 30px;
 }
 
@@ -102,7 +105,7 @@ body {
 }
 
 .caption {
-  font-family: "Grey Qo", cursive;
+  /* font-family: "Grey Qo", cursive; */
   color: black;
   text-align: center;
   justify-items: center;
