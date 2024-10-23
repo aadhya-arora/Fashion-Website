@@ -6,14 +6,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(to left, #ee7e9c, #ffecd1);
+  background:  #ee7e9c;
   align-items: center;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 header {
   text-align: center;
+  color: white;
   font-size: 90px;
-  font-family: "Nerko One", cursive;
+  font-family: "Montserrat Alternates", sans-serif;
   margin-top: -10px;
   margin-bottom: 10px;
   width: 100%;
@@ -21,17 +23,17 @@ header {
 
 .login-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  width: 00%;
 }
 
+
 .login {
+  width: 100%;
   padding-top: 20px;
   position: relative;
   margin-top: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 40px;
+  padding-right: 20px;
   background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -42,7 +44,6 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/backgrounds/shop1.jpg");
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -58,11 +59,7 @@ header {
   border: none;
 }
 
-.text:hover,
-.email:hover,
-#input.hover {
-  border-bottom: 2px solid black;
-}
+
 .email,
 #input {
   width: 400px;
@@ -78,38 +75,65 @@ header {
 
 .btn {
   margin-left: 100px;
-  background-color: #241023;
+  background-color: #ee7e9c;
   margin-top: 20px;
   font-size: 20px;
   height: 50px;
   width: 200px;
+  border: none;
   border-radius: 9px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   color: white;
   cursor: pointer;
 }
 
-#error {
-  color: red;
-  font-size: 20px;
+.btn:hover{
+  background-color: #96151e;
 }
 
-@media screen and (max-width: 915px) {
+
+
+
+
+
+/* Media Query for screens smaller than 376px */
+@media (max-width: 376px) {
   header {
-    font-size: 50px;
-    margin-top: 10px;
+    font-size: 30px; 
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
+
+  .login {
+    margin-left: -30px;
+    padding-left: 20px;
+    padding-right: 40px;
+    width: 100%; 
+  }
+
   .name {
-    font-size: 15px;
-    gap: 130px;
+    display: block; 
+    font-size: 16px; 
+    gap: 0; 
   }
-  .text {
-    padding: 5px;
-  }
-  .email {
-    width: 200px;
-  }
+
   .input {
-    gap: 30px;
+    display: block; 
+    margin-top: 10px; 
+    gap: 0; 
+  }
+
+  .email, #input, .text {
+    width: 100%; 
+    padding: 10px;
+    font-size: 16px; 
+  }
+
+  .btn {
+    margin: 30px;
+    width: 100%; 
+    font-size: 18px; 
+    margin-left: 5px;
   }
 }
+
