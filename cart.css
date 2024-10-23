@@ -4,6 +4,7 @@ body {
   cursor: pointer;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat Alternates", serif;
 }
 
 .header {
@@ -23,7 +24,7 @@ body {
 }
 
 .dropbtn {
-  color: black;
+  color: pink;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -55,8 +56,9 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: #6d213c;
+  background-color: pink;
   color: white;
+  border-radius: 30px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -175,14 +177,16 @@ body {
   margin-top: 50px;
   padding: 15px;
   width: 200px;
-  color: white;
+  font-weight: 600;
+  color: black;
   cursor: pointer;
-  background-color: black;
+  background-color: pink;
+  border: none;
 }
 .help {
-  width: 400px;
-  border: 2px solid rgb(188, 188, 232);
-  height: 400px;
+  width: 420px;
+  border: 2px solid pink;
+  height: 470px;
 }
 
 .need-help {
@@ -215,9 +219,9 @@ body {
 
 .end {
   height: 10px;
-  color: #a5c0f5;
+  color: pink;
   width: 90%;
-  background-color: #a5c0f5;
+  background-color: pink;
 }
 
 .footer {
@@ -259,7 +263,7 @@ body {
   display: inline-block;
   height: 37px;
   width: 37px;
-  background-color: black;
+  background-color: pink;
   border-radius: 20px;
   margin-left: 16px;
 }
