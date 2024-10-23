@@ -15,6 +15,7 @@ body {
   left: 0;
   z-index: 1000;
   transition: background-color 0.3s, color 0.3s;
+  font-family: "Montserrat Alternates", serif;
 }
 
 .banner {
@@ -25,6 +26,7 @@ body {
   min-height: 600px;
   display: flex;
   color: white;
+  font-family: "Montserrat Alternates", serif;
 }
 
 .banner2 {
@@ -34,6 +36,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 600px;
+  font-family: "Montserrat Alternates", serif;
 }
 
 .header2 {
