@@ -14,34 +14,50 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 
   <body>
-    <header>Sign Up</header>
+    <div style="justify-content: space-between;">
+    <header>SIGN UP</header>
+  </div>
     <form id="signup-form">
       <div class="login">
         <div class="name">
-          <p>First Name</p>
-          <p>Last Name</p>
+          <div  id="FIRSTNAME">
+            <p style="margin-left: 1rem;">First Name</p>
+            <input
+              type="text"
+              placeholder="Enter Your First Name"
+              class="text"
+              required
+              id="first-name"
+            />
+          </div>
+          
+          <div id="LASTNAME">
+            <p style="margin-left: 1rem;">Last Name</p>
+            <input
+              type="text"
+              placeholder="Enter Your Last Name"
+              class="text"
+              required
+              id="last-name"
+            />
+          </div>
         </div>
-
-        <div class="input">
-          <input
-            type="text"
-            placeholder="Enter Your First Name"
-            class="text"
-            required
-            id="first-name"
-          />
-          <input
-            type="text"
-            placeholder="Enter Your Last Name"
-            class="text"
-            required
-            id="last-name"
-          />
-        </div>
-
-        <p class="name">Username</p>
+        
+        <p class="name" style="margin-left: 1rem;">Username</p>
         <input
           type="text"
           placeholder="Enter Your Username"
@@ -50,10 +66,10 @@
           id="username"
         />
 
-        <p class="name">Phone Number</p>
-        <input
+        <p class="name" style="margin-left: 1rem;">Phone Number</p>
+        <input 
           type="tel"
-          placeholder="9xxxxxxxxx"
+          placeholder="9027xxxxxx"
           id="input"
           maxlength="10"
           minlength="10"
@@ -61,10 +77,10 @@
           required
         />
 
-        <p class="name">Date of Birth</p>
-        <input type="date" id="dob" class="email" required />
+        <p class="name" style="margin-left: 1rem;">Date of Birth</p>
+        <input type="date" id="dob" class="email" required/>
 
-        <p class="name">Password</p>
+        <p class="name" style="margin-left: 1rem;">Password</p>
         <input
           type="password"
           placeholder="Enter your Password"
@@ -76,11 +92,9 @@
         />
         <br />
 
-        <button id="btn">Sign Up</button>
+        <button id="btn">SIGN UP</button>
       </div>
     </form>
-
-    <div id="error"></div>
 
     <script type="module" src="signup.js"></script>
   </body>

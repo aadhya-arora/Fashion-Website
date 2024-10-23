@@ -6,31 +6,38 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(to left, #ee7e9c, #ffecd1);
+  background:  #ee7e9c;
   align-items: center;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 header {
   text-align: center;
-  font-size: 90px;
-  font-family: "Nerko One", cursive;
+  font-size: 110px;
+  /* justify-content: space-between; */
+  font-family: "Montserrat Alternates", sans-serif;
   margin-top: -10px;
-  margin-bottom: 10px;
+  margin-bottom: px;
+  color: white;
   width: 100%;
 }
 
+form{
+  width: 60rem;
+  background-color: #ee7e9c;
+}
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 200%;
 }
 
 .login {
   position: relative;
   margin-top: 20px;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 90px;
   background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -53,20 +60,161 @@ header {
   font-size: 20px;
 }
 .text {
-  padding: 10px;
+  margin-left: 10px;
+  padding: 10px 128px;
   border: none;
 }
 
-.text:hover,
-.email:hover,
-#input:hover {
-  border-bottom: 2px solid black;
-}
 .email,
 #input {
   width: 400px;
   padding: 10px;
   border: none;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+#input{
+  padding-right: 32rem;
+  margin-left: 10px;
+}
+.input {
+  margin-top: -10px;
+  display: flex;
+  gap: 60px;
+  /* font-family: "Montserrat Alternates", sans-serif; */
+  
+}
+
+  #LASTNAME{
+    margin-left: -5.5rem;
+  }
+  
+#dob{
+  padding-right: 32rem;
+  margin-left: 10px;
+
+}
+#password{
+  padding-right: 32rem;
+  margin-left: 10px;
+
+}
+#username{
+  padding-right: 32rem;
+  margin-left: 10px;
+
+}
+#btn {
+  margin-left: 20rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  background-color: #ee7e9c;
+  margin-top: 20px;
+  font-size: 20px;
+  height: 40px;
+  width: 300px;
+  border: none;
+  border-radius: 9px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+#btn:hover{
+  background-color: #a5173d;
+  font-weight: 600;
+  text-shadow: 0px 0px 10px;
+}
+
+#error {
+  color: red;
+  font-size: 20px;
+}
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ee7e9c;
+  align-items: center;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+header {
+  text-align: center;
+  font-size: 110px;
+  font-family: "Montserrat Alternates", sans-serif;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  color: white;
+  width: 100%;
+}
+
+form {
+  width: 60rem;
+  background-color: #ee7e9c;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200%;
+}
+
+.login {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 90px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/backgrounds/shop1.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.name {
+  display: flex;
+  gap: 150px;
+  font-size: 20px;
+}
+
+.text {
+  margin-left: 10px;
+  padding: 10px 128px;
+  border: none;
+}
+
+
+
+.email,
+#input {
+  width: 400px;
+  padding: 10px;
+  border: none;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+#input {
+  padding-right: 32rem;
+  margin-left: 10px;
 }
 
 .input {
@@ -75,17 +223,37 @@ header {
   gap: 60px;
 }
 
+#first-name, #last-name {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+#dob,
+#password,
+#username {
+  padding-right: 32rem;
+  margin-left: 10px;
+}
+
 #btn {
-  margin-left: 100px;
-  background-color: #241023;
+  margin-left: 20rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  background-color: #ee7e9c;
   margin-top: 20px;
   font-size: 20px;
-  height: 50px;
-  width: 200px;
+  height: 40px;
+  width: 300px;
+  border: none;
   border-radius: 9px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
   color: white;
   cursor: pointer;
+}
+
+#btn:hover {
+  background-color: #a5173d;
+  font-weight: 600;
+  text-shadow: 0px 0px 10px;
 }
 
 #error {
@@ -93,22 +261,70 @@ header {
   font-size: 20px;
 }
 
-@media screen and (max-width: 915px) {
+/* Media Query for screens smaller than 375px */
+@media (max-width: 376px) {
+  body{
+    font-family: "Montserrat Alternates", sans-serif;
+  }
+
   header {
-    font-size: 50px;
     margin-top: 10px;
+    font-size: 40px; /* Smaller header font */
+    margin-bottom: 5px;
   }
+
+  form {
+    width: 90%;
+    height: 80%;
+  }
+
+  .login-container {
+    width: 90%;
+    flex-direction: column;
+  }
+
   .name {
-    font-size: 15px;
-    gap: 130px;
+    display: block;
+    font-size: 16px;
+    gap: 0px;
   }
-  .text {
-    padding: 5px;
+
+  .text, .email, #input {
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 16px;
   }
-  .email {
-    width: 200px;
+
+  #dob, #password, #username {
+    padding: 10px 30px;
+    margin-left: 0;
+    font-size: 16px;
   }
-  .input {
-    gap: 30px;
+
+  #btn {
+    margin-left: 2.5rem;
+    width: 100%;
+    font-size: 18px;
   }
+
+
+  #btn:hover {
+    background-color: #a5173d;
+    font-weight: 600;
+    text-shadow: 0px 0px 10px;
+  }
+
+  #names{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+#FIRSTNAME{
+padding-top: 10px;
+}
+
+#LASTNAME{
+  margin-left: 0rem;
+}
 }
