@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let submitBtn = document.getElementById("btn");
 
   if (!form || !phoneInput || !errorDiv) {
-    console.error("One or more elements are missing in the DOM");
+    console.error("One or more elements are missing");
     return;
   }
 
@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   phoneInput.onfocus = function () {
-    if (this.classList.contains("invalid")) {
-      this.classList.remove("invalid");
+    if (this.classList.contains("Invalid")) {
+      this.classList.remove("Invalid");
       errorDiv.innerHTML = "";
     }
   };
