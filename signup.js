@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let phoneInput = document.getElementById("input");
   let errorDiv = document.getElementById("error");
   let form = document.getElementById("signup-form");
+  let submitBtn = document.getElementById("btn");
 
   if (!form || !phoneInput || !errorDiv) {
     console.error("One or more elements are missing in the DOM");
@@ -11,10 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
   phoneInput.onblur = function () {
     if (phoneInput.value.length !== 10) {
       phoneInput.classList.add("invalid");
-      errorDiv.innerText = "Phone Number Incorrect";
-      document.getElementById("btn").disabled = true;
+      errorDiv.innerText = "Phone Number must be 10 digits.";
+      submitBtn.disabled = true;
     } else {
-      document.getElementById("btn").disabled = false;
+      submitBtn.disabled = false;
+      errorDiv.innerText = "";
     }
   };
 
