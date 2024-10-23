@@ -10,7 +10,8 @@ body {
   padding: 0;
   cursor: pointer;
   font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 400;}
+  font-weight: 400;
+}
 
 #welcome-msg {
   margin-top: 20px;
@@ -197,7 +198,8 @@ body {
 .link1:hover,
 .link:hover,
 .link2:hover {
-color: #f1a2ba;}
+  color: #f1a2ba;
+}
 
 .set {
   display: inline-block;
@@ -212,9 +214,6 @@ color: #f1a2ba;}
 .set:hover {
   /* animation: 1s ; */
   background-color: white;
-  
-
-
 }
 .social-links {
   margin-top: 70px;
@@ -254,7 +253,6 @@ color: #f1a2ba;}
   text-shadow: 0px 0px 5px #ded5d7;
   color: white;
   font-weight: 600;
-
 }
 /* 
 @keyframes glow {
@@ -332,7 +330,7 @@ color: #f1a2ba;}
   margin-left: 260px;
   margin-top: -3px;
   color: #96151e;
-  
+
   text-align: center;
 }
 
@@ -405,7 +403,7 @@ color: #f1a2ba;}
 #abt {
   margin-left: 260px;
   background-color: #ff6788;
-  height: 30rem;
+  height: 35rem;
 }
 .title2 {
   font-size: 50px;
@@ -536,7 +534,6 @@ color: #f1a2ba;}
 }
 
 footer {
-  
   margin-left: 280px;
   padding-bottom: 10px;
 }
@@ -556,7 +553,6 @@ footer {
   font-family: "Montserrat Alternates", serif;
   font-size: 100px;
   text-align: center;
-
 }
 .c-hub {
   font-weight: 400;
@@ -690,17 +686,17 @@ footer {
 .im1-text,
 .im2-text,
 .im3-text {
-  color: white;
+  color: #41122c;
   display: none;
-  font-family: serif;;
-  font-size: 40px;
-  margin-top: 30%;
+  font-family: serif;
+  font-size: 1.7rem;
+  margin-top: 35%;
   margin-left: 10%;
 }
 
 .im2:hover {
   background-image: url("");
-  background-color: #41122c;
+  background-color: pink;
   .im2-text {
     display: flex;
   }
@@ -708,7 +704,7 @@ footer {
 
 .im3:hover {
   background-image: url("");
-  background-color: #41122c;
+  background-color: pink;
   .im3-text {
     display: flex;
   }
@@ -716,13 +712,13 @@ footer {
 
 .im1:hover {
   background-image: url("");
-  background-color: #41122c;
+  background-color: pink;
   .im1-text {
     display: flex;
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 915px) {
   .navbar {
     height: 80px;
     width: 100%;
@@ -787,7 +783,7 @@ footer {
     display: none;
   }
   .title1-2 {
-    margin-left: 75px;
+    margin-left: 15px;
     font-size: 20px;
     display: inline;
   }
@@ -828,13 +824,18 @@ footer {
   }
   .paper {
     width: 350px;
-    height: ;
-    }
+    height: 350px;
+  }
 
-  .paper-text{
+  .button {
+    display: none;
+  }
+
+  .paper-text {
     font-size: 12px;
     font-family: "Montserrat Alternates", sans-serif;
-    margin-top: 20px;  }
+    margin-top: 20px;
+  }
   .myname {
     margin-left: 80px;
   }

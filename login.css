@@ -6,7 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background:  #ee7e9c;
+  background: #ee7e9c;
   align-items: center;
   font-family: "Montserrat Alternates", sans-serif;
 }
@@ -25,7 +25,6 @@ header {
   display: flex;
   width: 00%;
 }
-
 
 .login {
   width: 100%;
@@ -59,7 +58,6 @@ header {
   border: none;
 }
 
-
 .email,
 #input {
   width: 400px;
@@ -87,19 +85,13 @@ header {
   cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #96151e;
 }
 
-
-
-
-
-
-/* Media Query for screens smaller than 376px */
-@media (max-width: 376px) {
+@media (max-width: 915px) {
   header {
-    font-size: 30px; 
+    font-size: 30px;
     margin-top: 40px;
     margin-bottom: 20px;
   }
@@ -108,32 +100,33 @@ header {
     margin-left: -30px;
     padding-left: 20px;
     padding-right: 40px;
-    width: 100%; 
+    width: 100%;
   }
 
   .name {
-    display: block; 
-    font-size: 16px; 
-    gap: 0; 
+    display: block;
+    font-size: 16px;
+    gap: 0;
   }
 
   .input {
-    display: block; 
-    margin-top: 10px; 
-    gap: 0; 
+    display: block;
+    margin-top: 10px;
+    gap: 0;
   }
 
-  .email, #input, .text {
-    width: 100%; 
+  .email,
+  #input,
+  .text {
+    width: 100%;
     padding: 10px;
-    font-size: 16px; 
+    font-size: 16px;
   }
 
   .btn {
     margin: 30px;
-    width: 100%; 
-    font-size: 18px; 
+    width: 100%;
+    font-size: 18px;
     margin-left: 5px;
   }
 }
-

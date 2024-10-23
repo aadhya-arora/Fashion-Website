@@ -6,7 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background:  #ee7e9c;
+  background: #ee7e9c;
   align-items: center;
   font-family: "Montserrat Alternates", sans-serif;
 }
@@ -22,7 +22,7 @@ header {
   width: 100%;
 }
 
-form{
+form {
   width: 60rem;
   background-color: #ee7e9c;
 }
@@ -72,7 +72,7 @@ form{
   border: none;
   font-family: "Montserrat Alternates", sans-serif;
 }
-#input{
+#input {
   padding-right: 32rem;
   margin-left: 10px;
 }
@@ -81,27 +81,23 @@ form{
   display: flex;
   gap: 60px;
   /* font-family: "Montserrat Alternates", sans-serif; */
-  
 }
 
-  #LASTNAME{
-    margin-left: -5.5rem;
-  }
-  
-#dob{
-  padding-right: 32rem;
-  margin-left: 10px;
-
+#LASTNAME {
+  margin-left: -5.5rem;
 }
-#password{
+
+#dob {
   padding-right: 32rem;
   margin-left: 10px;
-
 }
-#username{
+#password {
   padding-right: 32rem;
   margin-left: 10px;
-
+}
+#username {
+  padding-right: 32rem;
+  margin-left: 10px;
 }
 #btn {
   margin-left: 20rem;
@@ -118,7 +114,7 @@ form{
   color: white;
   cursor: pointer;
 }
-#btn:hover{
+#btn:hover {
   background-color: #a5173d;
   font-weight: 600;
   text-shadow: 0px 0px 10px;
@@ -129,16 +125,15 @@ form{
   font-size: 20px;
 }
 
-
 /* Media Query for screens smaller than 375px */
-@media (max-width: 376px) {
-  body{
+@media (max-width: 915px) {
+  body {
     font-family: "Montserrat Alternates", sans-serif;
   }
 
   header {
-    margin-top: 10px;
-    font-size: 40px; /* Smaller header font */
+    margin-top: 20px;
+    font-size: 5rem; /* Smaller header font */
     margin-bottom: 5px;
   }
 
@@ -158,13 +153,17 @@ form{
     gap: 0px;
   }
 
-  .text, .email, #input {
+  .text,
+  .email,
+  #input {
     width: 100%;
     padding: 10px 30px;
     font-size: 16px;
   }
 
-  #dob, #password, #username {
+  #dob,
+  #password,
+  #username {
     padding: 10px 30px;
     margin-left: 0;
     font-size: 16px;
@@ -176,24 +175,23 @@ form{
     font-size: 18px;
   }
 
-
   #btn:hover {
     background-color: #a5173d;
     font-weight: 600;
     text-shadow: 0px 0px 10px;
   }
 
-  #names{
+  #names {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
   }
 
-#FIRSTNAME{
-padding-top: 10px;
-}
+  #FIRSTNAME {
+    padding-top: 10px;
+  }
 
-#LASTNAME{
-  margin-left: 0rem;
-}
+  #LASTNAME {
+    margin-left: 0rem;
+  }
 }
