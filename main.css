@@ -14,8 +14,9 @@ body {
 
 #welcome-msg {
   margin-top: 20px;
-  font-size: 50px;
-  color: #7f5d70;
+  font-family: serif;
+  font-size: 40px;
+  color: #96151e;
   text-align: center;
   margin-bottom: 20px;
 }
