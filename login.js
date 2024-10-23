@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         storedUserData.password === passwordInput
       ) {
         alert("Login successful!");
-        window.location.href = "index.html";
+        window.location.href = "main.html";
       } else {
         errorDiv.innerText =
           "Incorrect username or password. Please try again.";
