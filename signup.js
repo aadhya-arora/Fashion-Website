@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let phoneInput = document.getElementById("input");
   let errorDiv = document.getElementById("error");
   let form = document.getElementById("signup-form");
-  let submitBtn = document.getElementById("btn");
+  let submitBtn = document.getElementById("animated-button");
 
   if (!form || !phoneInput || !errorDiv) {
     console.error("One or more elements are missing");
@@ -52,3 +52,5 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "login.html";
   });
 });
+
+

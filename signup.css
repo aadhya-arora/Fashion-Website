@@ -6,36 +6,43 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #ee7e9c;
+  /* background: #ee7e9c; */
   align-items: center;
   font-family: "Montserrat Alternates", sans-serif;
 }
 
-header {
-  text-align: center;
-  font-size: 110px;
-  /* justify-content: space-between; */
-  font-family: "Montserrat Alternates", sans-serif;
-  margin-top: -10px;
-  margin-bottom: px;
-  color: white;
-  width: 100%;
+input{
+  margin-left: 31rem;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 form {
   width: 60rem;
-  background-color: #ee7e9c;
+}
+#backvid{
+
+  height: 125%;
+  position: fixed;
+  z-index: -100;
 }
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 200%;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  
 }
 
 .login {
   position: relative;
-  margin-top: 20px;
+  box-shadow: 0px 0px 10px #83AAF2;
+  z-index: 0;
+  border-radius: 30px;
+  height: 37rem;
+  margin-top:5rem;
   padding-left: 10px;
   padding-right: 90px;
   background-color: rgba(255, 255, 255, 0.6);
@@ -43,21 +50,97 @@ form {
 
 .login::before {
   content: "";
+  border-radius: 30px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/backgrounds/shop1.jpg");
+
   background-size: cover;
   background-position: center;
   z-index: -1;
 }
+/* Carousel Container */
+#carousel {
+  position: absolute;
+  overflow: hidden;
+  z-index: 99;
+  width: 23rem;
+  margin-top: 4.3rem;
+  margin-right: 29rem;
+  height: 30rem; /* Set desired height */
+  border-radius: 30px;
+  
+
+}
+#title{
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /* Added text animation */
+  animation: titleAnimation 3s ease-in-out infinite alternate;
+
+}
+@keyframes titleAnimation {
+  0% { color:#4f8bfa; }
+  50% { color: #003DAC; }
+  100% { color: #052250; }
+}
+.carousel-track {
+  display: flex;
+  width: calc(100% * 8); /* 8 images (original + duplicate) */
+  animation: scroll 12s linear infinite; /* Adjust duration as needed */
+}
+
+#carousel img {
+  width: 24rem;
+  height: 30rem;
+  object-fit: cover;
+}
+
+/* Animation for smooth horizontal scroll */
+/* @keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+} */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Scroll by 4 images' width */
+  }
+}
 
 .name {
   display: flex;
-  gap: 150px;
-  font-size: 20px;
+  flex-wrap: wrap;
+
+}
+.name input{
+  margin-left: 31rem;
+   padding: 5px;
+   width: 400px;
+   font-family: "Montserrat Alternates", sans-serif;
+}
+.name p {
+  margin-left: 31rem;
+}
+p{
+  margin-left: 31rem;
 }
 .text {
   margin-left: 10px;
@@ -68,64 +151,116 @@ form {
 .email,
 #input {
   width: 400px;
-  padding: 10px;
+  padding: 5px;
   border: none;
   font-family: "Montserrat Alternates", sans-serif;
 }
-#input {
-  padding-right: 32rem;
-  margin-left: 10px;
+#caraousel{
+  height: 300px;
 }
-.input {
-  margin-top: -10px;
+
+#animated-button {
+  position: relative;
   display: flex;
-  gap: 60px;
-  /* font-family: "Montserrat Alternates", sans-serif; */
-}
-
-#LASTNAME {
-  margin-left: -5.5rem;
-}
-
-#dob {
-  padding-right: 32rem;
-  margin-left: 10px;
-}
-#password {
-  padding-right: 32rem;
-  margin-left: 10px;
-}
-#username {
-  padding-right: 32rem;
-  margin-left: 10px;
-}
-#btn {
-  margin-left: 20rem;
-  font-family: "Montserrat Alternates", sans-serif;
-  background-color: #ee7e9c;
-  margin-top: 20px;
-  font-size: 20px;
-  height: 40px;
-  width: 300px;
-  border: none;
-  border-radius: 9px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: white;
-  cursor: pointer;
-}
-#btn:hover {
-  background-color: #a5173d;
+  align-items: center;
+  
+  margin-top: 2.5rem;
+ 
+  margin-left: 33rem;
+  
+  padding: 0px 10px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 80px;
   font-weight: 600;
-  text-shadow: 0px 0px 10px;
+  color: #02122B;
+  box-shadow: 0 0 0 2px #C1D5F9;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+
+
 }
 
+#animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: #83AAF2;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#animated-button .arr-1 {
+  right: 16px;
+}
+
+#animated-button .arr-2 {
+  left: -25%;
+}
+
+#animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #83AAF2;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+  
+}
+
+#animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+#animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+#animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+#animated-button:hover svg {
+  fill: #83AAF2;
+}
+
+#animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px #83AAF2;
+  
+}
+
+#animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
 #error {
   color: red;
   font-size: 20px;
 }
 
 /* Media Query for screens smaller than 375px */
+
 @media (max-width: 915px) {
   body {
     font-family: "Montserrat Alternates", sans-serif;
@@ -168,7 +303,10 @@ form {
     margin-left: 0;
     font-size: 16px;
   }
-
+  .animated-button{
+    margin-left: 160px;
+  }
+/* 
   #btn {
     margin-left: 2.5rem;
     width: 100%;
@@ -179,7 +317,7 @@ form {
     background-color: #a5173d;
     font-weight: 600;
     text-shadow: 0px 0px 10px;
-  }
+  } */
 
   #names {
     display: flex;
@@ -194,4 +332,39 @@ form {
   #LASTNAME {
     margin-left: 0rem;
   }
+}
+@media (max-width: 426px){
+  .login{
+    padding-bottom: 40px;
+  }
+  .animated-button{
+    margin-left: 94px;
+  }
+  #username.email{
+    margin-left: 8px;
+  }
+  #dob.email{
+    margin-left: 8px;
+  }
+  #password.email{
+   margin-left: 8px;
+  }
+}
+@media (max-width:769px) {
+  .login{
+    padding-bottom: 40px;
+  }
+  .animated-button{
+    margin-left: 250px;
+  }
+  #username.email{
+    margin-left: 8px;
+  }
+  #dob.email{
+    margin-left: 8px;
+  }
+  #password.email{
+   margin-left: 8px;
+  }
+  
 }
