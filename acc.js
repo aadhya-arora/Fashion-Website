@@ -61,3 +61,136 @@ function hide3() {
   document.querySelector(".cta3").style.display = "flex";
   document.querySelector(".cta7").style.display = "none";
 }
+
+// Sample data to search from (you can replace this with your data)
+const items = [
+  "Watches",
+  "Handbags",
+  "Neckpieces",
+  "Earrings",
+  "Irridescent-Blue-Lacerta-Neckpiece",
+  "Beauteous-Beady-Neckpiece",
+  "Delicate-Blue-Neckpiece",
+  "Delicate-Emerald-Neckpiece",
+  "Enchanting-Delicate-Neckpiece",
+  "Pink-Sapphire-Double-Heart-Neckpiece",
+  "Delicate-Waves-Diamond-Neckpiece",
+  "Glamorous-Infinity-Heart-Neckpiece",
+  "Fancy-Leather-Strap-Watch",
+  "Rose-Gold-Bracelet-Watch",
+  "Acnos-Fancy-Bracelet-Watch",
+  "Stylish-Colorful-Hearty-Watch",
+  "Elegant-Nature-Greeny-Watch",
+  "Delicate-in-Black-Watch",
+  "Old-style-Delicate-Watch",
+  "Alluring-Hearty-Watch",
+  "Black-Flower-Embroidered-Handbag",
+  "Alluring-Pink-Handbag",
+  "Faux-Leather-Burgandy-Handbag",
+  "Formal-In-Grey-Handbag",
+  "Beautiful-In-White-Butterfly-Earrings",
+  "Delicate-Blue-Hue-Earrings",
+  "Elegant-Star-Zirconia-Stud-Earring",
+  "Elegant-Emerald-Gold-Earrings",
+  "Arizonal-Blue-Studded-Earrings",
+  "Multicolored-Brass-And-Pearl-Earrings",
+  "Soho-Designer-Drop-Earrings",
+];
+function SearchBar() {
+  const [query, setQuery] = React.useState("");
+  const [filteredItems, setFilteredItems] = React.useState([]);
+
+  const handleSearch = (event) => {
+    const searchQuery = event.target.value;
+    setQuery(searchQuery);
+
+    // Filter items based on the query
+    if (searchQuery.trim() === "") {
+      setFilteredItems([]);
+    } else {
+      const filtered = items.filter((item) =>
+        item.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setFilteredItems(filtered);
+    }
+  };
+
+  const handleItemClick = (item) => {
+    // Scroll to the section that matches the item
+    const section = document.getElementById(item.toLowerCase());
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
+  return (
+    <div style={{ position: "relative" }}>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={query}
+        onChange={handleSearch}
+        style={{
+          padding: "8px",
+          borderRadius: "4px",
+          border: "1px solid #ccc",
+          marginLeft: "-280px", // Adjusted for positioning
+          fontSize: "14px",
+          width: "200px",
+        }}
+      />
+      {filteredItems.length > 0 && (
+        <ul
+          style={{
+            listStyle: "none",
+            margin: 0,
+            padding: "10px",
+            border: "1px solid #ccc",
+            borderRadius: "4px",
+            backgroundColor: "#fff",
+            position: "absolute",
+            top: "40px",
+            left: "-280px", // Align dropdown with the search bar
+            width: "200px",
+            boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+            zIndex: 1000,
+          }}
+        >
+          {filteredItems.map((item, index) => (
+            <li
+              key={index}
+              style={{
+                padding: "5px",
+                cursor: "pointer",
+                borderBottom: "1px solid #f0f0f0",
+                color: "#333", // Change text color here
+                fontSize: "14px", // Optional: Set font size
+              }}
+              onClick={() => {
+                setQuery(item); // Set query to the selected item
+                setFilteredItems([]); // Close the dropdown
+                handleItemClick(item); // Scroll to the matching section
+              }}
+              onMouseOver={(e) => {
+                e.target.style.backgroundColor = "#f0f0f0"; // Hover effect
+                e.target.style.color = "#007bff"; // Hover color change
+              }}
+              onMouseOut={(e) => {
+                e.target.style.backgroundColor = "transparent"; // Reset hover effect
+                e.target.style.color = "#333"; // Reset text color
+              }}
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Render the SearchBar component in the header
+ReactDOM.render(<SearchBar />, document.getElementById("search-bar"));

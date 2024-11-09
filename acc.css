@@ -916,6 +916,9 @@ body {
   font-family: "Montserrat Alternates", sans-serif;
 }
 @media screen and (max-width: 915px) {
+  #search-bar {
+    display: none;
+  }
   .intro {
     font-size: 70px;
     margin-left: -70px;
