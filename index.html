@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Girlies</title>
     <link rel="stylesheet" href="signup.css" />
-  </head>
+  
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,12 +35,13 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
+</head>
 
-  <body>
+  <body><video autoplay muted loop id="backvid"><source src="./backgrounds/64426-509717747.mp4" type="video/mp4"></video>
     <div style="justify-content: space-between">
       <header>SIGN UP</header>
     </div>
-    <form id="signup-form">
+    <form id="signup-form" style="border-radius: 30px;">
       <div class="login">
         <div class="name">
           <div id="FIRSTNAME">
@@ -100,8 +101,22 @@
           id="password"
         />
         <br />
+        <button class="animated-button">
+          <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+            ></path>
+          </svg>
+          <span class="text">SIGNUP</span>
+          <span class="circle"></span>
+          <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+            ></path>
+          </svg>
+        </button>
 
-        <button id="btn">SIGN UP</button>
+        <!-- <button id="btn">SIGN UP</button> -->
       </div>
     </form>
     <div id="error"></div>
