@@ -38,6 +38,7 @@ form {
 
 .login {
   position: relative;
+  box-shadow: 0px 0px 10px #83AAF2;
   z-index: 0;
   border-radius: 30px;
   height: 37rem;
@@ -73,7 +74,18 @@ form {
   
 
 }
+#title{
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /* Added text animation */
+  animation: titleAnimation 3s ease-in-out infinite alternate;
 
+}
+@keyframes titleAnimation {
+  0% { color:#4f8bfa; }
+  50% { color: #003DAC; }
+  100% { color: #052250; }
+}
 .carousel-track {
   display: flex;
   width: calc(100% * 8); /* 8 images (original + duplicate) */
