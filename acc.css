@@ -4,8 +4,6 @@ body {
   background: white;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat Alternates", sans-serif;
-
 }
 
 header {
@@ -30,20 +28,19 @@ header {
   /* font-family: "Grey Qo", cursive; */
   color: white;
   font-size: 70px;
-  font-family: "Montserrat Alternates", sans-serif;
-
 }
 
 .dropbtn {
-  color: black;
+  color: #02122b;
   background-color: white;
   border: none;
   cursor: pointer;
-  margin-left: -50px;
+  margin-left: -130px;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
+  margin-left: 150px;
   display: inline-block;
   position: relative;
 }
@@ -58,6 +55,7 @@ header {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   margin-left: -130px;
+  font-family: "Satisfy", cursive;
 }
 
 /* Links inside the dropdown */
@@ -70,7 +68,7 @@ header {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #eb4368;
+  background-color: #02122b;
   color: white;
 }
 
@@ -81,7 +79,7 @@ header {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-  color: #eb4368;
+  color: #003dac;
 }
 
 .back {
@@ -90,6 +88,7 @@ header {
 }
 
 .intro {
+  color: #02122b;
   font-size: 90px;
   font-family: "Grey Qo", cursive;
   text-align: center;
@@ -111,10 +110,10 @@ header {
 
 .heading {
   font-size: 50px;
-  color: #eb4368;
+  color: #02122b;
   text-align: center;
   align-items: center;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Satisfy", cursive;
 }
 
 .variety {
@@ -125,27 +124,56 @@ header {
   gap: 20px;
 }
 
-.Neckpieces {
-  background-image: url("/Neckpieces/n2.jpeg");
-  color: white;
-  font-weight: bold;
-  font-size: 25px;
-}
-
 .Neckpieces,
 .Watches,
 .earrings,
 .bags {
+  position: relative; /* Make the container relative to position the text absolutely */
   display: flex;
-  font-size: 30px;
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
   height: 200px;
   width: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  font-family: "Montserrat Alternates", sans-serif;
-  border: 4px solid #eb4368;
+  border: 4px solid #02122b;
+  overflow: hidden; /* Ensure the content stays within the borders */
+}
+
+.neck-img,
+.watch-img,
+.earring-img,
+.bag-img {
+  height: 100%; /* Ensure the image covers the entire container */
+  width: 100%;
+  object-fit: cover; /* Maintain the aspect ratio and cover the area */
+}
+
+.neckpiece-title,
+.bag-title {
+  position: absolute; /* Position the text on top of the image */
+  color: white;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.Neckpieces:hover .neckpiece-title,
+.bags:hover .bag-title,
+.Watches:hover .watch-title,
+.earrings:hover .ear-title {
+  transform: translateY(250px); /* Move the text down, out of the div box */
+}
+
+.watch-title,
+.ear-title {
+  position: absolute; /* Position the text on top of the image */
+  color: black;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  z-index: 1;
+  transition: transform 0.3s ease;
 }
 
 .bags {
@@ -156,7 +184,7 @@ header {
 }
 
 .Watches {
-  color: white;
+  color: black;
   font-size: 25px;
   font-weight: bold;
   background-image: url("/watches/w1.webp");
@@ -170,51 +198,92 @@ header {
 }
 #neck,
 #Bag {
-  background-color: #ffcedd;
+  background-color: #02122b;
   height: 600px;
   border-bottom: 2px solid white;
 }
 
-.heading-1 {
+.heading-1,
+.heading-2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Satisfy", cursive;
   font-size: 60px;
-  color: #96151e;
   text-align: center;
   margin-bottom: 20px;
 }
+
+.heading-1 {
+  color: #83aaf2;
+}
+
+.heading-2 {
+  color: #02122b;
+}
+
 .dis1 {
   background-image: url("/Neckpieces/n1.jpeg");
+}
+
+.dis1:hover {
+  background-image: url("/Neckpieces/n1-a.jpg");
 }
 
 .dis2 {
   background-image: url("/Neckpieces/n2.jpeg");
 }
 
+.dis2:hover {
+  background-image: url("/Neckpieces/n2-a.jpg");
+}
+
 .dis3 {
   background-image: url("/Neckpieces/n9.png");
+}
+
+.dis3:hover {
+  background-image: url("/Neckpieces/n3-a.jpg");
 }
 
 .dis4 {
   background-image: url("/Neckpieces/n4.jpg");
 }
 
+.dis4:hover {
+  background-image: url("/Neckpieces/n4-a.jpg");
+}
+
 .dis5 {
-  background-image: url("/Neckpieces/n5.webp");
+  background-image: url("/Neckpieces/n5.jpg");
+}
+
+.dis5:hover {
+  background-image: url("/Neckpieces/n5-a.jpg");
 }
 
 .dis6 {
   background-image: url("/Neckpieces/n6.webp");
 }
 
+.dis6:hover {
+  background-image: url("/Neckpieces/n6-a.jpg");
+}
+
 .dis7 {
   background-image: url("/Neckpieces/n7.jpg");
 }
 
+.dis7:hover {
+  background-image: url("/Neckpieces/n7-a.jpg");
+}
+
 .dis8 {
   background-image: url("/Neckpieces/n8.webp");
+}
+
+.dis8:hover {
+  background-image: url("Neckpieces/n8-a.jpg");
 }
 
 .dis8,
@@ -257,12 +326,12 @@ header {
 }
 
 .display1 {
-  border: 2px solid #96151e;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f1a2ba;
+  background-color: #c1d5f9;
   color: black;
   height: 350px;
   width: 250px;
@@ -305,14 +374,23 @@ header {
   cursor: pointer;
 }
 
-.cta3 span,
 .cta2 span,
-.cta1 span,
 .cta span,
 .cta4 span,
+.cta6 span {
+  color: #83aaf2;
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta1 span,
 .cta5 span,
-.cta6 span,
+.cta3 span,
 .cta7 span {
+  color: #02122b;
   padding-bottom: 7px;
   letter-spacing: 4px;
   font-size: 14px;
@@ -328,6 +406,7 @@ header {
 .cta5 svg,
 .cta6 svg,
 .cta7 svg {
+  color: #02122b;
   transform: translateX(-8px);
   transition: all 0.3s ease;
 }
@@ -340,6 +419,8 @@ header {
 .cta5:hover svg,
 .cta6:hover svg,
 .cta7:hover svg {
+  color: #02122b;
+
   transform: translateX(0);
 }
 
@@ -351,12 +432,14 @@ header {
 .cta5:active svg,
 .cta6:active svg,
 .cta7:active svg {
+  color: #02122b;
+
   transform: scale(0.9);
 }
 
 .hover-underline-animation {
   position: relative;
-  color: black;
+  color: #83aaf2;
   padding-bottom: 20px;
 }
 
@@ -368,9 +451,30 @@ header {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000000;
+  background-color: #83aaf2;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
+}
+
+.cta1 .hover-underline-animation::after,
+.cta5 .hover-underline-animation::after,
+.cta3 .hover-underline-animation::after,
+.cta7 .hover-underline-animation::after {
+  background-color: #02122b;
+}
+
+.cta svg path,
+.cta2 svg path,
+.cta4 svg path,
+.cta6 svg path {
+  fill: #83aaf2;
+}
+
+.cta1 svg path,
+.cta5 svg path,
+.cta3 svg path,
+.cta7 svg path {
+  fill: #02122b;
 }
 
 .cta3:hover .hover-underline-animation:after,
@@ -382,6 +486,7 @@ header {
 .cta6:hover .hover-underline-animation:after,
 .cta7:hover .hover-underline-animation:after {
   transform: scaleX(1);
+  color: #02122b;
   transform-origin: bottom left;
 }
 
@@ -406,32 +511,63 @@ header {
 .wat1 {
   background-image: url("/watches/w1.webp");
 }
+.wat1:hover {
+  background-image: url("/watches/w1-a.jpg");
+}
 
 .wat2 {
   background-image: url("/watches/w2.webp");
+}
+
+.wat2:hover {
+  background-image: url("/watches/w2-a.jpg");
 }
 
 .wat3 {
   background-image: url("/watches/w3.webp");
 }
 
+.wat3:hover {
+  background-image: url("/watches/w3-a.jpg");
+}
+
 .wat4 {
-  background-image: url("/watches/w4.webp");
+  background-image: url("/watches/w4.jpg");
+}
+
+.wat4:hover {
+  background-image: url("/watches/w4-a.jpg");
 }
 
 .wat5 {
   background-image: url("/watches/w5.webp");
 }
 
+.wat5:hover {
+  background-image: url("/watches/w5-a.jpg");
+}
+
 .wat6 {
   background-image: url("/watches/w6.jpg");
+}
+
+.wat6:hover {
+  background-image: url("/watches/w6-a.jpg");
 }
 .wat7 {
   background-image: url("/watches/w7.webp");
 }
 
+.wat7:hover {
+  background-image: url("/watches/w7-a.jpg");
+}
+
 .wat8 {
   background-image: url("/watches/w8.webp");
+}
+
+.wat8:hover {
+  background-image: url("/watches/w8-a.jpg");
 }
 
 .wat8,
@@ -456,35 +592,66 @@ header {
 }
 
 .b1 {
-  background-image: url("/Bags/b1.jpg");
+  background-image: url("/Bags/b1-a.jpg");
+}
+
+.b1:hover {
+  background-image: url("/Bags/b1-b.jpg");
 }
 
 .b2 {
   background-image: url("/Bags/b2.webp");
 }
 
+.b2:hover {
+  background-image: url("/Bags/b2-a.jpg");
+}
+
 .b3 {
   background-image: url("/Bags/b3.webp");
+}
+
+.b3:hover {
+  background-image: url("/Bags/b3-a.jpg");
 }
 
 .b4 {
   background-image: url("/Bags/b4.webp");
 }
 
+.b4:hover {
+  background-image: url("/Bags/b4-a.jpg");
+}
+
 .b5 {
   background-image: url("/Bags/b5.webp");
+}
+
+.b5:hover {
+  background-image: url("/Bags/b5-a.jpg");
 }
 
 .b6 {
   background-image: url("/Bags/b6.jpg");
 }
 
+.b6:hover {
+  background-image: url("/Bags/b6-a.jpg");
+}
 .b7 {
   background-image: url("/Bags/b7.webp");
 }
 
+.b7:hover {
+  background-image: url("/Bags/b7-a.jpg");
+}
+
 .b8 {
   background-image: url("/Bags/b8.jpg");
+}
+
+.b8:hover {
+  background-image: url("/Bags/b8-a.jpg");
 }
 
 .b1,
@@ -510,31 +677,62 @@ header {
 .e1 {
   background-image: url("/Earrings/e1.webp");
 }
+
+.e1:hover {
+  background-image: url("/Earrings/e1-a.jpg");
+}
 .e2 {
-  background-image: url("/Earrings/e2.webp");
+  background-image: url("/Earrings/e2.jpg");
+}
+
+.e2:hover {
+  background-image: url("/Earrings/e2-a.jpg");
 }
 .e3 {
   background-image: url("/Earrings/e3.jpg");
+}
+
+.e3:hover {
+  background-image: url("/Earrings/e3-a.jpg");
 }
 
 .e4 {
   background-image: url("/Earrings/e4.webp");
 }
 
+.e4:hover {
+  background-image: url("/Earrings/e4-a.jpg");
+}
+
 .e5 {
   background-image: url("/Earrings/e5.webp");
+}
+.e5:hover {
+  background-image: url("/Earrings/e5-a.jpg");
 }
 
 .e6 {
   background-image: url("/Earrings/e6.webp");
 }
 
+.e6:hover {
+  background-image: url("Earrings/e6-a.jpg");
+}
+
 .e7 {
   background-image: url("/Earrings/e7.jpg");
 }
 
+.e7:hover {
+  background-image: url("Earrings/e7-a.jpg");
+}
+
 .e8 {
   background-image: url("/Earrings/e8.jpg");
+}
+
+.e8:hover {
+  background-image: url("/Earrings/e8-a.jpg");
 }
 
 .e1,
@@ -554,20 +752,23 @@ header {
 }
 
 footer {
-  background-color: #ffcedd;
+  background-color: #02122b;
   padding-bottom: 30px;
 }
 
 .footer-heading {
+  padding-top: 20px;
+  color: #c1d5f9;
+  font-family: "Faculty Glyphic", sans-serif;
   text-transform: uppercase;
   font-size: 50px;
   text-align: center;
   font-weight: 500;
-
 }
 
 .line {
   width: 900px;
+  color: #c1d5f9;
 }
 .foot {
   margin-left: 200px;
@@ -576,7 +777,6 @@ footer {
   gap: 120px;
   flex-direction: row;
   font-weight: 500;
-
 }
 .c-hub {
   font-weight: lighter;
@@ -587,15 +787,20 @@ footer {
 }
 
 .c-heading {
+  font-weight: 500;
   font-size: 20px;
+  color: #83aaf2;
 }
 
 .c-content {
-  color: grey;
+  color: #c1d5f9;
   font-style: italic;
 }
 .c-heading1 {
+  font-weight: 500;
+  color: #83aaf2;
   margin-left: 20px;
+  font-size: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -607,7 +812,7 @@ footer {
   display: inline-block;
   height: 37px;
   width: 37px;
-  background-color: #cda9bd;
+  background-color: white;
   color: #311e8f;
   border-radius: 20px;
   margin-left: 16px;
@@ -618,24 +823,24 @@ footer {
 }
 
 .link0 {
-  color: #311e8f;
+  color: #003dac;
   margin-left: 8.5px;
   margin-top: 6px;
 }
 
 .link2 {
-  color: #311e8f;
+  color: #003dac;
   margin-left: 8.5px;
   margin-top: 6px;
 }
 
 .link1 {
-  color: #311e8f;
+  color: #003dac;
   margin-left: 10px;
   margin-top: 7px;
 }
 .link {
-  color: #311e8f;
+  color: #003dac;
   margin-left: 7px;
   margin-top: 7px;
 }
@@ -644,7 +849,7 @@ footer {
 .link1:hover,
 .link:hover,
 .link2:hover {
-  color: #ff4da6;
+  color: #83aaf2;
 }
 
 .mapping {
@@ -659,7 +864,6 @@ footer {
   display: flex;
   flex-direction: column;
   font-weight: 700;
-
 }
 
 .n-heading {
@@ -667,11 +871,12 @@ footer {
   font-family: "Montserrat Alternates", sans-serif;
   text-transform: uppercase;
   font-size: 20px;
-  color: black;
+  color: #83aaf2;
 }
 .input-email {
+  padding: 5px;
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #83aaf2;
 }
 
 .input-email:hover {
@@ -685,20 +890,21 @@ footer {
 .sign-up {
   margin-top: 20px;
   background-color: transparent;
-  color: black;
+  color: #83aaf2;
   padding: 10px;
   width: 150px;
-  border: 2px solid grey;
+  border: 2px solid #83aaf2;
 }
 
 .sign-up:hover {
-  border: 2px solid black;
+  background-color: #c1d5f9;
+  border: 2px solid #c1d5f9;
   color: black;
 }
 .copy {
   margin-top: 120px;
   font-size: 10px;
-  color: black;
+  color: #83aaf2;
 }
 
 .location {
@@ -706,9 +912,8 @@ footer {
   width: 400px;
 }
 
-body{
+body {
   font-family: "Montserrat Alternates", sans-serif;
-
 }
 @media screen and (max-width: 915px) {
   .intro {
@@ -785,10 +990,13 @@ body{
   }
 
   .foot {
-    margin-left: 90px;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 10px;
+    justify-content: space-around;
+    margin-left: 10px;
+    gap: 2px;
   }
+
   .line {
     width: 300px;
   }
@@ -801,12 +1009,10 @@ body{
     width: 350px;
   }
   .input-email {
-    width: 250px;
+    width: 300px;
     margin-left: -100px;
   }
-  .connect {
-    margin-left: -20px;
-  }
+
   .copy {
     display: none;
   }
