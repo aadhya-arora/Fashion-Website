@@ -127,12 +127,13 @@ body {
 #front {
   background-image: url("/backgrounds/bg16.webp");
   height: 750px;
-  width: 1270px;
+  width: 1260px;
   margin-left: 260px;
   display: flex;
   background-repeat: no-repeat;
   background-size: 1270px 750px;
   border-bottom: 2px solid #96151e;
+  
 }
 .name {
   font-size: 200px;
@@ -141,6 +142,9 @@ body {
   font-family: "Grey Qo", cursive;
   margin-left: 650px;
   cursor: pointer;
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
 }
 
 .tagline {
@@ -150,7 +154,53 @@ body {
   /* font-style: italic; */
   margin-top: 450px;
   margin-left: -350px;
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
 }
+
+.name:first-of-type {    /* For increasing performance 
+  ID/Class should've been used. 
+  For a small demo 
+  
+  it's okaish for now */
+  width: 450px;
+animation: showup 6s infinite;
+}
+
+.tagline:last-of-type {
+width:0px;
+animation: reveal 6s infinite;
+}
+
+.tagline:last-of-type span {
+margin-left:-355px;
+animation: slidein 6s infinite;
+}
+
+@keyframes showup {
+0% {opacity:0;}
+20% {opacity:1;}
+80% {opacity:1;}
+100% {opacity:1;}
+}
+
+@keyframes slidein {
+0% { margin-left:-100px; }
+20% { margin-left:-100px; }
+35% { margin-left:0px; }
+100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+0% {opacity:0;width:0px;}
+20% {opacity:1;width:0px;}
+/* 30% {width:355px;} */
+80% {opacity:1;}
+80% {width:655px;}
+/* 100% {opacity:0;width:355px;} */
+}
+
 
 .profile {
   text-align: center;
@@ -718,10 +768,10 @@ footer {
   }
 }
 
-@media screen and (max-width: 915px) {
-  .navbar {
+@media screen and (max-width: 769px) {
+  nav.navbar {
     height: 80px;
-    width: 97%;
+    width: 100%;
     display: flex;
     flex-direction: row;
   }
@@ -736,12 +786,14 @@ footer {
   .profile-pic {
     height: 50px;
     width: 50px;
+    margin-left: 10px;
     border: 4px solid #7f5d70;
   }
   .text-light {
     margin-top: -10px;
     margin-left: 30px;
     font-size: 60px;
+    justify-content: space-between;
   }
   .media-links {
     display: none;
@@ -758,7 +810,7 @@ footer {
     font-size: larger;
   }
   .dropbtn {
-    margin-left: -20px;
+    margin-left: 300px;
   }
   .dropdown-content {
     top: 40px;
@@ -774,6 +826,7 @@ footer {
     border: none;
     background-attachment: fixed;
     margin-top: 80px;
+    
   }
   .name {
     display: none;
@@ -786,11 +839,12 @@ footer {
     display: none;
   }
   .title1-2 {
-    margin-left: 15px;
-    font-size: 20px;
+    margin-left: 75px;
+    font-size: 25px;
     display: inline;
   }
   .t1-2 {
+   
     margin-left: 155px;
     display: inline;
   }
@@ -808,10 +862,12 @@ footer {
   }
   .im {
     margin-top: 20px;
-    display: flex;
+    display: flex; 
+    margin-left: 120px;
   }
   .im-2 {
     display: flex;
+    margin-left: 215px;
   }
   #abt {
     margin-left: 0;
@@ -842,7 +898,9 @@ footer {
   .myname {
     margin-left: 80px;
   }
-
+.button1{
+  margin-left: 86px;
+}
   .expbtn1 {
     display: flex;
   }
@@ -866,7 +924,7 @@ footer {
     margin-left: 0;
   }
   .mapping {
-    margin-left: 20px;
+    margin-left: 70px;
     flex-direction: column;
     gap: 10px;
   }

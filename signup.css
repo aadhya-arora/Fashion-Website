@@ -6,29 +6,21 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #ee7e9c;
+  /* background: #ee7e9c; */
   align-items: center;
   font-family: "Montserrat Alternates", sans-serif;
 }
 
-header {
-  text-align: center;
-  font-size: 110px;
-  /* justify-content: space-between; */
-  font-family: "Montserrat Alternates", sans-serif;
-  margin-top: -10px;
-  margin-bottom: px;
-  color: white;
-  width: 100%;
+input{
+  margin-left: 31rem;
+  padding: 5px;
 }
 
 form {
   width: 60rem;
-  background-color: #ee7e9c;
-  /* padding-bottom: 10px; */
 }
 #backvid{
-  opacity: 50%;
+
   height: 125%;
   position: fixed;
   z-index: -100;
@@ -45,9 +37,10 @@ form {
 
 .login {
   position: relative;
+  z-index: 0;
   border-radius: 30px;
   height: 37rem;
-  /* margin-top: 20px; */
+  margin-top:5rem;
   padding-left: 10px;
   padding-right: 90px;
   background-color: rgba(255, 255, 255, 0.6);
@@ -61,16 +54,36 @@ form {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/backgrounds/shop1.jpg");
+
   background-size: cover;
   background-position: center;
   z-index: -1;
 }
-
+#cara{
+ 
+  position: absolute;
+  z-index: 99;
+  height: 1rem;
+}
+#cara img{
+  height: 1rem;
+}
 .name {
   display: flex;
-  gap: 150px;
-  font-size: 20px;
+  flex-wrap: wrap;
+
+}
+.name input{
+  margin-left: 31rem;
+   padding: 5px;
+   width: 400px;
+   font-family: "Montserrat Alternates", sans-serif;
+}
+.name p {
+  margin-left: 31rem;
+}
+p{
+  margin-left: 31rem;
 }
 .text {
   margin-left: 10px;
@@ -81,86 +94,43 @@ form {
 .email,
 #input {
   width: 400px;
-  padding: 10px;
+  padding: 5px;
   border: none;
   font-family: "Montserrat Alternates", sans-serif;
 }
-#input {
-  padding-right: 32rem;
-  margin-left: 10px;
-}
-.input {
-  margin-top: -10px;
-  display: flex;
-  gap: 60px;
-  /* font-family: "Montserrat Alternates", sans-serif; */
+#caraousel{
+  height: 300px;
 }
 
-#LASTNAME {
-  margin-left: -5.5rem;
-}
-
-#dob {
-  padding-right: 32rem;
-  margin-left: 10px;
-}
-#password {
-  padding-right: 32rem;
-  margin-left: 10px;
-}
-#username {
-  padding-right: 32rem;
-  margin-left: 10px;
-}
-/* #btn {
-  margin-left: 20rem;
-  font-family: "Montserrat Alternates", sans-serif;
-  background-color: #ee7e9c;
-  margin-top: 20px;
-  font-size: 20px;
-  height: 40px;
-  width: 300px;
-  border: none;
-  border-radius: 9px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: white;
-  cursor: pointer;
-}
-#btn:hover {
-  background-color: #a5173d;
-  font-weight: 600;
-  text-shadow: 0px 0px 10px;
-} */
 .animated-button {
   position: relative;
   display: flex;
   align-items: center;
-  /* gap: 4px; */
-  margin-top: 17px;
-  /* margin-bottom: 10px; */
-  margin-left: 280px;
-  /* margin-right: -10px; */
-  padding: px 20px;
+  
+  margin-top: 2.5rem;
+ 
+  margin-left: 33rem;
+  
+  padding: 0px 10px;
   border: 4px solid;
   border-color: transparent;
   font-size: 16px;
   background-color: inherit;
-  border-radius: 100px;
+  border-radius: 80px;
   font-weight: 600;
-  color: rgb(221, 84, 107);
-  box-shadow: 0 0 0 2px pink;
+  color: #02122B;
+  box-shadow: 0 0 0 2px #C1D5F9;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  margin-bottom: 10px;
+
 
 }
 
 .animated-button svg {
   position: absolute;
   width: 24px;
-  fill: pink;
+  fill: #83AAF2;
   z-index: 9;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -180,7 +150,7 @@ form {
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  background-color: pink;
+  background-color: #83AAF2;
   border-radius: 50%;
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -213,12 +183,12 @@ form {
 }
 
 .animated-button:hover svg {
-  fill: #212121;
+  fill: #83AAF2;
 }
 
 .animated-button:active {
   scale: 0.95;
-  box-shadow: 0 0 0 4px pink;
+  box-shadow: 0 0 0 4px #83AAF2;
   
 }
 
