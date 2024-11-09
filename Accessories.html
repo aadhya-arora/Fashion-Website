@@ -45,6 +45,11 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
   <body>
     <header style="display: flex">
       <div class="dropdown">
@@ -59,6 +64,7 @@
         </div>
       </div>
       <div class="intro">Accessories</div>
+      <div id="search-bar"></div>
     </header>
     <div class="banner2">
       <div class="banner2-text">Discover your style</div>
@@ -100,27 +106,31 @@
     </div>
 
     <section id="neck">
-      <div class="heading-1">NECKPIECES</div>
+      <div class="heading-1" id="neckpieces">NECKPIECES</div>
       <div class="disp">
         <div class="display1">
           <div class="dis1">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Irridescent Blue Lacerta Neckpiece</p>
+          <p class="text" id="irridescent-blue-lacerta-neckpiece">
+            Irridescent Blue Lacerta Neckpiece
+          </p>
           <p class="price">4,200 INR</p>
         </div>
         <div class="display1">
           <div class="dis2">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Beauteous Beady <br />Neckpiece</p>
+          <p class="text" id="beauteous-beady-neckpiece">
+            Beauteous Beady <br />Neckpiece
+          </p>
           <p class="price">3,200 INR</p>
         </div>
         <div class="display1">
           <div class="dis3">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">
+          <p class="text" id="delicate-blue-neckpiece">
             Delicate Blue<br />
             Neckpiece
           </p>
@@ -131,7 +141,7 @@
           <div class="dis4">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">
+          <p class="text" id="delicate-emerald-neckpiece">
             Delicate Emerald <br />
             Neckpiece
           </p>
@@ -162,7 +172,7 @@
           <div class="dis5">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">
+          <p class="text" id="enchanting-delicate-neckpiece">
             Enchanting Delicate<br />
             Neckpiece
           </p>
@@ -173,7 +183,9 @@
           <div class="dis6">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Pink Sapphire Double Heart Neckpiece</p>
+          <p class="text" id="pink-sapphire-double-heart-neckpiece">
+            Pink Sapphire Double Heart Neckpiece
+          </p>
           <p class="price">9,577 INR</p>
         </div>
 
@@ -181,7 +193,9 @@
           <div class="dis7">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Delicate Waves Diamond Neckpiece</p>
+          <p class="text" id="delicate-waves-diamond-neckpiece">
+            Delicate Waves Diamond Neckpiece
+          </p>
           <p class="price">10,115 INR</p>
         </div>
 
@@ -189,7 +203,9 @@
           <div class="dis8">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Glamorous Infinity Heart Neckpiece</p>
+          <p class="text" id="glamorous-infinity-heart-neckpiece">
+            Glamorous Infinity Heart Neckpiece
+          </p>
           <p class="price">3,500 INR</p>
         </div>
       </div>
@@ -220,7 +236,9 @@
           <div class="wat1">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Fancy Leather Strap <br />Watch</p>
+          <p class="text" id="fancy-leather-strap-watch">
+            Fancy Leather Strap <br />Watch
+          </p>
           <p class="price">5,490 INR</p>
         </div>
 
@@ -228,7 +246,9 @@
           <div class="wat2">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Rose Gold Bracelet <br />Watch</p>
+          <p class="text" id="rose-gold-bracelet-watch">
+            Rose Gold Bracelet <br />Watch
+          </p>
           <p class="price">2,490 INR</p>
         </div>
 
@@ -236,7 +256,7 @@
           <div class="wat3">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">
+          <p class="text" id="acnos-fancy-bracelet-watch">
             Acnos Fancy Bracelet <br />
             Watch
           </p>
@@ -278,7 +298,9 @@
           <div class="wat5">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Elegant Greeny <br />Watch</p>
+          <p class="text" id="elegant-greeny-watch">
+            Elegant Greeny <br />Watch
+          </p>
           <p class="price">7,320 INR</p>
         </div>
 
@@ -286,7 +308,7 @@
           <div class="wat6">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">
+          <p class="text" id="delicate-in-black-watch">
             Delicate in Black <br />
             Watch
           </p>
@@ -297,7 +319,7 @@
           <div class="wat7">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">
+          <p class="text" id="old-style-delicate-watch">
             Old style Delicate <br />
             Watch
           </p>
@@ -307,7 +329,9 @@
           <div class="wat8">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Alluring Hearty <br />Watch</p>
+          <p class="text" id="alluring-hearty-watch">
+            Alluring Hearty <br />Watch
+          </p>
           <p class="price">4,300 INR</p>
         </div>
       </div>
@@ -332,13 +356,15 @@
     </section>
 
     <section id="Bag">
-      <div class="heading-1">HANDBAGS</div>
+      <div class="heading-1" id="handbags">HANDBAGS</div>
       <div class="disp">
         <div class="display1">
           <div class="b1">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Black Flower Embroidered Handbag</p>
+          <p class="text" id="black-flower-embroidered-handbag">
+            Black Flower Embroidered Handbag
+          </p>
           <p class="price">4,200 INR</p>
         </div>
 
@@ -346,7 +372,9 @@
           <div class="b2">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Alluring Pink <br />Handbag</p>
+          <p class="text" id="alluring-pink-handbag">
+            Alluring Pink <br />Handbag
+          </p>
           <p class="price">2,850 INR</p>
         </div>
 
@@ -354,7 +382,9 @@
           <div class="b3">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Formal In Grey <br />Handbag</p>
+          <p class="text" id="formal-in-grey-handbag">
+            Formal In Grey <br />Handbag
+          </p>
           <p class="price">2,050 INR</p>
         </div>
 
@@ -362,7 +392,9 @@
           <div class="b4">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Faux Leather Burgandy Slingbag</p>
+          <p class="text" id="faux-leather-burgandy-handbag">
+            Faux Leather Burgandy Slingbag
+          </p>
           <p class="price">1000 INR</p>
         </div>
       </div>
@@ -442,13 +474,15 @@
     </section>
 
     <section id="Ear">
-      <div class="heading-2">EARRINGS</div>
+      <div class="heading-2" id="earrings">EARRINGS</div>
       <div class="disp">
         <div class="display1">
           <div class="e1">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Beautiful In White Butterfly Earrings</p>
+          <p class="text" id="beautiful-in-white-butterfly-earrings">
+            Beautiful In White Butterfly Earrings
+          </p>
           <p class="price">1,050 INR</p>
         </div>
 
@@ -456,7 +490,7 @@
           <div class="e2">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">
+          <p class="text" id="delicate-blue-hue-earrings">
             Delicate Blue Hue<br />
             Earrings
           </p>
@@ -467,14 +501,18 @@
           <div class="e3">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Elegant Star Zirconia Stud Earring</p>
+          <p class="text" id="elegant-star-zirconia-stud-earring">
+            Elegant Star Zirconia Stud Earring
+          </p>
           <p class="price">1,250 INR</p>
         </div>
         <div class="display1">
           <div class="e4">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Elegant Emerald Gold <br />Earrings</p>
+          <p class="text" class="elegant-emerald-gold-earrings">
+            Elegant Emerald Gold <br />Earrings
+          </p>
           <p class="price">1,050 INR</p>
         </div>
       </div>
@@ -510,7 +548,9 @@
           <div class="e6">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Arizonal Blue Studded Earrings</p>
+          <p class="text" id="arizonal-blue-studded-earrings">
+            Arizonal Blue Studded Earrings
+          </p>
           <p class="price">3,050 INR</p>
         </div>
 
@@ -518,7 +558,9 @@
           <div class="e7">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Multicolored Brass And Pearl Earrings</p>
+          <p class="text" id="multicolored-brass-and-pearl-earrings">
+            Multicolored Brass And Pearl Earrings
+          </p>
           <p class="price">1,070 INR</p>
         </div>
 
@@ -526,7 +568,7 @@
           <div class="e8">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">
+          <p class="text" id="soho-designer-drop-earrings">
             Soho Designer Drop<br />
             Earrings
           </p>
@@ -644,5 +686,141 @@
       </div>
     </footer>
   </body>
+
+  <script type="text/babel">
+    // Sample data to search from (you can replace this with your data)
+    const items = [
+      "Watches",
+      "Handbags",
+      "Neckpieces",
+      "Earrings",
+      "Irridescent-Blue-Lacerta-Neckpiece",
+      "Beauteous-Beady-Neckpiece",
+      "Delicate-Blue-Neckpiece",
+      "Delicate-Emerald-Neckpiece",
+      "Enchanting-Delicate-Neckpiece",
+      "Pink-Sapphire-Double-Heart-Neckpiece",
+      "Delicate-Waves-Diamond-Neckpiece",
+      "Glamorous-Infinity-Heart-Neckpiece",
+      "Fancy-Leather-Strap-Watch",
+      "Rose-Gold-Bracelet-Watch",
+      "Acnos-Fancy-Bracelet-Watch",
+      "Stylish-Colorful-Hearty-Watch",
+      "Elegant-Nature-Greeny-Watch",
+      "Delicate-in-Black-Watch",
+      "Old-style-Delicate-Watch",
+      "Alluring-Hearty-Watch",
+      "Black-Flower-Embroidered-Handbag",
+      "Alluring-Pink-Handbag",
+      "Faux-Leather-Burgandy-Handbag",
+      "Formal-In-Grey-Handbag",
+      "Beautiful-In-White-Butterfly-Earrings",
+      "Delicate-Blue-Hue-Earrings",
+      "Elegant-Star-Zirconia-Stud-Earring",
+      "Elegant-Emerald-Gold-Earrings",
+      "Arizonal-Blue-Studded-Earrings",
+      "Multicolored-Brass-And-Pearl-Earrings",
+      "Soho-Designer-Drop-Earrings",
+    ];
+    function SearchBar() {
+      const [query, setQuery] = React.useState("");
+      const [filteredItems, setFilteredItems] = React.useState([]);
+
+      const handleSearch = (event) => {
+        const searchQuery = event.target.value;
+        setQuery(searchQuery);
+
+        // Filter items based on the query
+        if (searchQuery.trim() === "") {
+          setFilteredItems([]);
+        } else {
+          const filtered = items.filter((item) =>
+            item.toLowerCase().includes(searchQuery.toLowerCase())
+          );
+          setFilteredItems(filtered);
+        }
+      };
+
+      const handleItemClick = (item) => {
+        // Scroll to the section that matches the item
+        const section = document.getElementById(item.toLowerCase());
+        if (section) {
+          section.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      };
+
+      return (
+        <div style={{ position: "relative" }}>
+          <input
+            type="text"
+            placeholder="Search..."
+            value={query}
+            onChange={handleSearch}
+            style={{
+              padding: "8px",
+              borderRadius: "4px",
+              border: "1px solid #ccc",
+              marginLeft: "-280px", // Adjusted for positioning
+              fontSize: "14px",
+              width: "200px",
+            }}
+          />
+          {filteredItems.length > 0 && (
+            <ul
+              style={{
+                listStyle: "none",
+                margin: 0,
+                padding: "10px",
+                border: "1px solid #ccc",
+                borderRadius: "4px",
+                backgroundColor: "#fff",
+                position: "absolute",
+                top: "40px",
+                left: "-280px", // Align dropdown with the search bar
+                width: "200px",
+                boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+                zIndex: 1000,
+              }}
+            >
+              {filteredItems.map((item, index) => (
+                <li
+                  key={index}
+                  style={{
+                    padding: "5px",
+                    cursor: "pointer",
+                    borderBottom: "1px solid #f0f0f0",
+                    color: "#333", // Change text color here
+                    fontSize: "14px", // Optional: Set font size
+                  }}
+                  onClick={() => {
+                    setQuery(item); // Set query to the selected item
+                    setFilteredItems([]); // Close the dropdown
+                    handleItemClick(item); // Scroll to the matching section
+                  }}
+                  onMouseOver={(e) => {
+                    e.target.style.backgroundColor = "#f0f0f0"; // Hover effect
+                    e.target.style.color = "#007bff"; // Hover color change
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.backgroundColor = "transparent"; // Reset hover effect
+                    e.target.style.color = "#333"; // Reset text color
+                  }}
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      );
+    }
+
+    // Render the SearchBar component in the header
+    ReactDOM.render(<SearchBar />, document.getElementById("search-bar"));
+  </script>
+
   <script src="acc.js"></script>
 </html>
