@@ -62,7 +62,6 @@ function hide3() {
   document.querySelector(".cta7").style.display = "none";
 }
 
-// Sample data to search from (you can replace this with your data)
 const items = [
   "Watches",
   "Handbags",
@@ -104,7 +103,6 @@ function SearchBar() {
     const searchQuery = event.target.value;
     setQuery(searchQuery);
 
-    // Filter items based on the query
     if (searchQuery.trim() === "") {
       setFilteredItems([]);
     } else {
@@ -116,7 +114,6 @@ function SearchBar() {
   };
 
   const handleItemClick = (item) => {
-    // Scroll to the section that matches the item
     const section = document.getElementById(item.toLowerCase());
     if (section) {
       section.scrollIntoView({
@@ -137,7 +134,7 @@ function SearchBar() {
           padding: "8px",
           borderRadius: "4px",
           border: "1px solid #ccc",
-          marginLeft: "-280px", // Adjusted for positioning
+          marginLeft: "-280px",
           fontSize: "14px",
           width: "200px",
         }}
@@ -153,7 +150,7 @@ function SearchBar() {
             backgroundColor: "#fff",
             position: "absolute",
             top: "40px",
-            left: "-280px", // Align dropdown with the search bar
+            left: "-280px",
             width: "200px",
             boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
             zIndex: 1000,
@@ -166,21 +163,21 @@ function SearchBar() {
                 padding: "5px",
                 cursor: "pointer",
                 borderBottom: "1px solid #f0f0f0",
-                color: "#333", // Change text color here
-                fontSize: "14px", // Optional: Set font size
+                color: "#333",
+                fontSize: "14px",
               }}
               onClick={() => {
-                setQuery(item); // Set query to the selected item
-                setFilteredItems([]); // Close the dropdown
-                handleItemClick(item); // Scroll to the matching section
+                setQuery(item);
+                setFilteredItems([]);
+                handleItemClick(item);
               }}
               onMouseOver={(e) => {
-                e.target.style.backgroundColor = "#f0f0f0"; // Hover effect
-                e.target.style.color = "#007bff"; // Hover color change
+                e.target.style.backgroundColor = "#f0f0f0";
+                e.target.style.color = "#007bff";
               }}
               onMouseOut={(e) => {
-                e.target.style.backgroundColor = "transparent"; // Reset hover effect
-                e.target.style.color = "#333"; // Reset text color
+                e.target.style.backgroundColor = "transparent";
+                e.target.style.color = "#333";
               }}
             >
               {item}
@@ -192,5 +189,4 @@ function SearchBar() {
   );
 }
 
-// Render the SearchBar component in the header
 ReactDOM.render(<SearchBar />, document.getElementById("search-bar"));
