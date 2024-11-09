@@ -27,7 +27,7 @@ header {
   font-family: "Montserrat Alternates", sans-serif;
   padding-top: 2rem;
   /* margin-bottom: -10px; */
-  width: 100%;
+  /* width: 100%; */
     letter-spacing: 2px;
     text-transform: uppercase;
     /* Added text animation */
@@ -42,7 +42,7 @@ header {
 
 .login-container {
   display: flex;
-  /* width: 00%; */
+  /* width: 100%; */
 }
 
 .login {
