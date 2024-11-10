@@ -1,0 +1,212 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cormorant", serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  color: #02122B;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px 0px;
+ 
+}
+
+.hero-image {
+  width: 100%;
+  /* height: 20%; */
+  margin-left: 1rem;
+  /* margin-right: 10rem; */
+  /* border-radius: 8px; */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 120px;
+  /* transform: translate(-50%, -50%); */
+  /* background-color: rgba(2, 18, 43, 0.6); */
+  color: white;
+  /* text-shadow:#02122B 0px 0px 5px; */
+  /* padding: 20px 40px; */
+  /* border-radius: 8px; */
+  /* text-align: center; */
+}
+
+.hero-overlay h1 {
+  font-size: 3.2rem;
+  font-weight: 500;
+letter-spacing: 5px;
+}
+
+/* Contact Info Section */
+.contact-info {
+  text-align: left;
+  margin: 50px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 1;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  margin-top: 20px;
+  background: #fff;
+  border: 6px solid #02122B;
+  box-shadow: 12px 12px 0 #02122B;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 17px 17px 0 #02122B;
+}
+
+.card__title {
+  font-size: 32px;
+  font-weight: 900;
+  color: #02122B;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 3px;
+  background-color: #02122B;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+
+.card:hover .card__title::after {
+  transform: translateX(0);
+}
+
+.card__content {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card__form input {
+  padding: 10px;
+  border: 3px solid #02122B;
+  font-size: 16px;
+  font-family: inherit;
+  transition: transform 0.3s;
+  width: calc(100% - 26px); /* Adjust for padding and border */
+}
+
+.card__form input:focus {
+  outline: none;
+  transform: scale(1.05);
+  background-color:#02122B;
+  color: #ffffff;
+}
+
+.card__button {
+  border: 3px solid #000;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  left: 20%;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+  width: 50%;
+  height: 100%;
+}
+
+.card__button::before {
+  content: "Sure?";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 105%;
+  background-color: #0044C3;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.card__button:hover::before {
+  transform: translateY(0);
+}
+
+.card__button:active {
+  transform: scale(0.95);
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(2px, 2px);
+  }
+  25% {
+    transform: translate(-2px, -2px);
+  }
+  50% {
+    transform: translate(-2px, 2px);
+  }
+  75% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(2px, 2px);
+  }
+}
+
+.glitch {
+  animation: glitch 0.3s infinite;
+}
+
+.parent{
+  display: flex;
+  flex-direction: row;
+  gap: 18rem;
+}
+.parent h3{
+  font-size: xx-large;
+  padding-bottom: 10px;
+}
