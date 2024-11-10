@@ -74,7 +74,7 @@ body {
 }
 
 .dropdown-content {
-  border-radius: 30px;
+  /* border-radius: 30px; */
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -92,7 +92,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: #02122b;
+  background-color:#02122B;
   color: white;
 }
 
