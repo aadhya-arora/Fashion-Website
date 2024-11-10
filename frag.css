@@ -163,15 +163,19 @@ body {
 }
 
 .p1 {
+  text-transform: uppercase;
   padding-top: 20px;
   text-align: center;
   /* font-family: "Satisfy", cursive; */
   font-family: "Cormorant", serif;
   font-size: 60px;
   color: #83aaf2;
+  font-weight: 700;
 }
 
 .p2 {
+  font-weight: 700;
+  text-transform: uppercase;
   text-align: center;
   font-family: "Cormorant", serif;
   /* font-family: "Satisfy", cursive; */
@@ -314,7 +318,6 @@ body {
   width: 220px;
   background-size: cover;
   background-position: center;
-
 }
 
 #beauty {
@@ -456,7 +459,7 @@ body {
 
 .cta1 span,
 .cta3 span {
-  color: #83aaf2;
+  color: #02122b;
 }
 
 .hover-underline-animation {
@@ -488,8 +491,8 @@ body {
 .cta3:hover .hover-underline-animation:after {
   transform: scaleX(1);
   transform-origin: bottom left;
-  color: #83aaf2;
-  background-color: #83aaf2;
+  color: #02122b;
+  background-color: #02122b;
 }
 
 .cta2 svg,
@@ -501,7 +504,7 @@ body {
 
 .cta3 svg,
 .cta1 svg {
-  color: #83aaf2;
+  color: #02122b;
   transform: translateX(-8px);
   transition: all 0.3s ease;
 }
@@ -514,7 +517,7 @@ body {
 
 .cta3:hover svg,
 .cta1:hover svg {
-  color: #83aaf2;
+  color: #02122b;
   transform: translateX(0);
 }
 
@@ -526,7 +529,7 @@ body {
 
 .cta1:active svg,
 .cta3:active svg {
-  color: #83aaf2;
+  color: #02122b;
   transform: scale(0.9);
 }
 
@@ -537,7 +540,7 @@ body {
 
 .cta1 svg path,
 .cta3 svg path {
-  fill: #83aaf2;
+  fill: #02122b;
 }
 footer {
   background-color: #02122b;
