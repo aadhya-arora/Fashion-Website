@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const lastName = document.getElementById("last-name").value;
     const username = document.getElementById("username").value;
     const phone = phoneInput.value;
-    const dob = document.getElementById("dob").value;
     const password = document.getElementById("password").value;
 
     const user = {
@@ -42,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
       lastName,
       username,
       phone,
-      dob,
       password,
     };
 
@@ -52,5 +50,3 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "login.html";
   });
 });
-
-

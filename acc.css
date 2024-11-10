@@ -134,13 +134,13 @@ header {
 .Watches,
 .earrings,
 .bags {
-  position: relative; /* Make the container relative to position the text absolutely */
+  position: relative;
   display: flex;
-  justify-content: center; /* Center the text horizontally */
-  align-items: center; /* Center the text vertically */
+  justify-content: center;
+  align-items: center;
   height: 200px;
   width: 200px;
-  border: 2px solid #02122b;
+  border: 4px solid #02122b;
   overflow: hidden; /* Ensure the content stays within the borders */
 }
 
@@ -148,14 +148,14 @@ header {
 .watch-img,
 .earring-img,
 .bag-img {
-  height: 100%; /* Ensure the image covers the entire container */
+  height: 100%;
   width: 100%;
-  object-fit: cover; /* Maintain the aspect ratio and cover the area */
+  object-fit: cover;
 }
 
 .neckpiece-title,
 .bag-title {
-  position: absolute; /* Position the text on top of the image */
+  position: absolute;
   color: white;
   font-weight: bold;
   font-family: "Cormorant", serif;

@@ -7,7 +7,7 @@ window.onload = function () {
     let storedUserData = JSON.parse(localStorage.getItem("userData"));
     if (storedUserData && storedUserData.firstName) {
       let msg = document.getElementById("welcome-msg");
-      msg.innerText = "Welcome " + storedUserData.firstName + "❤️";
+      msg.innerText = "Welcome " + storedUserData.firstName + "💙";
     }
   } else {
     modal.style.display = "none";
