@@ -123,7 +123,7 @@
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
           <p class="text" id="irridescent-blue-lacerta-neckpiece">
-            Irridescent Blue Lacerta <br>Neckpiece
+            Irridescent Blue Lacerta <br />Neckpiece
           </p>
           <p class="price">4,200 INR</p>
         </div>
@@ -674,7 +674,7 @@
             placeholder="Enter your email"
             class="input-email"
           />
-          <button class="sign-up">Subscribe</button>
+          <button class="sign-up" onclick="subscribed()">Subscribe</button>
           <div class="copy">
             <i class="fa fa-copyright fa-lg">
               Girlies India 2024.All rights reserved</i
@@ -760,38 +760,38 @@
 
       return (
         <div style={{ position: "relative" }}>
-  <input
-    type="text"
-    placeholder="Search..."
-    value={query}
-    onChange={handleSearch}
-    style={{
-      padding: "10px 30px",
-      borderRadius: "25px",
-      border: "2px solid #ccc",
-      fontSize: "14px",
-      width: "200px",
-      marginRight:"50px",
-      transition: "width 0.3s ease, box-shadow 0.3s ease",
-      outline: "none",
-      boxShadow: "1px 2px 4px rgba(0, 0, 0, 0.1)",
-    }}
-    onFocus={(e) => {
-      e.target.style.width = "300px";
-      e.target.style.boxShadow = "0 4px 15px rgba(0, 150, 255, 0.4)";
-    }}
-    onBlur={(e) => {
-      e.target.style.width = "200px";
-      e.target.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.1)";
-    }}
-  />
+          <input
+            type="text"
+            placeholder="Search..."
+            value={query}
+            onChange={handleSearch}
+            style={{
+              padding: "10px 30px",
+              borderRadius: "25px",
+              border: "2px solid #ccc",
+              fontSize: "14px",
+              width: "200px",
+              marginRight: "50px",
+              transition: "width 0.3s ease, box-shadow 0.3s ease",
+              outline: "none",
+              boxShadow: "1px 2px 4px rgba(0, 0, 0, 0.1)",
+            }}
+            onFocus={(e) => {
+              e.target.style.width = "300px";
+              e.target.style.boxShadow = "0 4px 15px rgba(0, 150, 255, 0.4)";
+            }}
+            onBlur={(e) => {
+              e.target.style.width = "200px";
+              e.target.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.1)";
+            }}
+          />
           {filteredItems.length > 0 && (
             <ul
               style={{
                 listStyle: "none",
                 margin: 0,
                 padding: "10px",
-                fontSize:"20px",
+                fontSize: "20px",
                 border: "2px solid #ccc",
                 borderRadius: "25px",
                 backgroundColor: "#fff",

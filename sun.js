@@ -33,3 +33,6 @@ function hide1() {
   document.querySelector(".cta2").style.display = "flex";
   document.querySelector(".cta4").style.display = "none";
 }
+function subscribed() {
+  alert("You have subscribed to our newsletter successfully");
+}
