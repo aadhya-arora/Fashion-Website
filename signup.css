@@ -162,14 +162,18 @@ p{
 #caraousel{
   height: 300px;
 }
-
+.eveee{
+  margin-left: 38rem;
+  font-size: 16px ;
+  font-family: "Cormorant", serif;
+}
 #animated-button {
   position: relative;
   display: flex;
   align-items: center;
   
-  margin-top: 2.5rem;
- 
+  margin-top: 2rem;
+  font-family: "Cormorant", serif;
   margin-left: 33rem;
   
   padding: 0px 10px;
@@ -220,6 +224,8 @@ p{
 #animated-button .text {
   position: relative;
   z-index: 1;
+  font-family: "Cormorant", serif;
+
   transform: translateX(-12px);
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }

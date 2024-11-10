@@ -8,7 +8,8 @@ body {
   justify-content: center;
   /* background: #ee7e9c; */
   align-items: center;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Cormorant", serif;
+  /* font-family: "Montserrat Alternates", sans-serif; */
 }
 
 #backvid{
@@ -24,7 +25,8 @@ header {
   color: white;
   font-size: 90px;
   font-weight: 900;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Cormorant", serif;
+  /* font-family: "Montserrat Alternates", sans-serif; */
   padding-top: 2rem;
   /* margin-bottom: -10px; */
   /* width: 100%; */
