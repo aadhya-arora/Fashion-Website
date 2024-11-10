@@ -87,7 +87,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: #6d213c;
+  background-color: #02122b;
   color: white;
 }
 
@@ -96,7 +96,7 @@ body {
 }
 
 .dropdown:hover .dropbtn {
-  color: #6d213c;
+  color: #003dac;
 }
 
 .option {
@@ -111,7 +111,7 @@ body {
 .Beauty {
   font-family: "CenturyGothic", "CenturyGothic-fallback", Arial, sans-serif;
   font-size: 13px;
-  color: grey;
+  color: #02122b;
   text-transform: uppercase;
 }
 
@@ -126,10 +126,10 @@ body {
   padding: 10px;
   height: 50px;
   width: 120px;
-  color: grey;
+  color: #83aaf2;
   background-color: white;
   border-radius: 50%;
-  border: 2px solid grey;
+  border: 2px solid #83aaf2;
   cursor: pointer;
 }
 
@@ -143,28 +143,30 @@ body {
 
 .discover:hover,
 .discover1:hover {
-  color: black;
-  border: 2px solid black;
+  color: #02122b;
+  border: 2px solid #02122b;
 }
 
 #perfumes {
   margin-top: 80px;
-  background-color: black;
+  background-color: #02122b;
   height: 600px;
+  padding-bottom: 20px;
 }
 
 .p1 {
+  padding-top: 20px;
   text-align: center;
-  font-family: "Dancing Script", cursive;
+  font-family: "Satisfy", cursive;
   font-size: 60px;
-  color: white;
+  color: #83aaf2;
 }
 
 .p2 {
   text-align: center;
-  font-family: "Dancing Script", cursive;
+  font-family: "Satisfy", cursive;
   font-size: 60px;
-  color: black;
+  color: #83aaf2;
 }
 
 .display {
@@ -180,7 +182,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #7ebdc2;
+  background-color: #c1d5f9;
   color: black;
   height: 350px;
   width: 250px;
@@ -190,6 +192,7 @@ body {
   box-sizing: border-box;
   cursor: pointer;
   position: relative;
+  border-radius: 20px;
 }
 
 .like {
@@ -227,33 +230,63 @@ body {
 .d1 {
   background-image: url("/perfumes/p1.webp");
 }
+.d1:hover {
+  background-image: url("/perfumes/p1-a.jpg");
+}
 
 .d2 {
   background-image: url("/perfumes/p2.jpg");
+}
+
+.d2:hover {
+  background-image: url("/perfumes/p2-a.jpg");
 }
 
 .d3 {
   background-image: url("/perfumes/p3.jpg");
 }
 
+.d3:hover {
+  background-image: url("/perfumes/p3-a.webp");
+}
+
 .d4 {
   background-image: url("/perfumes/p4.webp");
+}
+
+.d4:hover {
+  background-image: url("/perfumes/p4-a.webp");
 }
 
 .d5 {
   background-image: url("/perfumes/p5.avif");
 }
 
+.d5:hover {
+  background-image: url("/perfumes/p5-a.webp");
+}
+
 .d6 {
   background-image: url("/perfumes/p6.webp");
+}
+.d6:hover {
+  background-image: url("/perfumes/p6-a.jpeg");
 }
 
 .d7 {
   background-image: url("/perfumes/p7.webp");
 }
 
+.d7:hover {
+  background-image: url("/perfumes/p7-a.webp");
+}
+
 .d8 {
   background-image: url("/perfumes/p8.jpg");
+}
+
+.d8:hover {
+  background-image: url("/perfumes/p8-a.jpeg");
 }
 
 .d1,
@@ -277,20 +310,13 @@ body {
   margin-bottom: 80px;
 }
 
-.p2 {
-  text-align: center;
-  font-family: "Dancing Script", cursive;
-  font-size: 60px;
-  color: black;
-}
-
 .disp1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: black;
-  color: white;
+  background-color: #c1d5f9;
+  color: black;
   height: 350px;
   width: 250px;
   text-align: center;
@@ -299,38 +325,71 @@ body {
   box-sizing: border-box;
   cursor: pointer;
   position: relative;
+  border-radius: 20px;
 }
 
 .b1 {
   background-image: url("/makeup/b1.png");
 }
 
+.b1:hover {
+  background-image: url("/makeup/b1-a.jpg");
+}
+
 .b2 {
   background-image: url("/makeup/b2.webp");
+}
+
+.b2:hover {
+  background-image: url("/makeup/b2-a.jpg");
 }
 
 .b3 {
   background-image: url("/makeup/b3.webp");
 }
 
+.b3:hover {
+  background-image: url("/makeup/b3-a.jpg");
+}
+
 .b4 {
   background-image: url("/makeup/b4.jpg");
+}
+
+.b4:hover {
+  background-image: url("/makeup/b4-a.jpg");
 }
 
 .b5 {
   background-image: url("/makeup/b5.jpeg");
 }
 
+.b5:hover {
+  background-image: url("/makeup/b5-a.jpg");
+}
+
 .b6 {
   background-image: url("/makeup/b6.jpg");
+}
+
+.b6:hover {
+  background-image: url("/makeup/b6-a.jpg");
 }
 
 .b7 {
   background-image: url("/makeup/b7.jpeg");
 }
 
+.b7:hover {
+  background-image: url("/makeup/b7-a.jpg");
+}
+
 .b8 {
   background-image: url("/makeup/b8.jpg");
+}
+
+.b8:hover {
+  background-image: url("/makeup/b8-a.jpg");
 }
 
 .b1,
@@ -366,7 +425,7 @@ body {
 }
 .cta,
 .cta2 {
-  color: white;
+  color: #83aaf2;
 }
 
 .cta span,
@@ -378,6 +437,11 @@ body {
   font-size: 14px;
   padding-right: 15px;
   text-transform: uppercase;
+}
+
+.cta1 span,
+.cta3 span {
+  color: #83aaf2;
 }
 
 .hover-underline-animation {
@@ -401,44 +465,95 @@ body {
 .cta2:hover .hover-underline-animation:after {
   transform: scaleX(1);
   transform-origin: bottom left;
-  color: white;
-  background-color: white;
+  color: #83aaf2;
+  background-color: #83aaf2;
 }
 
 .cta1:hover .hover-underline-animation:after,
 .cta3:hover .hover-underline-animation:after {
   transform: scaleX(1);
   transform-origin: bottom left;
-  color: black;
-  background-color: black;
+  color: #83aaf2;
+  background-color: #83aaf2;
 }
 
+.cta2 svg,
+.cta svg {
+  color: #83aaf2;
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta3 svg,
+.cta1 svg {
+  color: #83aaf2;
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta2:hover svg,
+.cta:hover svg {
+  color: #83aaf2;
+  transform: translateX(0);
+}
+
+.cta3:hover svg,
+.cta1:hover svg {
+  color: #83aaf2;
+  transform: translateX(0);
+}
+
+.cta2:active svg,
+.cta:active svg {
+  color: #83aaf2;
+  transform: scale(0.9);
+}
+
+.cta1:active svg,
+.cta3:active svg {
+  color: #83aaf2;
+  transform: scale(0.9);
+}
+
+.cta svg path,
+.cta2 svg path {
+  fill: #83aaf2;
+}
+
+.cta1 svg path,
+.cta3 svg path {
+  fill: #83aaf2;
+}
 footer {
-  background-color: black;
-  padding-bottom: 50px;
+  background-color: #02122b;
+  padding-bottom: 30px;
 }
 .footer-heading {
-  margin-top: 30px;
+  padding-top: 20px;
   text-transform: uppercase;
   font-size: 50px;
   text-align: center;
-  color: white;
+  color: #c1d5f9;
+  font-family: "Faculty Glyphic", sans-serif;
+  font-weight: 500;
 }
 .line {
   width: 900px;
+  color: #c1d5f9;
 }
 
 .foot {
   margin-top: 50px;
   display: flex;
-  margin-left: 190px;
+  margin-left: 200px;
   gap: 120px;
   flex-direction: row;
+  font-weight: 500;
 }
 
 .c-hub {
   font-weight: lighter;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -446,11 +561,12 @@ footer {
 
 .c-heading {
   font-size: 20px;
-  color: white;
+  font-weight: 500;
+  color: #83aaf2;
 }
 
 .c-content {
-  color: grey;
+  color: #c1d5f9;
   font-style: italic;
 }
 
@@ -464,7 +580,7 @@ footer {
   height: 37px;
   width: 37px;
   background-color: white;
-  color: black;
+  color: #311e8f;
   border-radius: 20px;
   margin-left: 16px;
 }
@@ -474,25 +590,25 @@ footer {
 }
 
 .link0 {
-  color: black;
+  color: #003dac;
   margin-left: 8.5px;
   margin-top: 6px;
 }
 
 .link {
-  color: black;
+  color: #003dac;
   margin-left: 7px;
   margin-top: 7px;
 }
 
 .link1 {
-  color: black;
+  color: #003dac;
   margin-left: 10px;
   margin-top: 7px;
 }
 
 .link2 {
-  color: black;
+  color: #003dac;
   margin-left: 8.5px;
   margin-top: 6px;
 }
@@ -501,7 +617,7 @@ footer {
 .link1:hover,
 .link:hover,
 .link2:hover {
-  color: #6d213c;
+  color: #83aaf2;
 }
 
 .mapping {
@@ -515,18 +631,20 @@ footer {
   margin-left: 120px;
   display: flex;
   flex-direction: column;
+  font-weight: 700;
 }
 
 .n-heading {
-  font-weight: lighter;
-  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-family: "Montserrat Alternates", sans-serif;
   text-transform: uppercase;
   font-size: 20px;
-  color: grey;
+  color: #83aaf2;
 }
 .input-email {
+  padding: 5px;
   border: none;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid #83aaf2;
 }
 
 .input-email:hover {
@@ -540,20 +658,21 @@ footer {
 .sign-up {
   margin-top: 20px;
   background-color: transparent;
-  color: grey;
+  color: #83aaf2;
   padding: 10px;
   width: 150px;
-  border: 2px solid grey;
+  border: 2px solid #83aaf2;
 }
 
 .sign-up:hover {
-  border: 2px solid black;
+  background-color: #c1d5f9;
+  border: 2px solid #c1d5f9;
   color: black;
 }
 .copy {
   margin-top: 120px;
   font-size: 10px;
-  color: grey;
+  color: #83aaf2;
 }
 
 .location {
@@ -571,7 +690,7 @@ footer {
 .cpy {
   margin-top: 650px;
   margin-left: -30px;
-  color: white;
+  color: #83aaf2;
   font-size: 10px;
 }
 
