@@ -55,8 +55,8 @@ body {
 
 .header-text2 {
   display: none;
-  font-family: "Cormorant", serif;
-  /* font-family: "Grey Qo", cursive; */
+
+  font-family: "Grey Qo", cursive;
 }
 
 .dropbtn {
@@ -92,7 +92,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color:#02122B;
+  background-color: #02122b;
   color: white;
 }
 
