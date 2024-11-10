@@ -679,7 +679,7 @@ footer {
   width: 1100px;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 915px) {
   nav.navbar {
     height: 80px;
     width: 99%;
@@ -705,6 +705,7 @@ footer {
     width: 330px;
   }
   .kamini img {
+    margin-right: 0;
     margin-top: -3rem;
     margin-left: -14.5rem;
     width: 350px;
