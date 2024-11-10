@@ -46,10 +46,11 @@ body {
 }
 
 .intro {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-family: "Cormorant", serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 18px;
   font-family: 300;
-  color: #003DAC;
+  color: #063790;
   padding: 30px;
   padding-bottom: 60px;
   text-align: center;
@@ -109,7 +110,8 @@ body {
 }
 
 .caption {
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Cormorant", serif;
   /* font-family: "Grey Qo", cursive; */
   color: #0b0e14;
   text-align: center;
