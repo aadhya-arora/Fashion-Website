@@ -12,8 +12,8 @@ function scroll() {
 
   if (window.scrollY > 0) {
     header.style.backgroundColor = "White";
-    header.style.color = "Black";
-    dropbtn.style.color = "Black";
+    header.style.color = "#02122b";
+    dropbtn.style.color = "#02122b";
   } else {
     header.style.backgroundColor = "transparent";
     header.style.color = "white";

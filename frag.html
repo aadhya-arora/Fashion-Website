@@ -36,6 +36,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body onscroll="scroll()">
     <div class="banner">
@@ -52,6 +56,7 @@
           </div>
         </div>
         <div class="header-text">Fragnance & Beauty</div>
+        <div id="search-bar"></div>
       </nav>
     </div>
     <div class="header2">
@@ -87,7 +92,7 @@
           <div class="d1">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">
+          <p class="text" id="glam-woman-eau-de-parfum">
             Glam Woman <br />
             Eau De Parfum
           </p>
@@ -98,7 +103,9 @@
           <div class="d2">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Quicksand Fresh Light Fragnance</p>
+          <p class="text" id="quicksand-fresh-light-fragnance">
+            Quicksand Fresh Light Fragnance
+          </p>
           <p class="price">575 INR</p>
         </div>
 
@@ -106,7 +113,7 @@
           <div class="d3">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">
+          <p class="text" id="aerosal-dazzle-fruity-eau-de-parfum">
             Aerosal Dazzle Fruity<br />
             Eau De Parfum
           </p>
@@ -117,19 +124,29 @@
           <div class="d4">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Carlton London Overose Perfume</p>
+          <p class="text" id="carlton-london-overose-perfume">
+            Carlton London Overose Perfume
+          </p>
           <p class="price">575 INR</p>
         </div>
       </div>
 
       <button class="cta" onclick="fun1()">
         <span class="hover-underline-animation"> View More </span>
-        <path
-          id="Path_10"
-          data-name="Path 10"
-          d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-          transform="translate(30)"
-        ></path>
+        <svg
+          id="arrow-horizontal"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="10"
+          viewBox="0 0 46 16"
+        >
+          <path
+            id="Path_10"
+            data-name="Path 10"
+            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+            transform="translate(30)"
+          ></path>
+        </svg>
       </button>
 
       <div id="more">
@@ -138,7 +155,9 @@
             <div class="d5">
               <span class="material-symbols-outlined like"> favorite </span>
             </div>
-            <p class="text">Coco Mademoiselle Eau De Parfum</p>
+            <p class="text" id="coco-mademoiselle-eau-de-parfum">
+              Coco Mademoiselle Eau De Parfum
+            </p>
             <p class="price">675 INR</p>
           </div>
 
@@ -146,7 +165,9 @@
             <div class="d6">
               <span class="material-symbols-outlined like"> favorite </span>
             </div>
-            <p class="text">Skinn Titan Raw <br />Perfume</p>
+            <p class="text" id="skinn-titan-raw-perfume">
+              Skinn Titan Raw <br />Perfume
+            </p>
             <p class="price">675 INR</p>
           </div>
 
@@ -154,7 +175,9 @@
             <div class="d7">
               <span class="material-symbols-outlined like"> favorite </span>
             </div>
-            <p class="text">Versace Crystal Noir Eau De Parfum</p>
+            <p class="text" id="versace-crystal-noir-eau-de-parfum">
+              Versace Crystal Noir Eau De Parfum
+            </p>
             <p class="price">7,200 INR</p>
           </div>
 
@@ -164,7 +187,7 @@
                 favorite
               </span>
             </div>
-            <p class="text">
+            <p class="text" id="alfeem-enticing-eau-de-parfum">
               Alfeem Enticing Eau De<br />
               Parfum
             </p>
@@ -175,23 +198,33 @@
 
       <button class="cta2" onclick="hide()">
         <span class="hover-underline-animation"> Show Less </span>
-        <path
-          id="Path_10"
-          data-name="Path 10"
-          d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-          transform="translate(30)"
-        ></path>
+        <svg
+          id="arrow-horizontal"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="10"
+          viewBox="0 0 46 16"
+        >
+          <path
+            id="Path_10"
+            data-name="Path 10"
+            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+            transform="translate(30)"
+          ></path>
+        </svg>
       </button>
     </section>
 
     <section id="beauty">
-      <div class="p2">Glam Gear</div>
+      <div class="p2" id="beauty-products">Glam Gear</div>
       <div class="display">
         <div class="disp1">
           <div class="b1">
             <span class="material-symbols-outlined like like1"> favorite </span>
           </div>
-          <p class="text">Seamless Complexion <br />Sponge</p>
+          <p class="text" id="makeup-sponge">
+            Seamless Complexion <br />Sponge
+          </p>
           <p class="price">75 INR</p>
         </div>
 
@@ -199,7 +232,7 @@
           <div class="b2">
             <span class="material-symbols-outlined like1 like"> favorite </span>
           </div>
-          <p class="text">Instant Radiance <br />Concealer</p>
+          <p class="text" id="concealer">Instant Radiance <br />Concealer</p>
           <p class="price">575 INR</p>
         </div>
 
@@ -207,7 +240,7 @@
           <div class="b3">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Lash Curling <br />Mascara</p>
+          <p class="text" id="mascara">Lash Curling <br />Mascara</p>
           <p class="price">480 INR</p>
         </div>
 
@@ -215,7 +248,7 @@
           <div class="b4">
             <span class="material-symbols-outlined like like1"> favorite </span>
           </div>
-          <p class="text">
+          <p class="text" id="lip-gloss">
             Radiant Lip Plumping<br />
             Gloss
           </p>
@@ -225,12 +258,20 @@
 
       <button class="cta1" onclick="fun3()">
         <span class="hover-underline-animation"> View More </span>
-        <path
-          id="Path_10"
-          data-name="Path 10"
-          d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-          transform="translate(30)"
-        ></path>
+        <svg
+          id="arrow-horizontal"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="10"
+          viewBox="0 0 46 16"
+        >
+          <path
+            id="Path_10"
+            data-name="Path 10"
+            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+            transform="translate(30)"
+          ></path>
+        </svg>
       </button>
 
       <div id="more2">
@@ -241,7 +282,7 @@
                 favorite
               </span>
             </div>
-            <p class="text">Luxurious Shade Alchemy Collection</p>
+            <p class="text" id="blush-on">Luxurious Shade Alchemy Collection</p>
             <p class="price">1050 INR</p>
           </div>
 
@@ -251,7 +292,9 @@
                 favorite
               </span>
             </div>
-            <p class="text">Flawless Radiance Coverage Collection</p>
+            <p class="text" id="foundation">
+              Flawless Radiance Coverage Collection
+            </p>
             <p class="price">999 INR</p>
           </div>
 
@@ -261,7 +304,7 @@
                 favorite
               </span>
             </div>
-            <p class="text">
+            <p class="text" id="primer">
               Silk Veil Perfecting<br />
               Base
             </p>
@@ -274,7 +317,7 @@
                 favorite
               </span>
             </div>
-            <p class="text">
+            <p class="text" id="sparkle-blush-on">
               Luminous Glow Radiance<br />
               Elixir
             </p>
@@ -285,12 +328,20 @@
 
       <button class="cta3" onclick="hide1()">
         <span class="hover-underline-animation"> Show Less </span>
-        <path
-          id="Path_10"
-          data-name="Path 10"
-          d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-          transform="translate(30)"
-        ></path>
+        <svg
+          id="arrow-horizontal"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="10"
+          viewBox="0 0 46 16"
+        >
+          <path
+            id="Path_10"
+            data-name="Path 10"
+            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+            transform="translate(30)"
+          ></path>
+        </svg>
       </button>
     </section>
 
@@ -366,7 +417,7 @@
             placeholder="Enter your email"
             class="input-email"
           />
-          <button class="sign-up">Sign Up</button>
+          <button class="sign-up">Subscribe</button>
           <div class="copy">
             <i class="fa fa-copyright fa-lg">
               Girlies India 2024.All rights reserved</i
@@ -386,6 +437,124 @@
         </iframe>
       </div>
     </footer>
+    <script type="text/babel">
+      const items = [
+        "Perfumes",
+        "Beauty-products",
+        "Glam-Woman-Eau-De-Parfum",
+        "Quicksand-Fresh-Light-Fragnance",
+        "Aerosal-Dazzle-Fruity-Eau-De-Parfum",
+        "Carlton-London-Overose-Perfume",
+        "Coco-Mademoiselle-Eau-De-Parfum",
+        "Skinn-Titan-Raw-Perfume",
+        "Versace-Crystal-Noir-Eau-De-Parfum",
+        "Alfeem-Enticing-Eau-De-Parfum",
+        "Makeup-sponge",
+        "Concealer",
+        "Mascara",
+        "Lip-gloss",
+        "Blush-on",
+        "Foundation",
+        "Primer",
+        "Sparkle-blush-on",
+      ];
+      function SearchBar() {
+        const [query, setQuery] = React.useState("");
+        const [filteredItems, setFilteredItems] = React.useState([]);
+
+        const handleSearch = (event) => {
+          const searchQuery = event.target.value;
+          setQuery(searchQuery);
+
+          if (searchQuery.trim() === "") {
+            setFilteredItems([]);
+          } else {
+            const filtered = items.filter((item) =>
+              item.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+            setFilteredItems(filtered);
+          }
+        };
+
+        const handleItemClick = (item) => {
+          const section = document.getElementById(item.toLowerCase());
+          if (section) {
+            section.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        };
+
+        return (
+          <div style={{ position: "relative" }}>
+            <input
+              type="text"
+              placeholder="Search..."
+              value={query}
+              onChange={handleSearch}
+              style={{
+                padding: "8px",
+                borderRadius: "4px",
+                border: "1px solid #ccc",
+                marginLeft: "250px",
+                marginTop: "20px",
+                fontSize: "14px",
+                width: "200px",
+              }}
+            />
+            {filteredItems.length > 0 && (
+              <ul
+                style={{
+                  listStyle: "none",
+                  margin: 0,
+                  padding: "10px",
+                  border: "1px solid #ccc",
+                  borderRadius: "4px",
+                  backgroundColor: "#fff",
+                  position: "absolute",
+                  top: "60px",
+                  left: "250px",
+                  width: "200px",
+                  boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+                  zIndex: 1000,
+                }}
+              >
+                {filteredItems.map((item, index) => (
+                  <li
+                    key={index}
+                    style={{
+                      padding: "5px",
+                      cursor: "pointer",
+                      borderBottom: "1px solid #f0f0f0",
+                      color: "#333",
+                      fontSize: "14px",
+                    }}
+                    onClick={() => {
+                      setQuery(item);
+                      setFilteredItems([]);
+                      handleItemClick(item);
+                    }}
+                    onMouseOver={(e) => {
+                      e.target.style.backgroundColor = "#f0f0f0";
+                      e.target.style.color = "#007bff";
+                    }}
+                    onMouseOut={(e) => {
+                      e.target.style.backgroundColor = "transparent";
+                      e.target.style.color = "#333";
+                    }}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        );
+      }
+
+      ReactDOM.render(<SearchBar />, document.getElementById("search-bar"));
+    </script>
     <script src="frag.js"></script>
   </body>
 </html>
