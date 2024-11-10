@@ -19,6 +19,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
     <nav>
@@ -32,6 +35,7 @@
         </div>
       </div>
       <div class="heading">Sunglasses & Scarves</div>
+      <div id="search-bar"></div>
     </nav>
 
     <section id="front">
@@ -39,8 +43,8 @@
       <div class="intro_text">
         Exclusive Collection
         <hr class="lines" />
-        <p style="margin-left: 70px">Timeless elegance</p>
-        <p style="margin-top: -40px; margin-left: 5px">Exclusive luxury</p>
+        <p style="margin-left: 20px">Timeless elegance</p>
+        <p style="margin-top: -40px; margin-left: 35px">Exclusive luxury</p>
         <hr class="lines" />
         <p style="margin-left: 70px">Unparalleled</p>
         <p style="margin-left: 60px; margin-top: -40px">Sophistication</p>
@@ -77,9 +81,8 @@
           <div class="d1">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">
-            Oversized Polarised <br />
-            Sunglasses
+          <p class="text" id="oversized-polarised-sunglasses">
+            Oversized Polarised Sunglasses
           </p>
           <p class="price">4,487 INR</p>
         </div>
@@ -87,7 +90,9 @@
           <div class="d2">
             <span class="material-symbols-outlined like like1">favorite</span>
           </div>
-          <p class="text">Voyage UV Protective Sunglasses</p>
+          <p class="text" id="voyage-uv-protective-sunglasses">
+            Voyage UV Protective Sunglasses
+          </p>
           <p class="price">2,340 INR</p>
         </div>
 
@@ -95,7 +100,7 @@
           <div class="d3">
             <span class="material-symbols-outlined like">favorite</span>
           </div>
-          <p class="text">
+          <p class="text" id="korean-version-tide-sunglasses">
             Korean Version Tide<br />
             Sunglasses
           </p>
@@ -106,7 +111,9 @@
           <div class="d4">
             <span class="material-symbols-outlined like">favorite</span>
           </div>
-          <p class="text">Haute Tinted <br />Sunglasses</p>
+          <p class="text" id="haute-tinted-sunglasses">
+            Haute Tinted <br />Sunglasses
+          </p>
           <p class="price">2,839 INR</p>
         </div>
       </div>
@@ -134,7 +141,9 @@
           <div class="d5">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Oval Sunglasses with UV protective lenses</p>
+          <p class="text" id="oval-shaped-sunglasses">
+            Oval Sunglasses with UV protective lenses
+          </p>
           <p class="price">7,320 INR</p>
         </div>
 
@@ -142,7 +151,7 @@
           <div class="d6">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Gold Frame Aviator Sunglasses</p>
+          <p class="text" id="aviator-glasses">Gold Frame Aviator Sunglasses</p>
           <p class="price">1,320 INR</p>
         </div>
 
@@ -150,7 +159,9 @@
           <div class="d7">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Rimless Pink Beauty Sunglasses</p>
+          <p class="text" id="rimless-sunglasses">
+            Rimless Pink Beauty Sunglasses
+          </p>
           <p class="price">3,320 INR</p>
         </div>
 
@@ -158,7 +169,7 @@
           <div class="d8">
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
-          <p class="text">Open Bee Trendy Sunglasses</p>
+          <p class="text" id="open-bee-glasses">Open Bee Trendy Sunglasses</p>
           <p class="price">3,320 INR</p>
         </div>
       </div>
@@ -182,14 +193,14 @@
     </section>
 
     <section id="scarf_done">
-      <div class="heading-4">Luxe Beret</div>
+      <div class="heading-4" id="scarves">Luxe Beret</div>
 
       <div class="display">
         <div class="disp1">
           <div class="s1">
             <span class="material-symbols-outlined like">favorite</span>
           </div>
-          <p class="text">Braktrok Floral Rayon <br />Scarf</p>
+          <p class="text" id="rayon-scarf">Braktrok Floral Rayon <br />Scarf</p>
           <p class="price">999 INR</p>
         </div>
 
@@ -197,7 +208,7 @@
           <div class="s2">
             <span class="material-symbols-outlined like">favorite</span>
           </div>
-          <p class="text">Printed Viscose Women Scarf</p>
+          <p class="text" id="viscose-scarf">Printed Viscose Women Scarf</p>
           <p class="price">2,390 INR</p>
         </div>
 
@@ -205,7 +216,7 @@
           <div class="s3">
             <span class="material-symbols-outlined like">favorite</span>
           </div>
-          <p class="text">
+          <p class="text" id="cotton-scarf">
             Embroidered Cotton<br />
             Scarf
           </p>
@@ -216,7 +227,7 @@
           <div class="s4">
             <span class="material-symbols-outlined like">favorite</span>
           </div>
-          <p class="text">Aldo Berabrinna Pastel Scarf</p>
+          <p class="text" id="pastel-scarf">Aldo Berabrinna Pastel Scarf</p>
           <p class="price">2,000 INR</p>
         </div>
       </div>
@@ -244,7 +255,7 @@
           <div class="s5">
             <span class="material-symbols-outlined like">favorite</span>
           </div>
-          <p class="text">Black Floral Summer Scarf</p>
+          <p class="text" id="floral-scarf">Black Floral Summer Scarf</p>
           <p class="price">1,750 INR</p>
         </div>
 
@@ -252,7 +263,7 @@
           <div class="s6">
             <span class="material-symbols-outlined like">favorite</span>
           </div>
-          <p class="text">Pink Summerish Silk Scarf</p>
+          <p class="text" id="silk-scarf">Pink Summerish Silk Scarf</p>
           <p class="price">2,950 INR</p>
         </div>
 
@@ -260,7 +271,7 @@
           <div class="s7">
             <span class="material-symbols-outlined like">favorite</span>
           </div>
-          <p class="text">Floral Tassel Viscose Shawl</p>
+          <p class="text" id="tassel-scarf">Floral Tassel Viscose Shawl</p>
           <p class="price">3,750 INR</p>
         </div>
 
@@ -268,7 +279,7 @@
           <div class="s8">
             <span class="material-symbols-outlined like">favorite</span>
           </div>
-          <p class="text">Floral Printed Silk Scarf</p>
+          <p class="text" id="floaral-silk-scarf">Floral Printed Silk Scarf</p>
           <p class="price">4,750 INR</p>
         </div>
       </div>
@@ -384,5 +395,124 @@
       </div>
     </footer>
   </body>
+  <script type="text/babel">
+    const items = [
+      "Sunglasses",
+      "Scarves",
+      "Scarf",
+      "Oversized-Polarised-Sunglasses",
+      "Voyage-UV-Protective-Sunglasses",
+      "Korean-Version-Tide-Sunglasses",
+      "Haute-Tinted-Sunglasses",
+      "Oval-Shaped-Sunglasses",
+      "Aviator-Glasses",
+      "Rimless-Sunglasses",
+      "Open-Bee-Glasses",
+      "Rayon-Scarf",
+      "Viscose-scarf",
+      "Cotton-scarf",
+      "Pastel-scarf",
+      "Floral-scarf",
+      "Silk-scarf",
+      "Tassel-scarf",
+      "Floral-silk-scarf",
+    ];
+    function SearchBar() {
+      const [query, setQuery] = React.useState("");
+      const [filteredItems, setFilteredItems] = React.useState([]);
+
+      const handleSearch = (event) => {
+        const searchQuery = event.target.value;
+        setQuery(searchQuery);
+
+        if (searchQuery.trim() === "") {
+          setFilteredItems([]);
+        } else {
+          const filtered = items.filter((item) =>
+            item.toLowerCase().includes(searchQuery.toLowerCase())
+          );
+          setFilteredItems(filtered);
+        }
+      };
+
+      const handleItemClick = (item) => {
+        const section = document.getElementById(item.toLowerCase());
+        if (section) {
+          section.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      };
+
+      return (
+        <div style={{ position: "relative" }}>
+          <input
+            type="text"
+            placeholder="Search..."
+            value={query}
+            onChange={handleSearch}
+            style={{
+              padding: "8px",
+              borderRadius: "4px",
+              border: "1px solid #ccc",
+              marginLeft: "-280px",
+              fontSize: "14px",
+              width: "200px",
+              marginTop: "10px",
+            }}
+          />
+          {filteredItems.length > 0 && (
+            <ul
+              style={{
+                listStyle: "none",
+                margin: 0,
+                padding: "10px",
+                border: "1px solid #ccc",
+                borderRadius: "4px",
+                backgroundColor: "#fff",
+                position: "absolute",
+                top: "40px",
+                left: "-280px",
+                width: "200px",
+                boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+                zIndex: 1000,
+              }}
+            >
+              {filteredItems.map((item, index) => (
+                <li
+                  key={index}
+                  style={{
+                    padding: "5px",
+                    cursor: "pointer",
+                    borderBottom: "1px solid #f0f0f0",
+                    color: "#333",
+                    fontSize: "14px",
+                  }}
+                  onClick={() => {
+                    setQuery(item);
+                    setFilteredItems([]);
+                    handleItemClick(item);
+                  }}
+                  onMouseOver={(e) => {
+                    e.target.style.backgroundColor = "#f0f0f0";
+                    e.target.style.color = "#007bff";
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.backgroundColor = "transparent";
+                    e.target.style.color = "#333";
+                  }}
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      );
+    }
+
+    ReactDOM.render(<SearchBar />, document.getElementById("search-bar"));
+  </script>
   <script src="sun.js"></script>
 </html>
