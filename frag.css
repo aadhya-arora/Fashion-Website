@@ -2,6 +2,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Cormorant", serif;
 }
 
 .header {
@@ -15,7 +16,8 @@ body {
   left: 0;
   z-index: 1000;
   transition: background-color 0.3s, color 0.3s;
-  font-family: "Montserrat Alternates", serif;
+  /* font-family: "Montserrat Alternates", serif; */
+  font-family: "Cormorant", serif;
 }
 
 .banner {
@@ -26,7 +28,8 @@ body {
   min-height: 600px;
   display: flex;
   color: white;
-  font-family: "Montserrat Alternates", serif;
+  font-family: "Cormorant", serif;
+  /* font-family: "Montserrat Alternates", serif; */
 }
 
 .banner2 {
@@ -36,7 +39,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 600px;
-  font-family: "Montserrat Alternates", serif;
+  font-family: "Cormorant", serif;
+  /* font-family: "Montserrat Alternates", serif; */
 }
 
 .header2 {
@@ -51,7 +55,8 @@ body {
 
 .header-text2 {
   display: none;
-  font-family: "Grey Qo", cursive;
+  font-family: "Cormorant", serif;
+  /* font-family: "Grey Qo", cursive; */
 }
 
 .dropbtn {
@@ -109,8 +114,10 @@ body {
 
 .fragnance,
 .Beauty {
-  font-family: "CenturyGothic", "CenturyGothic-fallback", Arial, sans-serif;
-  font-size: 13px;
+  font-family: "Cormorant", serif;
+  /* font-family: "CenturyGothic", "CenturyGothic-fallback", Arial, sans-serif; */
+  font-size: 30px;
+  font-weight: 700;
   color: #02122b;
   text-transform: uppercase;
 }
@@ -122,23 +129,24 @@ body {
 
 .discover,
 .discover1 {
-  margin-top: 12px;
-  padding: 10px;
-  height: 50px;
+  margin-top: 8px;
+  padding: 10px 20px;
+  height: 53px;
   width: 120px;
   color: #83aaf2;
   background-color: white;
   border-radius: 50%;
   border: 2px solid #83aaf2;
   cursor: pointer;
+  font-size: 20px;
 }
 
 .discover {
-  margin-left: -15px;
+  margin-left: 10px;
 }
 
 .discover1 {
-  margin-left: -22px;
+  margin-left: 0px;
 }
 
 .discover:hover,
@@ -157,14 +165,16 @@ body {
 .p1 {
   padding-top: 20px;
   text-align: center;
-  font-family: "Satisfy", cursive;
+  /* font-family: "Satisfy", cursive; */
+  font-family: "Cormorant", serif;
   font-size: 60px;
   color: #83aaf2;
 }
 
 .p2 {
   text-align: center;
-  font-family: "Satisfy", cursive;
+  font-family: "Cormorant", serif;
+  /* font-family: "Satisfy", cursive; */
   font-size: 60px;
   color: #83aaf2;
 }
@@ -211,7 +221,8 @@ body {
 }
 
 .text {
-  font-family: "Dancing script", cursive;
+  /* font-family: "Dancing script", cursive; */
+  font-family: "Cormorant", serif;
   font-size: 20px;
 }
 .price {
@@ -298,11 +309,12 @@ body {
 .d7,
 .d8 {
   border-radius: 10%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   height: 200px;
   width: 220px;
   background-size: cover;
   background-position: center;
+
 }
 
 #beauty {
@@ -319,6 +331,7 @@ body {
   color: black;
   height: 350px;
   width: 250px;
+  font-family: "Cormorant", serif;
   text-align: center;
   margin-left: 60px;
   padding: 10px;
@@ -401,9 +414,10 @@ body {
 .b7,
 .b8 {
   border-radius: 10%;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   height: 200px;
   width: 220px;
+  font-family: "Cormorant", serif;
   background-size: cover;
   background-position: center;
 }
@@ -435,6 +449,7 @@ body {
   padding-bottom: 7px;
   letter-spacing: 4px;
   font-size: 14px;
+  font-family: "Cormorant", serif;
   padding-right: 15px;
   text-transform: uppercase;
 }
@@ -532,20 +547,22 @@ footer {
   padding-top: 20px;
   text-transform: uppercase;
   font-size: 50px;
+  font-weight: 900;
   text-align: center;
   color: #c1d5f9;
-  font-family: "Faculty Glyphic", sans-serif;
+  font-family: "Cormorant", serif;
+  /* font-family: "Faculty Glyphic", sans-serif; */
   font-weight: 500;
 }
 .line {
-  width: 900px;
+  width: 1100px;
   color: #c1d5f9;
 }
 
 .foot {
   margin-top: 50px;
   display: flex;
-  margin-left: 200px;
+  margin-left: 290px;
   gap: 120px;
   flex-direction: row;
   font-weight: 500;
@@ -553,8 +570,9 @@ footer {
 
 .c-hub {
   font-weight: lighter;
-  font-family: "Montserrat Alternates", sans-serif;
-  text-transform: uppercase;
+  font-family: "Cormorant", serif;
+  /* font-family: "Montserrat Alternates", sans-serif; */
+  /* text-transform: uppercase; */
   display: flex;
   flex-direction: column;
 }
@@ -636,7 +654,8 @@ footer {
 
 .n-heading {
   font-weight: 600;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Cormorant", serif;
+  /* font-family: "Montserrat Alternates", sans-serif; */
   text-transform: uppercase;
   font-size: 20px;
   color: #83aaf2;
