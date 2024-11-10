@@ -7,12 +7,12 @@ body {
   flex-direction: column;
   justify-content: center;
   /* background: #ee7e9c; */
- font-family: "Cormorant", serif;
+  font-family: "Cormorant", serif;
   align-items: center;
   /* font-family: "Montserrat Alternates", sans-serif; */
 }
 
-input{
+input {
   margin-left: 31rem;
   padding: 6px 22px;
   border-radius: 10px;
@@ -21,8 +21,7 @@ input{
 form {
   width: 60rem;
 }
-#backvid{
-
+#backvid {
   height: 125%;
   position: fixed;
   z-index: -100;
@@ -34,16 +33,15 @@ form {
   width: 200%;
   border-radius: 30px;
   margin-bottom: 10px;
-  
 }
 
 .login {
   position: relative;
-  box-shadow: 0px 0px 10px #83AAF2;
+  box-shadow: 0px 0px 10px #83aaf2;
   z-index: 0;
   border-radius: 30px;
   height: 37rem;
-  margin-top:5rem;
+  margin-top: 5rem;
   padding-left: 10px;
   padding-right: 90px;
   background-color: rgba(255, 255, 255, 0.6);
@@ -72,20 +70,29 @@ form {
   margin-right: 29rem;
   height: 30rem; /* Set desired height */
   border-radius: 30px;
-  
-
 }
-#title{
+#title {
+  margin-left: 37rem;
+  padding-top: 1rem;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 0px;
+  color: #003dac;
   letter-spacing: 2px;
   text-transform: uppercase;
   /* Added text animation */
   animation: titleAnimation 3s ease-in-out infinite alternate;
-
 }
 @keyframes titleAnimation {
-  0% { color:#4f8bfa; }
-  50% { color: #003DAC; }
-  100% { color: #052250; }
+  0% {
+    color: #4f8bfa;
+  }
+  50% {
+    color: #003dac;
+  }
+  100% {
+    color: #052250;
+  }
 }
 .carousel-track {
   display: flex;
@@ -129,20 +136,18 @@ form {
 .name {
   display: flex;
   flex-wrap: wrap;
-
 }
-.name input{
+.name input {
   margin-left: 31rem;
-   padding: 6px 13px;
-   font-family: "Cormorant", serif;
-   width: 400px;
-   /* font-family: "Montserrat Alternates", sans-serif; */
+  padding: 6px 13px;
+  font-family: "Cormorant", serif;
+  width: 400px;
+  /* font-family: "Montserrat Alternates", sans-serif; */
 }
 .name p {
   margin-left: 31rem;
-  
 }
-p{
+p {
   margin-left: 31rem;
 }
 .text {
@@ -159,23 +164,23 @@ p{
   border: none;
   /* font-family: "Montserrat Alternates", sans-serif; */
 }
-#caraousel{
+#caraousel {
   height: 300px;
 }
-.eveee{
+.eveee {
   margin-left: 38rem;
-  font-size: 16px ;
+  font-size: 16px;
   font-family: "Cormorant", serif;
 }
 #animated-button {
   position: relative;
   display: flex;
   align-items: center;
-  
+
   margin-top: 2rem;
   font-family: "Cormorant", serif;
   margin-left: 33rem;
-  
+
   padding: 0px 10px;
   border: 4px solid;
   border-color: transparent;
@@ -183,19 +188,17 @@ p{
   background-color: inherit;
   border-radius: 80px;
   font-weight: 600;
-  color: #02122B;
-  box-shadow: 0 0 0 2px #C1D5F9;
+  color: #02122b;
+  box-shadow: 0 0 0 2px #c1d5f9;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-
-
 }
 
 #animated-button svg {
   position: absolute;
   width: 24px;
-  fill: #83AAF2;
+  fill: #83aaf2;
   z-index: 9;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -215,7 +218,7 @@ p{
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  background-color: #83AAF2;
+  background-color: #83aaf2;
   border-radius: 50%;
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -234,7 +237,6 @@ p{
   box-shadow: 0 0 0 12px transparent;
   color: #212121;
   border-radius: 12px;
-  
 }
 
 #animated-button:hover .arr-1 {
@@ -250,13 +252,12 @@ p{
 }
 
 #animated-button:hover svg {
-  fill: #83AAF2;
+  fill: #83aaf2;
 }
 
 #animated-button:active {
   scale: 0.95;
-  box-shadow: 0 0 0 4px #83AAF2;
-  
+  box-shadow: 0 0 0 4px #83aaf2;
 }
 
 #animated-button:hover .circle {
@@ -272,6 +273,14 @@ p{
 /* Media Query for screens smaller than 375px */
 
 @media (max-width: 915px) {
+  #carousel {
+    display: none;
+  }
+
+  #title {
+    margin-left: 5rem;
+  }
+
   body {
     font-family: "Cormorant", serif;
     /* font-family: "Montserrat Alternates", sans-serif; */
@@ -291,6 +300,10 @@ p{
   .login-container {
     width: 90%;
     flex-direction: column;
+  }
+
+  .login {
+    height: 40rem;
   }
 
   .name {
@@ -314,10 +327,10 @@ p{
     margin-left: 0;
     font-size: 16px;
   }
-  .animated-button{
+  .animated-button {
     margin-left: 160px;
   }
-/* 
+  /* 
   #btn {
     margin-left: 2.5rem;
     width: 100%;
@@ -343,39 +356,58 @@ p{
   #LASTNAME {
     margin-left: 0rem;
   }
+
+  p,
+  .name p {
+    margin-left: 2rem;
+  }
+
+  .name input,
+  #input {
+    margin-left: 0.5rem;
+    padding: 10px 30px;
+    width: 280px;
+  }
+
+  #animated-button {
+    margin-left: 6rem;
+  }
+
+  .eveee {
+    margin-left: 3rem;
+  }
 }
-@media (max-width: 426px){
-  .login{
+@media (max-width: 426px) {
+  .login {
     padding-bottom: 40px;
   }
-  .animated-button{
+  .animated-button {
     margin-left: 94px;
   }
-  #username.email{
+  #username.email {
     margin-left: 8px;
   }
-  #dob.email{
+  #dob.email {
     margin-left: 8px;
   }
-  #password.email{
-   margin-left: 8px;
+  #password.email {
+    margin-left: 8px;
   }
 }
-@media (max-width:769px) {
-  .login{
+@media (max-width: 769px) {
+  .login {
     padding-bottom: 40px;
   }
-  .animated-button{
+  .animated-button {
     margin-left: 250px;
   }
-  #username.email{
+  #username.email {
     margin-left: 8px;
   }
-  #dob.email{
+  #dob.email {
     margin-left: 8px;
   }
-  #password.email{
-   margin-left: 8px;
+  #password.email {
+    margin-left: 8px;
   }
-  
 }
