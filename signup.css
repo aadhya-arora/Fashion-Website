@@ -315,7 +315,7 @@ p {
   .text,
   .email,
   #input {
-    width: 100%;
+    width: 280px;
     padding: 10px 30px;
     font-size: 16px;
   }
@@ -370,7 +370,8 @@ p {
   }
 
   #animated-button {
-    margin-left: 6rem;
+    width: 200px;
+    margin-left: 5rem;
   }
 
   .eveee {
