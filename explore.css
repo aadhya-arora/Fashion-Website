@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  background-image: url("/backgrounds/explore.webp");
+  background-image: url("/main/Girlies.png");
   min-height: 800px;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -20,9 +20,9 @@ body {
   justify-content: center;
   align-items: center;
   margin-left: 500px;
-  margin-top: 250px;
+  margin-top: 200px;
   font-size: 200px;
-  color: rgb(245, 112, 134);
+  color: white;
   font-family: "grey qo", cursive;
   border-radius: 10px;
   font-weight: 300;
@@ -31,30 +31,32 @@ body {
 .back {
   margin-top: 20px;
   margin-left: 20px;
-  color: black;
+  color: white;
 }
 
 .heading {
   justify-content: center;
   align-items: center;
-  color: #2c0735;
-  font-size: 50px;
+  color: #02122B;
+  font-size: 60px;
+  font-weight: 700;
   /* font-family: "Dancing Script", cursive; */
-  padding: 5px;
+  padding-top: 5px;
 }
 
 .intro {
   font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  color: white;
+  font-size: 16px;
+  font-family: 300;
+  color: #003DAC;
   padding: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
   text-align: center;
-  background-color: #777;
+  background-color: #C1D5F9;
 }
 
 .container2 {
-  background-image: url("/backgrounds/explore2.jpg");
+  background-image: url("/main/nonu.jpg");
   min-height: 300px;
   background-attachment: fixed;
   background-position: center;
@@ -67,8 +69,9 @@ body {
   justify-items: center;
   margin: 0 auto;
   padding: 40px;
-  color: #2c0735;
-  background-color: #777;
+  font-weight: 600;
+  color: #02122B;
+  background-color: #C1D5F9;
   /* font-family: "Dancing Script", cursive; */
   font-size: 30px;
 }
@@ -79,7 +82,7 @@ body {
   align-items: center;
   margin: 0 auto;
   padding: 20px;
-  background-color: #777;
+  background-color: #C1D5F9;
 }
 
 .link {
@@ -88,29 +91,32 @@ body {
 }
 
 .link:hover {
-  color: white;
+  color: #003DAC;
 }
 
 .container3 {
-  background-image: url("/backgrounds/explore3.webp");
+  background-image: url("/backgrounds/maal.png");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 400px;
   display: flex;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   justify-content: center;
   align-items: center;
 }
 
 .caption {
+  font-family: "Montserrat", sans-serif;
   /* font-family: "Grey Qo", cursive; */
-  color: black;
+  color: #0b0e14;
   text-align: center;
+  margin-top: rem;
   justify-items: center;
   align-items: center;
-  font-size: 50px;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 915px) {

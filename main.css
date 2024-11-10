@@ -321,11 +321,20 @@ body {
   margin-left: 10px;
 }
 #backvid{
-  /* height: 100vh; */
-  width: 1260px;
-  margin-left:260px;
-  display: flex;
-  /* margin-top: -17px; */
+  /* height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  margin-left:250px;
+  display: flex; */
+    height: 100vh;
+    width: 99.99%;
+    object-fit: cover;
+    margin: 0; /* Removes any extra space */
+    position: static; /* Ensures video stays in place while scrolling */
+    top: 0;
+    left: 0;
+    /* z-index: -1; Sends video to the background */
+  
 }
 .title1{
   font-size: 70px;
@@ -349,28 +358,33 @@ body {
   text-align: center;
 
 }
-.wrapper {
+#wrapper {
   display: flex;
-  flex-direction: row;
-  width: 90%;
+  /* gap: 10rem; */
+  width: 50%;
   justify-content: space-around;
 }
 
 .card {
-  width: 280px;
+  width: 72rem;
+  gap: 10rem;
   height: 360px;
+  margin-left: 280px;
+  margin-top: 2rem;
   border-radius: 15px;
   padding: 1.5rem;
   background: white;
   position: relative;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: flex-end;
   transition: 0.4s ease-out;
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
 .card:hover {
-  transform: translateY(20px);
+  transform: translateY(-10px);
 }
 
 .card:hover::before {
@@ -387,6 +401,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  
   display: block;
   width: 100%;
   height: 100%;
@@ -425,201 +440,139 @@ body {
   font-size: 15px;
   margin-top: 8px;
 }
-
-/* .images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-left: 300px;
-}
-
-.accessory {
-  display: flex;
-  text-align: center;
-  background-image: url("/images/Accessories.JPG");
-  height: 300px;
-  width: 350px;
-  background-size: cover;
-  margin-left: 10px;
-  border-radius: 10px;
-  border: 5px solid #96151e;
-}
-
-.fragnance {
-  display: flex;
-  text-align: center;
-  background-image: url("/images/Fragnance.JPG");
-  height: 300px;
-  width: 350px;
-  background-size: cover;
-  border-radius: 10px;
-  margin-left: 10px;
-  border: 5px solid #96151e;
-}
-
-.sunglasses {
-  display: flex;
-  text-align: center;
-  background-image: url("/images/sunglasses.jpg");
-  height: 300px;
-  width: 350px;
-  background-size: cover;
-  border-radius: 10px;
-  border: 5px solid #96151e;
-  margin-top: 30px;
-  margin-left: 700px;
-}
-
-.text {
-  display: none;
-  color: #fff;
-  margin-top: 150px;
-  margin-left: 170px;
-  animation: glow 1s ease-in-out infinite;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 45px;
-  font-family: "Yellowtail", cursive;
-}
-
-.fragnance:hover,
-.sunglasses:hover,
-.accessory:hover {
-  background-image: url("");
-  background-color: #96151e;
-  .text {
-    display: flex;
-  }
-} */
 #abt {
   margin-left: 260px;
-  background-color: #ff6788;
-  height: 35rem;
-}
-.title2 {
-  font-size: 50px;
-  margin-left: 12px;
-  color: white;
-  font-family: "Montserrat Alternates", serif;
-}
-
-.myself {
+  margin-top: 5rem;
   display: flex;
-}
-.me {
-  height: 400px;
-  width: 350px;
-  margin-left: 80px;
-  margin-bottom: 10px;
-  border: 12px double #ea8ebc;
-}
+  flex-direction: row;
+  
 
-.paper {
-  width: 60vw;
-  height: 370px;
-  margin: 2em auto;
-  background: #fff;
-  box-shadow: 4px 4px 0 #d71576;
-  background-image: linear-gradient(
-      90deg,
-      #fff 12px,
-      0,
-      #d71576 15px,
-      0,
-      #d71576 20px,
-      0,
-      #fff 100%
-    ),
-    radial-gradient(circle closest-side, rgba(255, 255, 255, 0) 88%, #fff 100%),
-    radial-gradient(circle at 22px 8px, #d71576 40%, #d71576 40%, #d71576 100%);
-  background-size: 32px 8px, 32px 16px, 32px 16px;
-  background-repeat: space no-repeat;
-  background-position: center top, center 6px, center 6px;
-
-  &--alt {
-    background-image: linear-gradient(
-        90deg,
-        #d88080 12px,
-        0,
-        #f078b4 15px,
-        0,
-        #f078b4 20px,
-        0,
-        #fff 100%
-      ),
-      radial-gradient(
-        circle closest-side,
-        rgba(255, 255, 255, 0) 88%,
-        #fff 100%
-      ),
-      radial-gradient(
-        circle at 22px 8px,
-        #ea8ebc 40%,
-        #f078b4 40%,
-        #f078b4 100%
-      );
-    background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 21'%3E%3Cpath d='M20 0h-7v6.9a7.5 7.5 0 107 0V0z' fill='%231373A9'/%3E%3Cpath d='M13 0h3v6.9a7.5 7.5 0 002 14 7.5 7.5 0 01-9-7.4c0-2.9 1.6-5.4 4-6.6V0z' fill='%2300486B'/%3E%3C/svg%3E");
-    background-size: 2em 1.3125em;
-  }
 }
-
-.paper-text {
-  color: #96151e;
-  margin-top: 30px;
-  text-align: center;
-  padding: 10px;
-  font-size: 17px;
+.chotewali{
+  position: absolute;
+z-index: 4;
+margin-top: 3rem;
+margin-left: 40rem;
 }
-
-.button,
-.button1 {
-  padding: 1.3em 3em;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 600;
-  color: white;
-  background-color: rgb(249, 156, 171);
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
+.kamini img{
+  z-index: 0;
+  margin-right: 2rem;
+  width: 25rem;
+  height: 40rem;
+  margin-left: 18rem;
 }
-
-.button:hover,
-.button1:hover {
-  background-color: maroon;
-  box-shadow: 0px 5px 10px #311e8fa8;
-  color: #fff;
-  transform: translateY(-7px);
+.dedibas{
+  padding-left: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #02122B;
+  margin-top: 10rem;
 }
-
-.button:active,
-.button1:active {
-  transform: translateY(-1px);
+.dedibas p{
+  font-size:  16px;
 }
-
-.expbtn,
-.expbtn1 {
-  margin-left: 390px;
-}
-
-.expbtn1 {
-  margin-top: 20px;
-  margin-left: 130px;
-  display: none;
-  text-decoration: none;
-}
-
 .myname {
   color: #ea8ebc;
   font-size: 50px;
   font-family: "Satisfy", cursive;
   margin-left: 140px;
 }
+
+.animated-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin-top: -10rem;
+  /* gap: 4px; */
+  /* margin-top: 10px; */
+  margin-left: 420px;
+  /* margin-right: -10px; */
+  padding: 3px 50px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #02122B;
+  box-shadow: 0 0 0 2px #83AAF2;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  /* margin-bottom: 10px; */
+
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: #02122B;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color:#83AAF2;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 50px;
+  padding: 10px 50px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #212121;
+}
+
+.animated-button:active {
+  scale: 0.95;
+ box-shadow: 0px 0px 13px #83AAF2;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
 
 #explore2 {
   display: none;
@@ -631,39 +584,44 @@ footer {
 }
 
 .foot {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   gap: 120px;
-  margin-left: 50px;
+  margin-left: 100px;
   flex-direction: row;
 }
 
 .footer-heading {
-  color: #96151e;
+  color: #02122B;
   margin-top: 80px;
   /* font-family: serif;; */
   font-family: "Montserrat Alternates", serif;
-  font-size: 100px;
+  font-size: 70px;
   text-align: center;
+  font-weight: 700;
+}
+.c-heading{
+  font-weight: 600;
 }
 .c-hub {
-  font-weight: 400;
+ 
   font-family: "Montserrat Alternates", sans-serif;
-  text-transform: uppercase;
+
   display: flex;
   flex-direction: column;
-  margin-left: -20px;
+
 }
 .n-heading {
-  font-weight: 300;
+  font-weight: 600;
   font-family: "Montserrat Alternates", sans-serif;
-  text-transform: uppercase;
+  
   font-size: 20px;
   color: grey;
 }
 .c-content {
   color: grey;
   font-style: italic;
+  padding-top: 3px;
 }
 
 .newsletter {
@@ -671,6 +629,7 @@ footer {
   flex-direction: column;
 }
 .input-email {
+  padding: 5px;
   border: none;
   border-bottom: 2px solid grey;
 }
@@ -679,9 +638,9 @@ footer {
   border-bottom: 2px solid black;
 }
 
-.input-email:focus {
+/* .input-email:focus {
   border: none;
-}
+} */
 .c-heading {
   font-size: 20px;
 }
@@ -689,6 +648,7 @@ footer {
   margin-left: 20px;
   justify-content: center;
   align-items: center;
+  font-weight: 600;
 }
 
 .sign-up {
@@ -702,7 +662,8 @@ footer {
 
 .sign-up:hover {
   border: 2px solid black;
-  color: black;
+  color: white;
+  background-color: #02122B;
 }
 
 .connect {
@@ -727,87 +688,7 @@ footer {
   width: 400px;
 }
 .line {
-  width: 900px;
-}
-.title1-2 {
-  display: none;
-}
-.t1-2 {
-  display: none;
-}
-.im {
-  margin-left: 30px;
-  display: none;
-  flex-direction: row;
-  gap: 30px;
-}
-
-.im1 {
-  background-image: url("/images/Accessories.JPG");
-  height: 150px;
-  width: 150px;
-  background-size: 150px 150px;
-  border: 2px solid #41122c;
-  border-radius: 10px;
-}
-
-.im2 {
-  background-image: url("/images/Fragnance.JPG");
-  height: 150px;
-  width: 150px;
-  background-size: 150px 150px;
-  border: 2px solid #41122c;
-  border-radius: 10px;
-}
-
-.im-2 {
-  display: none;
-  margin-top: 30px;
-  margin-left: 120px;
-}
-
-.im3 {
-  background-image: url("/images/sunglasses.jpg");
-  height: 150px;
-  width: 150px;
-  background-size: 150px 150px;
-  border: 2px solid #41122c;
-  border-radius: 10px;
-}
-
-.im1-text,
-.im2-text,
-.im3-text {
-  color: #41122c;
-  display: none;
-  font-family: serif;
-  font-size: 1.5rem;
-  margin-top: 35%;
-  margin-left: 10%;
-}
-
-.im2:hover {
-  background-image: url("");
-  background-color: pink;
-  .im2-text {
-    display: flex;
-  }
-}
-
-.im3:hover {
-  background-image: url("");
-  background-color: pink;
-  .im3-text {
-    display: flex;
-  }
-}
-
-.im1:hover {
-  background-image: url("");
-  background-color: pink;
-  .im1-text {
-    display: flex;
-  }
+  width: 1100px;
 }
 
 @media screen and (max-width: 769px) {
