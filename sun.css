@@ -866,8 +866,9 @@ footer {
     display: block;
   }
 
-  #sunglasses {
-    height: 800px;
+  #sunglasses,
+  #scarf_done {
+    height: 850px;
   }
   .display {
     flex-wrap: wrap;
@@ -908,6 +909,12 @@ footer {
     margin-top: 20px;
     margin-left: 10px;
     background-color: #c1d5f9;
+  }
+
+  .heading-3,
+  .heading-4 {
+    font-size: 50px;
+    margin-left: 1rem;
   }
 
   .foot {
