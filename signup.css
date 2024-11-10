@@ -7,13 +7,14 @@ body {
   flex-direction: column;
   justify-content: center;
   /* background: #ee7e9c; */
+ font-family: "Cormorant", serif;
   align-items: center;
-  font-family: "Montserrat Alternates", sans-serif;
+  /* font-family: "Montserrat Alternates", sans-serif; */
 }
 
 input{
   margin-left: 31rem;
-  padding: 5px;
+  padding: 6px 22px;
   border-radius: 10px;
 }
 
@@ -132,12 +133,14 @@ form {
 }
 .name input{
   margin-left: 31rem;
-   padding: 5px;
+   padding: 6px 13px;
+   font-family: "Cormorant", serif;
    width: 400px;
-   font-family: "Montserrat Alternates", sans-serif;
+   /* font-family: "Montserrat Alternates", sans-serif; */
 }
 .name p {
   margin-left: 31rem;
+  
 }
 p{
   margin-left: 31rem;
@@ -151,9 +154,10 @@ p{
 .email,
 #input {
   width: 400px;
-  padding: 5px;
+  padding: 5px 10px;
+  font-family: "Cormorant", serif;
   border: none;
-  font-family: "Montserrat Alternates", sans-serif;
+  /* font-family: "Montserrat Alternates", sans-serif; */
 }
 #caraousel{
   height: 300px;
@@ -263,7 +267,8 @@ p{
 
 @media (max-width: 915px) {
   body {
-    font-family: "Montserrat Alternates", sans-serif;
+    font-family: "Cormorant", serif;
+    /* font-family: "Montserrat Alternates", sans-serif; */
   }
 
   header {
