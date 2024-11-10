@@ -30,7 +30,12 @@
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
   />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Croissant+One&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet"
+  />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -77,6 +82,11 @@
 
     <div id="option">
       <div class="heading">Our Variety</div>
+      <br />
+      <p style="text-align: center; font-size: 19px; font-weight: 600">
+        "Your Style, Your Story – Find Your Perfect Look."
+      </p>
+
       <div class="variety">
         <a href="#neck" style="text-decoration: none">
           <div class="Neckpieces">
@@ -113,7 +123,7 @@
             <span class="material-symbols-outlined like"> favorite </span>
           </div>
           <p class="text" id="irridescent-blue-lacerta-neckpiece">
-            Irridescent Blue Lacerta Neckpiece
+            Irridescent Blue Lacerta <br>Neckpiece
           </p>
           <p class="price">4,200 INR</p>
         </div>
@@ -750,34 +760,60 @@
       };
 
       return (
+        // <div style={{ position: "relative" }}>
+        //   <input
+        //     type="text"
+        //     placeholder="Search..."
+        //     value={query}
+        //     onChange={handleSearch}
+        //     style={{
+        //       padding: "10px 70px",
+        //       borderRadius: "10px",
+        //       borderBottom: "1px solid #ccc",
+        //       marginRight: "50px",
+        //       fontSize: "14px",
+        //       width: "200px",
+        //     }}
+        //   />
         <div style={{ position: "relative" }}>
-          <input
-            type="text"
-            placeholder="Search..."
-            value={query}
-            onChange={handleSearch}
-            style={{
-              padding: "8px",
-              borderRadius: "4px",
-              border: "1px solid #ccc",
-              marginLeft: "-280px",
-              fontSize: "14px",
-              width: "200px",
-            }}
-          />
+  <input
+    type="text"
+    placeholder="Search..."
+    value={query}
+    onChange={handleSearch}
+    style={{
+      padding: "10px 30px",
+      borderRadius: "25px",
+      border: "2px solid #ccc",
+      fontSize: "14px",
+      width: "200px",
+      marginRight:"50px",
+      transition: "width 0.3s ease, box-shadow 0.3s ease",
+      outline: "none",
+      boxShadow: "1px 2px 4px rgba(0, 0, 0, 0.1)",
+    }}
+    onFocus={(e) => {
+      e.target.style.width = "300px";
+      e.target.style.boxShadow = "0 4px 15px rgba(0, 150, 255, 0.4)";
+    }}
+    onBlur={(e) => {
+      e.target.style.width = "200px";
+      e.target.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.1)";
+    }}
+  />
           {filteredItems.length > 0 && (
             <ul
               style={{
                 listStyle: "none",
                 margin: 0,
                 padding: "10px",
-                border: "1px solid #ccc",
-                borderRadius: "4px",
+                fontSize:"20px",
+                border: "2px solid #ccc",
+                borderRadius: "25px",
                 backgroundColor: "#fff",
                 position: "absolute",
-                top: "40px",
-                left: "-280px",
-                width: "200px",
+                top: "45px",
+                width: "340px",
                 boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
                 zIndex: 1000,
               }}
@@ -790,7 +826,7 @@
                     cursor: "pointer",
                     borderBottom: "1px solid #f0f0f0",
                     color: "#333",
-                    fontSize: "14px",
+                    fontSize: "18px",
                   }}
                   onClick={() => {
                     setQuery(item);
