@@ -12,7 +12,7 @@ body {
   /* font-family: "Montserrat Alternates", sans-serif; */
 }
 
-#backvid{
+#backvid {
   /* opacity: 50%; */
   height: 125%;
   position: fixed;
@@ -30,17 +30,22 @@ header {
   padding-top: 2rem;
   /* margin-bottom: -10px; */
   /* width: 100%; */
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    /* Added text animation */
-    animation: titleAnimation 3s ease-in-out infinite alternate;
-  
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /* Added text animation */
+  animation: titleAnimation 3s ease-in-out infinite alternate;
+}
+@keyframes titleAnimation {
+  0% {
+    color: white;
   }
-  @keyframes titleAnimation {
-    0% { color:white; }
-    50% { color: #acc4f1; }
-    100% { color: #4480f0; }
+  50% {
+    color: #acc4f1;
   }
+  100% {
+    color: #4480f0;
+  }
+}
 
 .login-container {
   display: flex;
@@ -49,7 +54,7 @@ header {
 
 .login {
   border-radius: 20px;
-  box-shadow: 0px 0px 10px #83AAF2;
+  box-shadow: 0px 0px 10px #83aaf2;
   width: 100%;
   height: 31rem;
   padding-top: 30px;
@@ -58,6 +63,10 @@ header {
   padding-left: 40px;
   padding-right: 20px;
   background-color: rgba(255, 255, 255, 0.6);
+}
+
+.signup-text {
+  margin-left: 7rem;
 }
 
 .login::before {
@@ -95,7 +104,7 @@ header {
   gap: 60px;
 }
 
-/* From Uiverse.io by gharsh11032000 */ 
+/* From Uiverse.io by gharsh11032000 */
 .animated-button {
   position: relative;
   display: flex;
@@ -111,19 +120,18 @@ header {
   background-color: inherit;
   border-radius: 100px;
   font-weight: 600;
-  color: #02122B;
-  box-shadow: 0 0 0 2px #83AAF2;
+  color: #02122b;
+  box-shadow: 0 0 0 2px #83aaf2;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   margin-bottom: 10px;
-
 }
 
 .animated-button svg {
   position: absolute;
   width: 24px;
-  fill: #02122B;
+  fill: #02122b;
   z-index: 9;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -143,7 +151,7 @@ header {
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  background-color:#83AAF2;
+  background-color: #83aaf2;
   border-radius: 50%;
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -180,7 +188,7 @@ header {
 
 .animated-button:active {
   scale: 0.95;
- box-shadow: 0px 0px 13px #83AAF2;
+  box-shadow: 0px 0px 13px #83aaf2;
 }
 
 .animated-button:hover .circle {
@@ -191,8 +199,9 @@ header {
 
 @media (max-width: 915px) {
   header {
+    margin-left: -10px;
     font-size: 30px;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
   }
 
@@ -201,6 +210,7 @@ header {
     padding-left: 20px;
     padding-right: 40px;
     width: 100%;
+    margin-top: 10px;
   }
 
   .name {
@@ -223,8 +233,12 @@ header {
     font-size: 16px;
   }
 
-  .animated-button{
+  .animated-button {
     margin-left: 22%;
     margin-top: 30px;
+  }
+
+  .signup-text {
+    margin-left: 2rem;
   }
 }
