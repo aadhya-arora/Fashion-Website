@@ -789,16 +789,28 @@ footer {
   }
   #Explore {
     margin-left: 2px;
-    display: none;
   }
   .title1-2 {
     margin-left: 75px;
     font-size: 25px;
     display: inline;
   }
+
+  .title1 {
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 40px;
+    margin-left: 0;
+  }
+
   .t1-2 {
     margin-left: 155px;
     display: inline;
+  }
+
+  .t1 {
+    margin-top: 1px;
+    margin-left: 2rem;
   }
 
   .container {
@@ -855,6 +867,11 @@ footer {
   }
   .expbtn1 {
     display: flex;
+  }
+
+  .card {
+    margin-left: 1rem;
+    width: 21rem;
   }
   footer {
     margin-left: 0;

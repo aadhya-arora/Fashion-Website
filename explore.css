@@ -6,7 +6,10 @@ body {
   padding: 0;
   cursor: pointer;
   /* font-family: "Montserrat Alternates", serif; */
-  
+}
+
+.caption1 {
+  margin-left: 18rem;
 }
 
 .container {
@@ -38,7 +41,7 @@ body {
 .heading {
   justify-content: center;
   align-items: center;
-  color: #02122B;
+  color: #02122b;
   font-size: 60px;
   font-weight: 700;
   /* font-family: "Dancing Script", cursive; */
@@ -54,7 +57,7 @@ body {
   padding: 30px;
   padding-bottom: 60px;
   text-align: center;
-  background-color: #C1D5F9;
+  background-color: #c1d5f9;
 }
 
 .container2 {
@@ -72,8 +75,8 @@ body {
   margin: 0 auto;
   padding: 40px;
   font-weight: 600;
-  color: #02122B;
-  background-color: #C1D5F9;
+  color: #02122b;
+  background-color: #c1d5f9;
   /* font-family: "Dancing Script", cursive; */
   font-size: 30px;
 }
@@ -84,7 +87,7 @@ body {
   align-items: center;
   margin: 0 auto;
   padding: 20px;
-  background-color: #C1D5F9;
+  background-color: #c1d5f9;
 }
 
 .link {
@@ -93,7 +96,7 @@ body {
 }
 
 .link:hover {
-  color: #003DAC;
+  color: #003dac;
 }
 
 .container3 {
@@ -146,6 +149,8 @@ body {
     background-image: url("/backgrounds/e2.jpg");
   }
   .quote {
+    font-size: 15px;
+    font-weight: 200;
     padding: 20px;
   }
   .container3 {
@@ -153,7 +158,11 @@ body {
     opacity: 1;
   }
   .caption {
-    font-size: 40px;
+    font-size: 25px;
+  }
+
+  .caption1 {
+    margin-left: 5rem;
   }
   .social-links {
     padding: 10px;
