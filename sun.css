@@ -2,12 +2,15 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Cormorant", serif;
 }
 .heading {
   font-size: 60px;
   font-family: "Grey Qo", cursive;
   margin-top: -10px;
   text-align: center;
+  letter-spacing: 1px;
+  font-weight: 599;
 }
 
 nav {
@@ -22,7 +25,7 @@ nav {
   background-color: white;
   color: #02122b;
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 20px;
   border: none;
 }
 
@@ -39,7 +42,7 @@ nav {
   min-width: 120px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  border-radius: 30px;
+  /* border-radius: 30px; */
 }
 
 .dropdown-content a {
@@ -97,7 +100,7 @@ nav {
 }
 
 .btn {
-  margin-top: 50px;
+  margin-top: 48px;
   margin-left: 80px;
   position: relative;
   display: flex;
@@ -105,7 +108,8 @@ nav {
   align-items: center;
   border-radius: 5px;
   background: #02122b;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Cormorant", serif;
+  /* font-family: "Montserrat", sans-serif; */
   box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   cursor: pointer;
@@ -175,7 +179,7 @@ nav {
   width: 400px;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 20px;
+  border-radius: 25px;
   transition: transform 0.3s ease;
 }
 
@@ -185,7 +189,7 @@ nav {
   width: 400px;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 20px;
+  border-radius: 25px;
   transition: transform 0.3s ease;
 }
 
@@ -195,8 +199,10 @@ nav {
 }
 
 .internal_text {
+  font-weight: 700;
   text-align: center;
-  font-family: "Grey Qo", cursive;
+  font-family: "Cormorant", serif;
+  /* font-family: "Grey Qo", cursive; */
   margin-top: 60px;
   font-size: 60px;
   padding-top: 100px;
@@ -216,6 +222,9 @@ nav {
   padding-top: 10px;
   font-size: 70px;
   text-align: center;
+  margin-left: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .display {
@@ -227,7 +236,7 @@ nav {
 }
 
 .display1 {
-  border: 2px solid #02122b;
+  /* border: 2px solid #02122b; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -246,7 +255,7 @@ nav {
 }
 
 .display2 {
-  border: 2px solid white;
+  /* border: 2px solid white; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -265,7 +274,7 @@ nav {
 }
 
 .disp {
-  border: 2px solid #02122b;
+  /* border: 2px solid #02122b; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -319,8 +328,9 @@ nav {
 .d7,
 .d8 {
   border-radius: 10%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   height: 200px;
+  font-family: "Cormorant", serif;
   width: 220px;
   background-size: cover;
   background-position: center;
@@ -397,6 +407,7 @@ nav {
   margin-top: 50px;
   margin-left: 700px;
   border: none;
+  font-family: "Cormorant", serif;
   background: none;
   cursor: pointer;
 }
@@ -412,7 +423,9 @@ nav {
   padding-bottom: 7px;
   letter-spacing: 4px;
   font-size: 14px;
+ 
   padding-right: 15px;
+  font-family: "Cormorant", serif;
   text-transform: uppercase;
 }
 
@@ -423,6 +436,7 @@ nav {
   letter-spacing: 4px;
   font-size: 14px;
   padding-right: 15px;
+  font-family: "Cormorant", serif;
   text-transform: uppercase;
 }
 
@@ -517,12 +531,16 @@ nav {
 .heading-4 {
   color: #02122b;
   padding-top: 10px;
+  font-family: "Cormorant", serif;
+  font-weight: 700;
+  text-transform: uppercase;
   font-size: 70px;
   text-align: center;
+  margin-left: 5rem;
 }
 
 .disp1 {
-  border: 2px solid white;
+  /* border: 2px solid white; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -531,6 +549,7 @@ nav {
   color: black;
   height: 350px;
   width: 250px;
+  font-family: "Cormorant", serif;
   text-align: center;
   margin-left: 60px;
   padding: 10px;
@@ -549,9 +568,10 @@ nav {
 .s7,
 .s8 {
   border-radius: 10%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   height: 200px;
   width: 220px;
+  font-family: "Cormorant", serif;
   background-size: cover;
   background-position: center;
 }
@@ -623,26 +643,29 @@ nav {
 footer {
   background-color: #02122b;
   padding-bottom: 20px;
+  font-family: "Cormorant", serif;
 }
 
 .footer-heading {
   padding-top: 20px;
   text-transform: uppercase;
   font-size: 50px;
-  font-family: "Faculty Glyphic", sans-serif;
+  font-weight: 800;
+  /* font-family: "Faculty Glyphic", sans-serif; */
   text-align: center;
+  font-family: "Cormorant", serif;
   color: #c1d5f9;
-  text-align: center;
-  font-weight: 500;
+  /* text-align: center; */
+  /* font-weight: 500; */
 }
 
 .line {
-  width: 900px;
+  width: 1100px;
   color: #c1d5f9;
 }
 
 .foot {
-  margin-left: 200px;
+  margin-left: 290px;
   margin-top: 50px;
   display: flex;
   gap: 120px;
@@ -651,8 +674,9 @@ footer {
 }
 .c-hub {
   font-weight: lighter;
-  font-family: "Montserrat Alternates", serif;
-  text-transform: uppercase;
+  font-family: "Cormorant", serif;
+  /* font-family: "Montserrat Alternates", serif; */
+  /* text-transform: uppercase; */
   display: flex;
   flex-direction: column;
 }
@@ -669,7 +693,8 @@ footer {
 }
 .explore {
   display: none;
-  font-family: "Grey Qo", cursive;
+  font-family: "Cormorant", serif;
+  /* font-family: "Grey Qo", cursive; */
   font-size: 50px;
   text-align: center;
 }
@@ -737,7 +762,8 @@ footer {
 
 .n-heading {
   font-weight: 600;
-  font-family: "Monteserrat Alternates", sans-serif;
+  font-family: "Cormorant", serif;
+  /* font-family: "Monteserrat Alternates", sans-serif; */
   text-transform: uppercase;
   font-size: 20px;
   color: #83aaf2;
