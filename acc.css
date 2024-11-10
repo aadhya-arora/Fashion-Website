@@ -237,7 +237,6 @@ header {
   text-transform: uppercase;
   /* Added text animation */
   animation: titleAnimation 3s ease-in-out infinite alternate;
-
 }
 
 @keyframes titleAnimation {
@@ -246,7 +245,7 @@ header {
   }
 
   50% {
-    color: #003DAC;
+    color: #003dac;
   }
 
   100% {
@@ -262,7 +261,6 @@ header {
   /* Adjust duration as needed */
 }
 
-
 .heading-2 {
   color: #02122b;
   /* color: #83aaf2; */
@@ -274,7 +272,6 @@ header {
   text-transform: uppercase;
   /* Added text animation */
   animation: titleAnimation 3s ease-in-out infinite alternate;
-
 }
 
 @keyframes titleAnimation {
@@ -283,7 +280,7 @@ header {
   }
 
   50% {
-    color: #003DAC;
+    color: #003dac;
   }
 
   100% {
@@ -299,7 +296,6 @@ header {
   /* Adjust duration as needed */
 }
 
-
 .dis1 {
   background-image: url("/Neckpieces/n1.jpeg");
   /* padding: 3px; */
@@ -309,72 +305,58 @@ header {
 
 .dis1:hover {
   background-image: url("/Neckpieces/n1-a.jpg");
-
 }
 
 .dis2 {
   background-image: url("/Neckpieces/n2.jpeg");
-
 }
 
 .dis2:hover {
   background-image: url("/Neckpieces/n2-a.jpg");
-
 }
 
 .dis3 {
   background-image: url("/Neckpieces/n9.png");
-
 }
 
 .dis3:hover {
   background-image: url("/Neckpieces/n3-a.jpg");
-
 }
 
 .dis4 {
   background-image: url("/Neckpieces/n4.jpg");
-
 }
 
 .dis4:hover {
   background-image: url("/Neckpieces/n4-a.jpg");
-
 }
 
 .dis5 {
   background-image: url("/Neckpieces/n5.jpg");
-
 }
 
 .dis5:hover {
   background-image: url("/Neckpieces/n5-a.jpg");
-
 }
 
 .dis6 {
   background-image: url("/Neckpieces/n6.webp");
-
 }
 
 .dis6:hover {
-
   background-image: url("/Neckpieces/n6-a.jpg");
 }
 
 .dis7 {
-
   background-image: url("/Neckpieces/n7.jpg");
 }
 
 .dis7:hover {
-
   background-image: url("/Neckpieces/n7-a.jpg");
 }
 
 .dis8 {
   background-image: url("/Neckpieces/n8.webp");
-
 }
 
 .dis8:hover {
@@ -863,7 +845,6 @@ footer {
 }
 
 .footer-heading {
-
   padding-top: 20px;
   color: #c1d5f9;
   font-family: "Cormorant", serif;
@@ -1056,7 +1037,7 @@ body {
 
   .slideshow {
     display: none;
-    width: 98rem;;
+    width: 98rem;
   }
 
   .banner2 {
@@ -1081,7 +1062,10 @@ body {
   }
 
   .heading-1 {
-    font-size: 40px;
+    font-size: 50px;
+  }
+  .heading-2 {
+    font-size: 50px;
   }
 
   .disp {
@@ -1121,7 +1105,7 @@ body {
   #watches,
   #Bag,
   #Ear {
-    height: 650px;
+    height: 700px;
   }
 
   .cta,
