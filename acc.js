@@ -61,3 +61,7 @@ function hide3() {
   document.querySelector(".cta3").style.display = "flex";
   document.querySelector(".cta7").style.display = "none";
 }
+
+function subscribed() {
+  alert("You have subscribed to our newsletter successfully");
+}
