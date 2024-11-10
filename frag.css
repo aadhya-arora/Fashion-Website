@@ -699,8 +699,8 @@ footer {
     display: block;
     font-size: 45px;
     text-align: center;
-    color: white;
-    background-color: black;
+    color: #02122b;
+    background-color: white;
     padding: 10px;
   }
   .banner {
@@ -717,8 +717,12 @@ footer {
 
   .header2 {
     display: flex;
-    background-color: black;
+    background-color: white;
     gap: 10px;
+  }
+
+  .dropbtn {
+    color: #02122b;
   }
 
   #perfumes {
@@ -777,9 +781,11 @@ footer {
     display: none;
   }
   .foot {
-    margin-left: 90px;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 10px;
+    justify-content: space-around;
+    margin-left: 10px;
+    gap: 2px;
   }
   .line {
     width: 300px;

@@ -792,12 +792,17 @@ footer {
 }
 
 @media screen and (max-width: 915px) {
+  #search-bar {
+    display: none;
+  }
   nav {
-    background-color: #575754;
+    background-color: #02122b;
+    color: white;
     display: flex;
   }
   .dropbtn {
     background-color: transparent;
+    color: white;
   }
 
   .heading {
@@ -875,13 +880,15 @@ footer {
   .disp1 {
     margin-top: 20px;
     margin-left: 10px;
-    background-color: #e88d93;
+    background-color: #c1d5f9;
   }
 
   .foot {
-    margin-left: 90px;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 10px;
+    justify-content: space-around;
+    margin-left: 10px;
+    gap: 2px;
   }
   .line {
     width: 300px;
