@@ -15,7 +15,7 @@ function myFunction() {
 
 function hide() {
   document.getElementById("more").style.display = "none";
-  document.getElementById("neck").style.height = "600px";
+  document.getElementById("neck").style.height = "650px";
   document.querySelector(".cta").style.display = "flex";
   document.querySelector(".cta4").style.display = "none";
 }
@@ -29,7 +29,7 @@ function myFunction2() {
 
 function hide1() {
   document.getElementById("more2").style.display = "none";
-  document.getElementById("watches").style.height = "600px";
+  document.getElementById("watches").style.height = "650px";
   document.querySelector(".cta1").style.display = "flex";
   document.querySelector(".cta5").style.display = "none";
 }
@@ -43,7 +43,7 @@ function myFunction4() {
 
 function hide2() {
   document.getElementById("more3").style.display = "none";
-  document.getElementById("Bag").style.height = "600px";
+  document.getElementById("Bag").style.height = "650px";
   document.querySelector(".cta2").style.display = "flex";
   document.querySelector(".cta6").style.display = "none";
 }
@@ -57,7 +57,7 @@ function myFunction6() {
 
 function hide3() {
   document.getElementById("more4").style.display = "none";
-  document.getElementById("Ear").style.height = "600px";
+  document.getElementById("Ear").style.height = "650px";
   document.querySelector(".cta3").style.display = "flex";
   document.querySelector(".cta7").style.display = "none";
 }
