@@ -159,59 +159,5 @@
         <img src="./main/jewellery.jpg" alt="Jewellery" />
       </div>
     </div>
-    <script>
-      document
-        .getElementById("signup-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevents default form submission
-
-          const name = document.getElementById("first-name").value;
-          const email = document.getElementById("last-name").value;
-          const username = document.getElementById("username").value;
-          const phone = document.getElementById("input").value;
-          const password = document.getElementById("password").value;
-
-          if (!phone || !password) {
-            console.err("One or more error");
-            return;
-          }
-          if (phone.length !== 10) {
-            document.getElementById("error").innerText = "Phone number invalid";
-            return;
-          } else {
-            document.getElementById("error").innerText = "";
-          }
-          // Prepare the data to send
-          const formData = {
-            name: name,
-            email: email,
-            user: username,
-            phone: phone,
-            password: password,
-          };
-
-          // Send the data to the server via fetch
-          fetch("http://localhost:5011/submit", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData), // Send form data as JSON
-          })
-            .then((response) => response.json())
-            .then((data) => {
-              console.log(data);
-              //ALERT
-              alert("Signup successful!");
-              // document.getElementById("response-message").innerText =
-              //   data.message;
-              document.getElementById("signup-form").reset();
-            })
-            .catch((error) => {
-              console.error("Error:", error);
-              alert("Signup failed. Please try again.");
-            });
-        });
-    </script>
   </body>
 </html>
