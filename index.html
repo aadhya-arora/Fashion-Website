@@ -171,6 +171,16 @@
           const phone = document.getElementById("input").value;
           const password = document.getElementById("password").value;
 
+          if (!phone || !password) {
+            console.err("One or more error");
+            return;
+          }
+          if (phone.length !== 10) {
+            document.getElementById("error").innerText = "Phone number invalid";
+            return;
+          } else {
+            document.getElementById("error").innerText = "";
+          }
           // Prepare the data to send
           const formData = {
             name: name,
