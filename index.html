@@ -193,7 +193,7 @@
       };
   
       // Send the data to the server via fetch
-      fetch('http://localhost:5050/submit', {
+      fetch('http://localhost:5011/submit', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
@@ -203,7 +203,6 @@
       .then(response => response.json())
       .then(data => {
           console.log(data);
-          //ALERT
           alert("Signup successful!");
           document.getElementById("response-message").innerText = data.message;
           document.getElementById("signup-form").reset();
