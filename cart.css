@@ -354,6 +354,232 @@ body {
   height: 300px;
   width: 400px;
 }
+.products {
+  margin-top: 70px;
+  margin-left: 100px;
+}
+
+#neck1 {
+  background-image: url("./Neckpieces/n1.jpeg");
+  background-repeat: no-repeat;
+  background-size: 160px 160px;
+  height: 160px;
+  width: 160px;
+}
+
+#neck2 {
+  background-image: url("./Neckpieces/n2.jpeg");
+  background-repeat: no-repeat;
+  background-size: 160px 160px;
+  height: 160px;
+  width: 160px;
+}
+#neck3 {
+  background-image: url("./Neckpieces/n9.png");
+  background-repeat: no-repeat;
+  background-size: 160px 160px;
+  height: 160px;
+  width: 160px;
+}
+
+.detail {
+  font-weight: 900;
+  font-size: 20px;
+}
+.product1 {
+  gap: 30px;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  width: 750px;
+}
+
+#count {
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.save_later {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.save_later:hover {
+  text-decoration: underline;
+}
+
+.pricediv {
+  margin-left: 150px;
+  margin-top: 20px;
+}
+
+.price {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 300;
+}
+.pricing {
+  gap: 100px;
+  display: none;
+  flex-direction: row;
+}
+
+.pricebox {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 130px;
+  height: 400px;
+  width: 400px;
+  border: none;
+  background-color: #e7eefa;
+}
+.sum {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.sum1 {
+  gap: 200px;
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.sum2 {
+  gap: 170px;
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.sum3 {
+  gap: 80px;
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.checkout {
+  margin-top: 30px;
+  background-color: #02122b;
+  color: #f3f4f7;
+  padding: 15px;
+  font-family: "Montserrat Alternates", serif;
+  font-weight: 700;
+  border: none;
+}
+
+/* .cart-container {
+  margin-top: 20px;
+  margin-left: 50px;
+} */
+
+.Shopp {
+  font-family: "Montserrat Alternates", serif;
+  font-weight: 400px;
+  font-size: 40px;
+}
+.cart-container {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-left: 350px;
+  padding: 20px;
+  width: 800px;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#empty-cart-message {
+  font-size: 18px;
+  color: #555;
+  font-weight: bold;
+  display: none; /* Initially hidden */
+}
+
+#cart-items {
+  width: 600px;
+
+  padding: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.cart-item p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.remove-item {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.remove-item:hover {
+  background-color: #c9302c;
+}
+
+.order-summary {
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-top: 2px solid #ddd;
+}
+
+.order-summary p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+#checkout-btn {
+  background-color: #02122b;
+  color: #f3f4f7;
+  padding: 12px 20px;
+  font-family: "Montserrat Alternates", serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+#checkout-btn:hover {
+  background-color: #032147;
+}
 
 @media screen and (max-width: 915px) {
   .header-text {

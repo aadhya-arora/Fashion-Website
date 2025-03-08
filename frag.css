@@ -55,7 +55,6 @@ body {
 
 .header-text2 {
   display: none;
-
   font-family: "Grey Qo", cursive;
 }
 
@@ -714,6 +713,48 @@ footer {
   margin-left: -30px;
   color: #83aaf2;
   font-size: 10px;
+}
+
+.addto {
+  height: 60px;
+  width: 200px;
+  background-color: #132233;
+  border: none;
+  color: #bebebe;
+  transition: 0.6s;
+  font-size: 15px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 20px; */
+  overflow: hidden;
+}
+
+.addto span {
+  transform: translateX(10px);
+  transition: 0.5s;
+}
+
+.addto svg {
+  transform: translateX(-300px);
+  transition: 0.6s;
+  z-index: 3;
+  height: 20px;
+}
+
+.addto:hover {
+  width: 60px;
+  background-color: rgba(51, 34, 51, 0.815);
+}
+
+.addto:hover svg {
+  transform: translateX(-5px);
+}
+
+.addto:hover span {
+  transform: translateY(70px);
+  font-size: 0.1rem;
 }
 
 @media screen and (max-width: 915px) {
