@@ -1,0 +1,3 @@
+{"name":"abcd","email":"aa2705@gmail.com","user":"abcd05","phone":"7626929633","password":"girlies1"}
+{"name":"ABC","email":"aadhu2705@gmail.com","user":"aadhu05","phone":"7626929633","password":"asdfghgj"}
+{"name":"ABC","email":"aadhu2705@gmail.com","user":"aadhu05","phone":"7626929633","password":"asdfghjk"}
