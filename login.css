@@ -197,6 +197,11 @@ header {
   opacity: 1;
 }
 
+#error1 {
+  color: white;
+  font-size: 35px;
+}
+
 @media (max-width: 915px) {
   header {
     margin-left: -10px;

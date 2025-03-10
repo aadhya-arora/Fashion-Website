@@ -2,3 +2,6 @@
 {"name":"Aadhya Arora","email":"aadhya0171.be23@chitkara.edu.in","user":"aadhu05","phone":"7626929633","password":"adhu0527"}
 {"name":"Aadhya Arora","email":"aadhu2705@gmail.com","user":"aadhu05","phone":"7626929633","password":"aadhu052"}
 {"name":"Aadhya","email":"aadhu2705@gmail.com","user":"aadhu05","phone":"123","password":"hathi.ad"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","user":"aadhu05","phone":"7626929633","password":"hathi.ad"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","user":"aadhu05","phone":"7626929633","password":"hathi.ad"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","user":"aadhu05","phone":"7626929633","password":"hathi.ad"}
