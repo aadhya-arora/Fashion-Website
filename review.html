@@ -16,7 +16,7 @@
     </video>
     <header>Your Review</header>
 
-    <form id="review-form">
+    <form id="review-form" action="/submit-review" method="POST">
       <div class="review">
         <nav class="head">
           <a href="main.html" class="head-1">Girlies</a>
@@ -41,7 +41,7 @@
               placeholder="What are your thoughts about us?"
               class="email"
               required
-              id="full-name"
+              id="user-review"
             />
             <p class="name">Improvment</p>
             <input
@@ -49,7 +49,7 @@
               placeholder="What can we improve?"
               class="email"
               required
-              id="full-name"
+              id="improvment"
             />
             <p class="name">Rate us</p>
             <div class="rating">

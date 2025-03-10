@@ -59,21 +59,36 @@
 // app.listen(port, () => {
 //     console.log(`Server running at http://localhost:${port}`);
 // });
-
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
-const dirpath = path.join(__dirname);
+
 const app = express();
+const PORT = 3000;
 const publicDir = __dirname;
-const filePath = path.join(__dirname, "data.txt");
+
+// File paths
+const userFilePath = path.join(__dirname, "data.txt");
+const reviewFilePath = path.join(__dirname, "review.txt");
+
 app.use(express.json());
-
 app.use(express.urlencoded({ extended: true })); // Needed for form data
+app.use(express.static(publicDir)); // Serves static files (HTML, CSS, JS)
 
-app.get("/index", (req, res) => {
+// Ensure files exist
+if (!fs.existsSync(userFilePath)) fs.writeFileSync(userFilePath, "");
+if (!fs.existsSync(reviewFilePath)) fs.writeFileSync(reviewFilePath, "");
+
+// ✅ Serve index.html (Signup Page)
+app.get("/", (req, res) => {
   res.sendFile(path.join(publicDir, "index.html"));
 });
+
+// ✅ Serve review.html (Review Page)
+app.get("/review", (req, res) => {
+  res.sendFile(path.join(publicDir, "review.html"));
+});
+
 app.post("/submit", (req, res) => {
   const new_user = {
     name: req.body.name,
@@ -83,8 +98,8 @@ app.post("/submit", (req, res) => {
     password: req.body.password,
   };
   const userString = JSON.stringify(new_user) + "\n";
-  if (fs.existsSync(filePath)) {
-    fs.appendFile(filePath, userString, (err) => {
+  if (fs.existsSync(userFilePath)) {
+    fs.appendFile(userFilePath, userString, (err) => {
       if (!err) {
         console.log("File updated");
         res.redirect("/main.html");
@@ -95,6 +110,26 @@ app.post("/submit", (req, res) => {
     res.redirect("/main.html");
   }
 });
-app.use(express.static(publicDir)); // Serves static files (HTML, CSS, JS)
 
-app.listen(3000);
+app.post("/submit-review", (req, res) => {
+  const newReview = {
+    fullname: req.body.fullname,
+    review: req.body.review,
+    improvement: req.body.improvement,
+    rating: req.body.rating,
+  };
+
+  const reviewString = JSON.stringify(newReview) + "\n";
+
+  fs.appendFile(reviewFilePath, reviewString, (err) => {
+    if (err) {
+      console.error("❌ Error saving review:", err);
+      return res.status(500).json({ message: "Error saving review" });
+    }
+    res.status(200).json({ message: "Review submitted successfully!" });
+  });
+});
+
+app.listen(PORT, () => {
+  console.log(` Server running at http://localhost:${PORT}`);
+});
