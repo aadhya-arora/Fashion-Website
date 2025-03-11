@@ -2,3 +2,4 @@
 {"name":"ABC","email":"aadhu2705@gmail.com","user":"aadhu05","phone":"7626929633","password":"asdfghgj"}
 {"name":"ABC","email":"aadhu2705@gmail.com","user":"aadhu05","phone":"7626929633","password":"asdfghjk"}
 {"name":"Aadhya Arora","email":"aadhu2705@gmail.com","user":"aadhu05","phone":"7626929633","password":"asdfghjk"}
+{"name":"ABC","email":"aabcd@gmail.com","user":"abcd08","phone":"7626929633","password":"asdfghjk"}
