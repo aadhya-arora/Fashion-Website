@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Ga+Maamli&family=Grey+Qo&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Matemasie&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+BE+VLG:wght@100..400&family=Rubik:ital,wght@0,300..900;1,300..900&family=Satisfy&family=Sevillana&family=Yellowtail&display=swap");
+
+body {
+  cursor: pointer;
+  margin: 0;
+  font-family: "Cormorant", serif;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  background-color: white;
+  color: black;
+  top: 0;
+  left: 0;
+}
+
+.header-text {
+  font-family: "Grey Qo", cursive;
+  font-size: 80px;
+  margin-left: 600px;
+}
+
+.dropbtn {
+  color: #02122b;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.dropdown {
+  margin-left: 30px;
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  /* border-radius: 30px; */
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 100px;
+  font-weight: 700;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-left: 40px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #02122b;
+  color: white;
+  /* border-radius: 30px; */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: #02122b;
+}
+.login {
+  text-decoration: none;
+  color: black;
+  margin-left: 450px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.login:hover {
+  color: #83aaf2;
+  .tooltip {
+    color: white;
+  }
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  width: 80px;
+  text-align: center;
+  padding: 8px;
+}
+
+.triangle {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid black;
+}
+
+.content-box,
+.content-box2 {
+  padding: 2px;
+}
+
+.login:hover .tooltip {
+  display: block;
+}
+
+.home {
+  text-decoration: none;
+  color: black;
+  margin-left: 30px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.home:hover {
+  color: #83aaf2;
+  .tooltip {
+    display: block;
+    color: white;
+  }
+}
+
+.empty {
+  height: 600px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empty_text {
+  color: #052a66;
+  font-size: 30px;
+}
+.empty img {
+  height: 400px;
+  width: 400px;
+}
+
+.go_cart {
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #03045e;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+
+.go_cart::before,
+.go_cart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.go_cart::before {
+  left: -10px;
+  background: #02122b;
+}
+
+.go_cart::after {
+  right: -10px;
+  background: #11126b;
+}
+
+.go_cart:hover::before,
+.go_cart:hover::after {
+  width: 58%;
+}
+
+.go_cart:hover span {
+  color: white;
+  transition: 0.3s;
+}
+
+.go_cart span {
+  color: #03045e;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+}

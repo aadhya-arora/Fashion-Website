@@ -64,27 +64,23 @@ const fs = require("fs");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 const publicDir = __dirname;
 
-// File paths
 const userFilePath = path.join(__dirname, "data.txt");
 const reviewFilePath = path.join(__dirname, "review.txt");
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true })); // Needed for form data
-app.use(express.static(publicDir)); // Serves static files (HTML, CSS, JS)
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(publicDir));
 
-// Ensure files exist
 if (!fs.existsSync(userFilePath)) fs.writeFileSync(userFilePath, "");
 if (!fs.existsSync(reviewFilePath)) fs.writeFileSync(reviewFilePath, "");
 
-// ✅ Serve index.html (Signup Page)
 app.get("/", (req, res) => {
   res.sendFile(path.join(publicDir, "index.html"));
 });
 
-// ✅ Serve review.html (Review Page)
 app.get("/review", (req, res) => {
   res.sendFile(path.join(publicDir, "review.html"));
 });
