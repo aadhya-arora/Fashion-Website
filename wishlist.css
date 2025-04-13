@@ -208,3 +208,18 @@ body {
   font-size: 18px;
   transition: all 0.3s ease-in;
 }
+
+.wishlist-container {
+  margin-top: 100px;
+  width: 600px;
+}
+.wishlist-card {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
