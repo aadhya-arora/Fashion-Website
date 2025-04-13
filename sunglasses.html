@@ -899,47 +899,75 @@
     </footer>
   </body>
   <script>
-    // Wishlist Functionality with Image Support
-    document.querySelectorAll(".like").forEach((heart) => {
-      heart.addEventListener("click", function () {
-        heart.classList.toggle("liked");
+    document.addEventListener("DOMContentLoaded", function () {
+      function getWishlist() {
+        return JSON.parse(localStorage.getItem("wishlist")) || [];
+      }
 
-        const parent = heart.closest(".disp, .display1"); // works for both sunglasses and frag layouts
-        const name = parent.querySelector(".text")?.textContent.trim();
-        const price = parent.querySelector(".price")?.textContent.trim();
-        const img =
-          parent.querySelector("img")?.src || getBackgroundImage(parent);
+      function saveWishlist(wishlist) {
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      }
 
-        const item = { name, price, img };
+      document.querySelectorAll(".like").forEach((button) => {
+        button.addEventListener("click", function () {
+          const parent = button.closest(".disp,.display2,.display1,disp1");
+          const nameElement = parent.querySelector(".text");
+          const priceElement = parent.querySelector(".price");
 
-        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+          if (!nameElement || !priceElement) return;
 
-        const exists = wishlist.find((i) => i.name === item.name);
+          const name = nameElement.textContent.trim().replace(/\s+/g, " ");
+          const price = parseInt(
+            priceElement.textContent.replace(/[^\d]/g, "")
+          );
 
-        if (!exists) {
-          wishlist.push(item);
-          localStorage.setItem("wishlist", JSON.stringify(wishlist));
-          alert("Added to Wishlist");
-        } else {
-          wishlist = wishlist.filter((i) => i.name !== item.name);
-          localStorage.setItem("wishlist", JSON.stringify(wishlist));
-          alert("Removed from Wishlist");
-        }
+          // ✅ Extract background image from the div containing the heart
+          const bgImageDiv = button.parentElement;
+          let imgSrc = "";
+
+          if (bgImageDiv) {
+            const bgStyle = window.getComputedStyle(bgImageDiv).backgroundImage;
+            const match = bgStyle.match(/url\(["']?(.*?)["']?\)/);
+            if (match && match[1]) {
+              const raw = match[1];
+              imgSrc = raw.startsWith("http")
+                ? raw
+                : window.location.origin + raw;
+            }
+          }
+
+          let wishlist = getWishlist();
+          const alreadyAdded = wishlist.some((item) => item.name === name);
+
+          if (!alreadyAdded) {
+            const itemData = { name, price, img: imgSrc };
+            wishlist.push(itemData);
+            saveWishlist(wishlist);
+
+            // Optional: send to server
+            fetch("/add-to-wishlist", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                user: "guest",
+                itemId: Date.now(),
+                itemName: name,
+                itemPrice: price,
+                itemImage: imgSrc,
+              }),
+            })
+              .then((res) => res.json())
+              .then((data) => console.log("✅ Wishlist item stored:", data))
+              .catch((err) => console.error("❌ Error saving to server:", err));
+
+            button.classList.add("liked");
+            alert(`${name} added to wishlist!`);
+          } else {
+            alert(`${name} is already in your wishlist.`);
+          }
+        });
       });
     });
-
-    // Helper function to extract background image from div
-    function getBackgroundImage(parent) {
-      const bgDiv = parent.querySelector(
-        "div[class^='d'], div[class^='dis'], div[class^='wat']"
-      );
-      if (!bgDiv) return "";
-
-      const style = window.getComputedStyle(bgDiv);
-      const backgroundImage = style.backgroundImage;
-      const match = backgroundImage.match(/url\(["']?(.*?)["']?\)/);
-      return match ? match[1] : "";
-    }
   </script>
 
   <script type="text/babel">

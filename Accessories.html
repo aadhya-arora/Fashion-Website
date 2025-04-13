@@ -1755,40 +1755,66 @@
   </body>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const likeButtons = document.querySelectorAll(".like");
+      function getWishlist() {
+        return JSON.parse(localStorage.getItem("wishlist")) || [];
+      }
 
-      likeButtons.forEach((button) => {
+      function saveWishlist(wishlist) {
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      }
+
+      document.querySelectorAll(".like").forEach((button) => {
         button.addEventListener("click", function () {
-          const displayItem = button.closest(".display1");
-          const nameElement = displayItem.querySelector(".text");
-          const priceElement = displayItem.querySelector(".price");
-          const bgImageDiv = button.parentElement;
+          const parent = button.closest(".display1");
+          const nameElement = parent.querySelector(".text");
+          const priceElement = parent.querySelector(".price");
 
-          if (!nameElement || !priceElement || !bgImageDiv) return;
+          if (!nameElement || !priceElement) return;
 
           const name = nameElement.textContent.trim().replace(/\s+/g, " ");
           const price = parseInt(
             priceElement.textContent.replace(/[^\d]/g, "")
           );
 
-          const bgImage = window.getComputedStyle(bgImageDiv).backgroundImage;
-          const match = bgImage.match(/url\(["']?(.*?)["']?\)/);
-
+          // ✅ Extract background image from the div containing the heart
+          const bgImageDiv = button.parentElement;
           let imgSrc = "";
-          if (match && match[1]) {
-            const raw = match[1];
-            imgSrc = raw.startsWith("http")
-              ? raw
-              : window.location.origin + raw;
+
+          if (bgImageDiv) {
+            const bgStyle = window.getComputedStyle(bgImageDiv).backgroundImage;
+            const match = bgStyle.match(/url\(["']?(.*?)["']?\)/);
+            if (match && match[1]) {
+              const raw = match[1];
+              imgSrc = raw.startsWith("http")
+                ? raw
+                : window.location.origin + raw;
+            }
           }
 
-          let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-
+          let wishlist = getWishlist();
           const alreadyAdded = wishlist.some((item) => item.name === name);
 
           if (!alreadyAdded) {
-            wishlist.push({ name, price, img: imgSrc });
-            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+            const itemData = { name, price, img: imgSrc };
+            wishlist.push(itemData);
+            saveWishlist(wishlist);
+
+            // Optional: send to server
+            fetch("/add-to-wishlist", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                user: "guest",
+                itemId: Date.now(),
+                itemName: name,
+                itemPrice: price,
+                itemImage: imgSrc,
+              }),
+            })
+              .then((res) => res.json())
+              .then((data) => console.log("✅ Wishlist item stored:", data))
+              .catch((err) => console.error("❌ Error saving to server:", err));
+
             button.classList.add("liked");
             alert(`${name} added to wishlist!`);
           } else {

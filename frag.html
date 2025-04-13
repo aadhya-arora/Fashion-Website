@@ -1020,49 +1020,6 @@
         </iframe>
       </div>
     </footer>
-    <script>
-      // Wishlist Functionality with Image Support
-      document.querySelectorAll(".like").forEach((heart) => {
-        heart.addEventListener("click", function () {
-          heart.classList.toggle("liked");
-
-          const parent = heart.closest(".disp, .display1"); // works for both sunglasses and frag layouts
-          const name = parent.querySelector(".text")?.textContent.trim();
-          const price = parent.querySelector(".price")?.textContent.trim();
-          const img =
-            parent.querySelector("img")?.src || getBackgroundImage(parent);
-
-          const item = { name, price, img };
-
-          let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-
-          const exists = wishlist.find((i) => i.name === item.name);
-
-          if (!exists) {
-            wishlist.push(item);
-            localStorage.setItem("wishlist", JSON.stringify(wishlist));
-            alert("Added to Wishlist");
-          } else {
-            wishlist = wishlist.filter((i) => i.name !== item.name);
-            localStorage.setItem("wishlist", JSON.stringify(wishlist));
-            alert("Removed from Wishlist");
-          }
-        });
-      });
-
-      // Helper function to extract background image from div
-      function getBackgroundImage(parent) {
-        const bgDiv = parent.querySelector(
-          "div[class^='d'], div[class^='dis'], div[class^='wat']"
-        );
-        if (!bgDiv) return "";
-
-        const style = window.getComputedStyle(bgDiv);
-        const backgroundImage = style.backgroundImage;
-        const match = backgroundImage.match(/url\(["']?(.*?)["']?\)/);
-        return match ? match[1] : "";
-      }
-    </script>
 
     <script type="text/babel">
       const items = [
@@ -1182,6 +1139,70 @@
 
       ReactDOM.render(<SearchBar />, document.getElementById("search-bar"));
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function getBackgroundImage(parent) {
+          // Look inside the parent for any div starting with 'd'
+          const bgDiv = parent.querySelector("div[class^='d']");
+          if (!bgDiv) return "";
+
+          const style = window.getComputedStyle(bgDiv);
+          const backgroundImage = style.backgroundImage;
+          const match = backgroundImage.match(/url\(["']?(.*?)["']?\)/);
+          return match ? match[1] : "";
+        }
+
+        document.querySelectorAll(".like").forEach((heart) => {
+          heart.addEventListener("click", function () {
+            heart.classList.toggle("liked");
+
+            const parent = heart.closest(".disp, .display1, .disp1"); // include disp1
+            const name = parent.querySelector(".text")?.textContent.trim();
+            const priceText =
+              parent.querySelector(".price")?.textContent.trim() || "";
+            const price = parseInt(priceText.replace(/[^\d]/g, ""));
+            const img =
+              parent.querySelector("img")?.src || getBackgroundImage(parent);
+
+            const item = { name, price, img };
+
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+            const exists = wishlist.find((i) => i.name === item.name);
+
+            if (!exists) {
+              wishlist.push(item);
+              localStorage.setItem("wishlist", JSON.stringify(wishlist));
+              alert("✅ Added to Wishlist");
+
+              fetch("/add-to-wishlist", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  user: "guest",
+                  itemId: Date.now(),
+                  itemName: name,
+                  itemPrice: price,
+                  itemImage: img,
+                }),
+              })
+                .then((res) => res.json())
+                .then((data) => console.log("✅ Wishlist item stored:", data))
+                .catch((err) =>
+                  console.error("❌ Error saving to server:", err)
+                );
+            } else {
+              wishlist = wishlist.filter((i) => i.name !== item.name);
+              localStorage.setItem("wishlist", JSON.stringify(wishlist));
+              alert("❌ Removed from Wishlist");
+            }
+          });
+        });
+      });
+    </script>
+
     <script src="frag.js"></script>
   </body>
 </html>

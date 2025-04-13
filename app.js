@@ -67,16 +67,20 @@ const app = express();
 const PORT = 5000;
 const publicDir = __dirname;
 
-const userFilePath = path.join(__dirname, "data.txt");
-const reviewFilePath = path.join(__dirname, "review.txt");
+const userFilePath = path.join(publicDir, "data.txt");
+const reviewFilePath = path.join(publicDir, "review.txt");
+const wishlistFilePath = path.join(publicDir, "wishlist.txt");
+
+// Create the text files if they don't exist
+[userFilePath, reviewFilePath, wishlistFilePath].forEach((file) => {
+  if (!fs.existsSync(file)) fs.writeFileSync(file, "");
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(publicDir));
 
-if (!fs.existsSync(userFilePath)) fs.writeFileSync(userFilePath, "");
-if (!fs.existsSync(reviewFilePath)) fs.writeFileSync(reviewFilePath, "");
-
+// Routes
 app.get("/", (req, res) => {
   res.sendFile(path.join(publicDir, "index.html"));
 });
@@ -93,18 +97,17 @@ app.post("/submit", (req, res) => {
     phone: req.body.phone,
     password: req.body.password,
   };
+
   const userString = JSON.stringify(new_user) + "\n";
-  if (fs.existsSync(userFilePath)) {
-    fs.appendFile(userFilePath, userString, (err) => {
-      if (!err) {
-        console.log("File updated");
-        res.redirect("/main.html");
-      }
-    });
-  } else {
-    fs.writeFileSync(dirpath + "/data.txt", userString);
+
+  fs.appendFile(userFilePath, userString, (err) => {
+    if (err) {
+      console.error(" Error saving user:", err);
+      return res.status(500).send("Failed to save user");
+    }
+    console.log("✅ User data saved");
     res.redirect("/main.html");
-  }
+  });
 });
 
 app.post("/submit-review", (req, res) => {
@@ -126,6 +129,27 @@ app.post("/submit-review", (req, res) => {
   });
 });
 
+// ✅ Wishlist route
+app.post("/add-to-wishlist", (req, res) => {
+  const wishlistItem = {
+    user: req.body.user,
+    itemId: req.body.itemId,
+    itemName: req.body.itemName,
+    itemPrice: req.body.itemPrice,
+    itemImage: req.body.itemImage,
+  };
+
+  const wishlistString = JSON.stringify(wishlistItem) + "\n";
+
+  fs.appendFile(wishlistFilePath, wishlistString, (err) => {
+    if (err) {
+      console.error("❌ Error saving wishlist item:", err);
+      return res.status(500).json({ message: "Error saving wishlist item" });
+    }
+    res.status(200).json({ message: "Wishlist item added successfully!" });
+  });
+});
+
 app.listen(PORT, () => {
-  console.log(` Server running at http://localhost:${PORT}`);
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
