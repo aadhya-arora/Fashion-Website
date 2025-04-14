@@ -164,6 +164,14 @@ p {
   border: none;
   /* font-family: "Montserrat Alternates", sans-serif; */
 }
+
+#sign_as {
+  margin-left: 31rem;
+  font-family: "Cormorant", serif;
+  width: 400px;
+  padding: 5px 10px;
+}
+
 #caraousel {
   height: 300px;
 }

@@ -10,3 +10,17 @@
 {"name":"Aadhya Arora","email":"aadhu2705@gmail.com","user":"aadhu05","phone":"7626929633","password":"aadhya12"}
 {"name":"Aadhya Arora","email":"aadhya0171.be23@chitkara.edu.in","user":"aadhu05","phone":"7626929633","password":"aadhya12"}
 {"name":"Aadhya Arora","email":"aadhu2705@gmail.com","user":"aadhu05","phone":"7626929633","password":"aadhya12"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","phone":"7626929633","password":"aadhya12"}
+{"name":"ABC","email":"aadhu2705@gmail.com","phone":"7626929633","password":"aadhya12"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","sign_as":"delivery","phone":"7626929633","password":"aadhya12"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","phone":"7626929633","password":"aadhya12","sign_as":"delivery"}
+{"name":"ABC","email":"aadhu2705@gmail.com","phone":"7626929633","password":"aadhya12","sign_as":"delivery"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","phone":"7626929633","password":"aadgyhdb","sign_as":"admin"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","phone":"7626929633","password":"aadhya12","sign_as":"delivery"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","phone":"7626929633","password":"aadhya12","sign_as":"delivery"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","phone":"7626929633","password":"aadhya12","sign_as":"buyer"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","phone":"7626929633","password":"aadhya12","sign_as":"buyer"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","phone":"7626929633","password":"aadghyar","sign_as":"admin"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","phone":"7626929633","password":"aadghyar","sign_as":"admin"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","phone":"7626929633","password":"adhya123","sign_as":"buyer"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","phone":"7626929633","password":"adhya123","sign_as":"buyer"}

@@ -6,7 +6,6 @@
     <title>Girlies</title>
     <link rel="stylesheet" href="signup.css" />
 
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -50,8 +49,8 @@
     </video>
     <form
       id="signup-form"
-      action="/submit" 
-      method="POST"
+      action="submit"
+      method="post"
       style="border-radius: 30px"
     >
       <div class="login">
@@ -65,7 +64,7 @@
               class="text"
               required
               id="first-name"
-              name="name" 
+              name="name"
             />
           </div>
 
@@ -82,7 +81,7 @@
           </div>
         </div>
 
-        <p class="username"><b>Username</b></p>
+        <!-- <p class="username"><b>Username</b></p>
         <input
           type="text"
           placeholder="Enter Your Username"
@@ -90,7 +89,7 @@
           required
           id="username"
           name="user"
-        />
+        /> -->
 
         <p class="phone"><b>Phone Number</b></p>
         <input
@@ -104,9 +103,6 @@
           name="phone"
         />
 
-        <!-- <p class="name" style="margin-left: 1rem">Date of Birth</p>
-        <input type="date" id="dob" class="email" required /> -->
-
         <p class="pass"><b>Password</b></p>
         <input
           type="password"
@@ -118,6 +114,12 @@
           id="password"
           name="password"
         />
+        <p class="sign_as"><b>Sign Up as</b></p>
+        <select id="sign_as" name="sign_as">
+          <option value="admin">Admin</option>
+          <option value="delivery">Delivery Partner</option>
+          <option value="buyer">Buyer</option>
+        </select>
         <br />
         <button id="animated-button" type="submit" value="Submit">
           <svg
@@ -171,48 +173,6 @@
       </div>
     </div>
 
-<script src="signup.js">
-  
-
-    document.getElementById("signup-form").addEventListener("submit", function(event) {
-      event.preventDefault();  // Prevents default form submission
-  
-      const name = document.getElementById("first-name").value;
-      const email = document.getElementById("last-name").value;
-      const username = document.getElementById("username").value;
-      const phone = document.getElementById("input").value;
-      const password = document.getElementById("password").value;
-      
-      // Prepare the data to send
-      const formData = {
-          name: name,
-          email: email,
-          user: username,
-          phone: phone,
-          password: password
-      };
-  
-      // Send the data to the server via fetch
-      fetch('http://localhost:5011/submit', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(formData) // Send form data as JSON
-      })
-      .then(response => response.json())
-      .then(data => {
-          console.log(data);
-          alert("Signup successful!");
-          document.getElementById("response-message").innerText = data.message;
-          document.getElementById("signup-form").reset();
-      })
-      .catch(error => {
-          console.error('Error:', error);
-          alert("Signup failed. Please try again.");
-      });
-  });
-  
-</script>
+    <script src="signup.js"></script>
   </body>
 </html>

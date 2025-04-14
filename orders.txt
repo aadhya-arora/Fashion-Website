@@ -1,1 +1,2 @@
 {"items":[" Beauteous Beady Neckpiece (x2)"],"total":"6742.00 INR","paymentMethod":"credit-card","timestamp":"2025-04-14T10:36:10.282Z"}
+{"items":["Irridescent Blue Lacerta Neckpiece (x1)"],"total":"4476.00 INR","paymentMethod":"cod","timestamp":"2025-04-14T10:42:27.361Z"}

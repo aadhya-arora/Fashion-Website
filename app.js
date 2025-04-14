@@ -71,7 +71,6 @@ const userFilePath = path.join(publicDir, "data.txt");
 const reviewFilePath = path.join(publicDir, "review.txt");
 const wishlistFilePath = path.join(publicDir, "wishlist.txt");
 
-// Create the text files if they don't exist
 [userFilePath, reviewFilePath, wishlistFilePath].forEach((file) => {
   if (!fs.existsSync(file)) fs.writeFileSync(file, "");
 });
@@ -80,7 +79,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(publicDir));
 
-// Routes
 app.get("/", (req, res) => {
   res.sendFile(path.join(publicDir, "index.html"));
 });
@@ -93,9 +91,9 @@ app.post("/submit", (req, res) => {
   const new_user = {
     name: req.body.name,
     email: req.body.email,
-    user: req.body.user,
     phone: req.body.phone,
     password: req.body.password,
+    sign_as: req.body.sign_as,
   };
 
   const userString = JSON.stringify(new_user) + "\n";
@@ -103,10 +101,18 @@ app.post("/submit", (req, res) => {
   fs.appendFile(userFilePath, userString, (err) => {
     if (err) {
       console.error(" Error saving user:", err);
-      return res.status(500).send("Failed to save user");
+      return res.status(500).json({ message: "Failed to save user" });
     }
-    console.log(" User data saved");
-    res.redirect("/main.html");
+
+    console.log(" User data saved to data.txt");
+
+    let redirectPage = "/main.html";
+    if (new_user.sign_as === "admin") redirectPage = "/admin.html";
+    else if (new_user.sign_as === "delivery") redirectPage = "/delivery.html";
+
+    res
+      .status(200)
+      .json({ message: "Signup successful!", redirect: redirectPage });
   });
 });
 
@@ -172,7 +178,7 @@ app.post("/submit-address", (req, res) => {
       return res.status(500).json({ message: "Failed to save address" });
     }
     console.log("Address saved");
-    res.status(200).json({ message: "Address saved successfully" }); // ✅ send JSON
+    res.status(200).json({ message: "Address saved successfully" });
   });
 });
 
