@@ -1,0 +1,78 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order_sum {
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  background-color: #d8e1f3;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sum {
+  margin-left: 25%;
+}
+#payment-cart-items {
+  margin-bottom: 20px;
+}
+
+.payment-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.summary p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+.payment-method {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.payment-method h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.payment-method label {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #725ac1;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #725ac1;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #725ac1;
+}
+
+button:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #725ac1;
+}
+
+button:active {
+  transform: scale(0.9);
+}

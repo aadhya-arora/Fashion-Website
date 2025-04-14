@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Girlies</title>
+    <link rel="stylesheet" href="payment.css" />
+  </head>
+  <body>
+    <div class="order_sum">
+      <h1 class="sum">Order Summary</h1>
+      <div id="payment-cart-items"></div>
+      <div class="summary">
+        <p>Subtotal: <span id="subtotal">0 INR</span></p>
+        <p>Estimated Tax: <span id="tax">0 INR</span></p>
+        <p>Shipping: <span id="shipping">0 INR</span></p>
+        <p>
+          <strong>Total: <span id="total">0 INR</span></strong>
+        </p>
+      </div>
+
+      <div class="payment-method">
+        <h3>Select Payment Method:</h3>
+        <label
+          ><input type="radio" name="payment" value="credit-card" checked />
+          Credit/Debit Card</label
+        ><br />
+        <label><input type="radio" name="payment" value="upi" /> UPI</label
+        ><br />
+        <label
+          ><input type="radio" name="payment" value="cod" /> Cash on
+          Delivery</label
+        >
+      </div>
+
+      <button>Place Order</button>
+    </div>
+    <script src="payment.js"></script>
+  </body>
+</html>

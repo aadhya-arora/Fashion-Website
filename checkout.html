@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Girlies</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back"
+    />
+    <link rel="stylesheet" href="checkout.css" />
+  </head>
+  <body>
+    <nav>
+      <span
+        class="material-symbols-outlined arrow"
+        onclick="window.location.href='cart.html'"
+      >
+        arrow_back
+      </span>
+
+      <div class="heading">Checkout</div>
+    </nav>
+
+    <div class="details-box">
+      <form action="/submit-address" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="" />
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="" />
+
+        <label for="house">Flat, House No., Building, Company, Apartment</label>
+        <input type="text" id="house" name="house" />
+
+        <label for="area">Area, Street, Sector, Village</label>
+        <input type="text" id="area" name="area" />
+
+        <label for="landmark">Landmark</label>
+        <input
+          type="text"
+          id="landmark"
+          name="landmark"
+          placeholder="E.g. near apollo hospital"
+        />
+
+        <div class="city-pin-row">
+          <div class="input-group">
+            <label for="city">Town/City</label>
+            <input type="text" id="city" name="city" />
+          </div>
+
+          <div class="input-group">
+            <label for="pin">Pincode</label>
+            <input
+              type="text"
+              id="pin"
+              name="pin"
+              placeholder="6-digit Pincode"
+            />
+          </div>
+        </div>
+
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" />
+
+        <button type="submit">Save Address</button>
+      </form>
+    </div>
+    <script src="checkout.js"></script>
+  </body>
+</html>

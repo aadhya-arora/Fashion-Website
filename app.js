@@ -105,7 +105,7 @@ app.post("/submit", (req, res) => {
       console.error(" Error saving user:", err);
       return res.status(500).send("Failed to save user");
     }
-    console.log("✅ User data saved");
+    console.log(" User data saved");
     res.redirect("/main.html");
   });
 });
@@ -122,14 +122,13 @@ app.post("/submit-review", (req, res) => {
 
   fs.appendFile(reviewFilePath, reviewString, (err) => {
     if (err) {
-      console.error("❌ Error saving review:", err);
+      console.error(" Error saving review:", err);
       return res.status(500).json({ message: "Error saving review" });
     }
     res.status(200).json({ message: "Review submitted successfully!" });
   });
 });
 
-// ✅ Wishlist route
 app.post("/add-to-wishlist", (req, res) => {
   const wishlistItem = {
     user: req.body.user,
@@ -143,13 +142,68 @@ app.post("/add-to-wishlist", (req, res) => {
 
   fs.appendFile(wishlistFilePath, wishlistString, (err) => {
     if (err) {
-      console.error("❌ Error saving wishlist item:", err);
+      console.error(" Error saving wishlist item:", err);
       return res.status(500).json({ message: "Error saving wishlist item" });
     }
     res.status(200).json({ message: "Wishlist item added successfully!" });
   });
 });
 
+const addressFilePath = path.join(publicDir, "address.txt");
+
+if (!fs.existsSync(addressFilePath)) fs.writeFileSync(addressFilePath, "");
+app.post("/submit-address", (req, res) => {
+  const newAddress = {
+    name: req.body.name,
+    mobile: req.body.mobile,
+    house: req.body.house,
+    area: req.body.area,
+    landmark: req.body.landmark,
+    city: req.body.city,
+    pin: req.body.pin,
+    state: req.body.state,
+  };
+
+  const addressString = JSON.stringify(newAddress) + "\n";
+
+  fs.appendFile(addressFilePath, addressString, (err) => {
+    if (err) {
+      console.error("Error saving address:", err);
+      return res.status(500).json({ message: "Failed to save address" });
+    }
+    console.log("Address saved");
+    res.status(200).json({ message: "Address saved successfully" }); // ✅ send JSON
+  });
+});
+
+const ordersFilePath = path.join(publicDir, "orders.txt");
+if (!fs.existsSync(ordersFilePath)) fs.writeFileSync(ordersFilePath, "");
+
+app.post("/place-order", (req, res) => {
+  const { items, total, paymentMethod } = req.body;
+
+  if (!items || !total || !paymentMethod) {
+    return res.status(400).json({ message: "Missing order data" });
+  }
+
+  const orderEntry = {
+    items,
+    total,
+    paymentMethod,
+    timestamp: new Date().toISOString(),
+  };
+
+  const orderString = JSON.stringify(orderEntry) + "\n";
+
+  fs.appendFile(ordersFilePath, orderString, (err) => {
+    if (err) {
+      console.error("Error saving order:", err);
+      return res.status(500).json({ message: "Failed to save order" });
+    }
+    res.status(200).json({ message: "Order placed successfully!" });
+  });
+});
+
 app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+  console.log(` Server running at http://localhost:${PORT}`);
 });
