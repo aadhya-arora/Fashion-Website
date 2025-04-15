@@ -210,6 +210,22 @@ app.post("/place-order", (req, res) => {
   });
 });
 
+app.get("/orders-data", (req, res) => {
+  const addressData = fs
+    .readFileSync(addressFilePath, "utf-8")
+    .trim()
+    .split("\n")
+    .map((line) => JSON.parse(line));
+
+  const orderData = fs
+    .readFileSync(ordersFilePath, "utf-8")
+    .trim()
+    .split("\n")
+    .map((line) => JSON.parse(line));
+
+  res.json({ addresses: addressData, orders: orderData });
+});
+
 app.listen(PORT, () => {
   console.log(` Server running at http://localhost:${PORT}`);
 });
