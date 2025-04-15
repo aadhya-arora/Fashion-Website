@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - User Reviews</title>
+    <link rel="stylesheet" href="admin_reviews.css" />
+  </head>
+  <body>
+    <h1>User Submitted Reviews</h1>
+    <table id="reviews-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Review</th>
+          <th>Improvement</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      fetch("/reviews")
+        .then((res) => res.json())
+        .then((reviews) => {
+          const tbody = document.querySelector("#reviews-table tbody");
+          reviews.forEach((r) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td>${r.fullname}</td>
+              <td>${r.review}</td>
+              <td>${r.improvement}</td>
+              <td>${r.rating}/5</td>
+            `;
+            tbody.appendChild(row);
+          });
+        })
+        .catch((err) => {
+          console.error("Failed to fetch reviews:", err);
+        });
+    </script>
+  </body>
+</html>

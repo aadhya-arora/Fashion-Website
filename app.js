@@ -226,6 +226,40 @@ app.get("/orders-data", (req, res) => {
   res.json({ addresses: addressData, orders: orderData });
 });
 
+app.get("/users", (req, res) => {
+  fs.readFile(userFilePath, "utf-8", (err, data) => {
+    if (err) {
+      console.error("Failed to read user file:", err);
+      return res.status(500).json({ message: "Failed to load users" });
+    }
+
+    const users = data
+      .trim()
+      .split("\n")
+      .filter(Boolean)
+      .map((line) => JSON.parse(line));
+
+    res.json(users);
+  });
+});
+
+app.get("/reviews", (req, res) => {
+  fs.readFile(reviewFilePath, "utf-8", (err, data) => {
+    if (err) {
+      console.error("Failed to read review file:", err);
+      return res.status(500).json({ message: "Failed to load reviews" });
+    }
+
+    const reviews = data
+      .trim()
+      .split("\n")
+      .filter(Boolean)
+      .map((line) => JSON.parse(line));
+
+    res.json(reviews);
+  });
+});
+
 app.listen(PORT, () => {
   console.log(` Server running at http://localhost:${PORT}`);
 });

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Users</title>
+    <link rel="stylesheet" href="users.css" />
+  </head>
+  <body>
+    <h1>Registered Users</h1>
+    <table id="users-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      fetch("/users")
+        .then((response) => response.json())
+        .then((users) => {
+          const tableBody = document.querySelector("#users-table tbody");
+          users.forEach((user) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td>${user.name}</td>
+              <td>${user.email}</td>
+              <td>${user.phone}</td>
+              <td>${user.sign_as}</td>
+            `;
+            tableBody.appendChild(row);
+          });
+        })
+        .catch((err) => {
+          console.error("Failed to load users:", err);
+        });
+    </script>
+  </body>
+</html>
