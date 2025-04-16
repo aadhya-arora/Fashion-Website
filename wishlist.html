@@ -68,16 +68,23 @@
     </nav>
 
     <div class="empty">
-      <img src="wish.avif" />
-      <p class="empty_text">Your Wishlist is Empty</p>
+      <img src="/images/undraw_empty-cart_574u.png" />
+      <p class="empty_text">Your wishlist looks a little too empty right now  <br> <br>
 
-      <button
-        class="go_cart"
-        onclick="window.location.href='Accessories.html';"
-      >
-        <span> Start Shopping </span>
-      </button>
+        Don’t leave it hanging like that! <br>
+        
+        Start adding your favorite items 😉 <br> <br>
+        
+        Tap "Start Shopping" and make it yours! 🛍️</p>
+
+     
     </div>
+    <button
+    class="go_cart"
+    onclick="window.location.href='Accessories.html';"
+  >
+    <span> Start Shopping </span>
+  </button>
 
     <div
       class="wishlist-container"
@@ -87,4 +94,20 @@
     </div>
   </body>
   <script src="wishlist.js"></script>
+  <script>
+    const dropdown = document.querySelector(".dropdown");
+    const dropbtn = dropdown.querySelector(".dropbtn");
+  
+    dropbtn.addEventListener("click", (e) => {
+      e.stopPropagation(); // prevent auto close
+      dropdown.classList.toggle("open");
+    });
+  
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove("open");
+      }
+    });
+  </script>
+  
 </html>
