@@ -6,3 +6,5 @@
 {"name":"AAROHI DIXIT","email":"aarohi0173.be23@chitkara.edu.in","phone":"8006658900","password":"mainhubh","sign_as":"admin"}
 {"name":"AAROHI DIXIT","email":"aarohi0173.be23@chitkara.edu.in","phone":"8006658900","password":"mainhubh","sign_as":"delivery"}
 {"name":"AAROHI DIXIT","email":"aarohi0173.be23@chitkara.edu.in","phone":"8006658900","password":"mainhubh","sign_as":"delivery"}
+{"name":"AAROHI DIXIT","email":"aarohi0173.be23@chitkara.edu.in","phone":"8006658900","password":"mainhubh","sign_as":"buyer"}
+{"name":"AAROHI DIXIT","email":"aarohi0173.be23@chitkara.edu.in","phone":"8006658900","password":"mainhubh","sign_as":"buyer"}
