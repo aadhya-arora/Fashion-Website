@@ -142,16 +142,19 @@ body {
 }
 
 .empty {
-  height: 600px;
+  height: 500px;
   width: 800px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+
 }
 .empty_text {
-  color: #052a66;
-  font-size: 30px;
+  color: #020d1e;
+  align-items: center;
+  font-size: 16px;
+  font-family: sans-serif;
 }
 .empty img {
   height: 400px;
@@ -162,12 +165,29 @@ body {
   display: inline-block;
   width: 250px;
   height: 50px;
+
   border-radius: 10px;
   border: 1px solid #03045e;
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease-in;
   z-index: 1;
+}
+/* --- Wishlist Button Glow-Up --- */
+.go_cart {
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  border-radius: 12px;
+  border: 1px solid #02122b;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: white;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  margin-bottom: -30px;
 }
 
 .go_cart::before,
@@ -177,10 +197,10 @@ body {
   top: 0;
   width: 0;
   height: 100%;
-  transform: skew(15deg);
+  transform: skew(20deg);
   transition: all 0.5s;
-  overflow: hidden;
   z-index: -1;
+  
 }
 
 .go_cart::before {
@@ -191,11 +211,13 @@ body {
 .go_cart::after {
   right: -10px;
   background: #11126b;
+  
 }
 
 .go_cart:hover::before,
 .go_cart:hover::after {
-  width: 58%;
+  width: 60%;
+  
 }
 
 .go_cart:hover span {
@@ -206,20 +228,73 @@ body {
 .go_cart span {
   color: #03045e;
   font-size: 18px;
+  font-weight: 600;
   transition: all 0.3s ease-in;
+  letter-spacing: 0.5px;
 }
 
+/* --- Wishlist Container Upgrade --- */
 .wishlist-container {
   margin-top: 100px;
-  width: 600px;
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff, #f5f7fa);
+  box-shadow: 10px 14px 33px rgba(0, 0, 0, 0.07);
 }
+
+/* --- Wishlist Card Upgrade --- */
 .wishlist-card {
   display: flex;
   align-items: center;
-  margin: 15px 0;
-  padding: 10px;
+  margin: 20px 0;
+  padding: 16px 20px;
   border: 1px solid #ddd;
-  border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  background-color: #fff;
+  border-radius: 16px;
+  background-color: #c7ceef;
+  box-shadow: 10px 20px 33px rgba(5, 9, 21, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 300px;
 }
+.wishlist-card>div{
+  margin-left: 0px;
+}
+.wishlist-card img {
+  width: 10rem;
+  height: auto;
+  border-radius: 8px;
+  margin-left: 100px;
+}
+
+
+.wishlist-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+.remove-wishlist{
+   height: 25px;
+   width: 80px; 
+   border-radius: 5px;
+   border: none;
+   margin-top: 1rem;
+
+}
+.remove-wishlist:hover{
+  /* color: red; */
+  background-color: rgb(29, 29, 83);
+  color: white;
+  
+}
+.move-to-cart{
+  height: 25px;
+   width: 11  0px; 
+   border-radius: 5px;
+   border: none;
+   margin-top: 1rem;
+}
+.move-to-cart:hover{
+  background-color: rgb(29, 29, 83);
+  color: white;
+}
+

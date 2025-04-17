@@ -1,3 +1,9 @@
 {"user":"guest","itemId":1744574326485,"itemName":"Irridescent Blue Lacerta Neckpiece","itemPrice":4200,"itemImage":"http://localhost:5000/Neckpieces/n1-a.jpg"}
 {"user":"guest","itemId":1744624794634,"itemName":"Irridescent Blue Lacerta Neckpiece","itemPrice":4200,"itemImage":"http://localhost:5000/Neckpieces/n1-a.jpg"}
+<<<<<<< HEAD
 {"user":"guest","itemId":1744807470997,"itemName":"Irridescent Blue Lacerta Neckpiece","itemPrice":4200,"itemImage":"http://localhost:5000/Neckpieces/n1-a.jpg"}
+=======
+{"user":"guest","itemId":1744830712801,"itemName":"Glam Woman \n            Eau De Parfum","itemPrice":575,"itemImage":"http://localhost:5000/perfumes/p1-a.jpg"}
+{"user":"guest","itemId":1744830715781,"itemName":"Aerosal Dazzle Fruity\n            Eau De Parfum","itemPrice":575,"itemImage":"http://localhost:5000/perfumes/p3-a.webp"}
+{"user":"guest","itemId":1744830719676,"itemName":"Lash Curling Mascara","itemPrice":480,"itemImage":""}
+>>>>>>> 4eb1117d888ebab8595c96dc4e298d64cbb56d22

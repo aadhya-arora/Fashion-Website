@@ -1,21 +1,110 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 3rem auto;
+  max-width: 1200px;
+  background-color: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
 }
-h1 {
-  text-align: center;
+
+
+  h1 {
+    text-align: center;
+    color: #1d3557;
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+  
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
 }
+
 th,
 td {
-  border: 1px solid #ccc;
-  padding: 10px;
+  padding: 16px 22px;
   text-align: left;
+  font-size: 16px;
 }
+
 th {
-  background-color: #f2f2f2;
+  background-color: #edf2ff;
+  color: #00296b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #d1d9e6;
+}
+
+td {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #f6f9ff;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(even) {
+  background-color: #fafbff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  table {
+    box-shadow: none;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  td {
+    padding: 12px;
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    font-weight: 600;
+    color: #666;
+    text-transform: capitalize;
+  }
 }

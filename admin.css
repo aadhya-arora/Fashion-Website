@@ -56,3 +56,28 @@ body {
   color: #c1d5f9;
   font-weight: 600;
 }
+img {
+  margin-top: 60px;
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: floatUp 1s ease-out, fadeIn 1s ease-in;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

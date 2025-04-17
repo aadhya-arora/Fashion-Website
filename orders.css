@@ -1,29 +1,108 @@
 body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-}
-.order,
-.address {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-}
-h2 {
-  margin-top: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: auto;
+  color: #333;
 }
 
-.order button {
+h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #2b2d42;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  letter-spacing: 1px;
+}
+
+#orders {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px 30px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  border-left: 6px solid #70a1ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+.order:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+}
+
+.order p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2f3640;
+}
+
+.order strong {
+  color: #1a237e;
+}
+
+.deliver-btn {
+  align-self: flex-start;
+  margin-top: 10px;
   font-size: 15px;
-  margin-left: 40px;
-  width: 150px;
+  padding: 10px 20px;
+  background-color: #e0ecff;
+  color: #003c8f;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.deliver-btn:hover {
+  background-color: #003c8f;
+  color: white;
 }
 
 .delivered {
   background-color: green !important;
-  color: white;
+  color: white !important;
+}
+
+/* Animations */
+@keyframes slideIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .order {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    padding: 14px;
+  }
 }
