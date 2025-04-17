@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const likeIcons = document.querySelectorAll(".like");
   const reviewForm = document.getElementById("review-form");
 
-  let rating = 0; // Store the selected rating
+  let rating = 0;
 
   likeIcons.forEach((icon, index) => {
     icon.addEventListener("click", () => {
-      rating = index + 1; // Set rating based on clicked star
+      rating = index + 1;
       likeIcons.forEach((star, i) => {
         if (i <= index) {
           star.style.color = "gold";
@@ -29,8 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = { fullname, review, improvement, rating };
 
     try {
-      const response = await fetch("http://localhost:3000/submit-review", {
-        // ✅ Fixed endpoint
+      const response = await fetch("http://localhost:5000/submit-review", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -39,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       const result = await response.json();
-      alert(result.message); // ✅ Now shows "Review submitted successfully!"
+      alert(result.message);
       reviewForm.reset();
     } catch (error) {
       console.error("Error submitting review:", error);

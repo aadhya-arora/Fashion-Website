@@ -20,3 +20,5 @@
 {"name":"Aadhya Arora","email":"aadhu2705@gmail.com","phone":"7626929633","password":"aadhya12","sign_as":"buyer"}
 {"name":"ABC","email":"anshika0203.be23@chitkara.edu.in","phone":"6283112212","password":"aadhya12","sign_as":"buyer"}
 {"name":"ABC","email":"anshika0203.be23@chitkara.edu.in","phone":"6283112212","password":"aadhya12","sign_as":"buyer"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","phone":"7626929633","password":"aadhya12","sign_as":"buyer"}
+{"name":"Aadhya Arora","email":"aadhu2705@gmail.com","phone":"7626929633","password":"aadhya12","sign_as":"buyer"}
