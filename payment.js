@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((res) => res.json())
         .then((data) => {
           alert(data.message);
-          localStorage.removeItem("cart"); // Clear cart
-          window.location.href = "main.html"; // Redirect after order
+          localStorage.removeItem("cart");
+          window.location.href = "main.html";
         })
         .catch((err) => {
           console.error("Order error:", err);

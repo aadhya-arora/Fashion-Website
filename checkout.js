@@ -30,7 +30,7 @@ form.addEventListener("submit", function (event) {
     .then((response) => response.json())
     .then((result) => {
       if (result.message) {
-        alert(result.message);
+        //alert(result.message);
         window.location.href = "/payment.html";
       }
     })

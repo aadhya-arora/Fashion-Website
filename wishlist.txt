@@ -7,3 +7,7 @@
 {"user":"guest","itemId":1744830715781,"itemName":"Aerosal Dazzle Fruity\n            Eau De Parfum","itemPrice":575,"itemImage":"http://localhost:5000/perfumes/p3-a.webp"}
 {"user":"guest","itemId":1744830719676,"itemName":"Lash Curling Mascara","itemPrice":480,"itemImage":""}
 >>>>>>> 4eb1117d888ebab8595c96dc4e298d64cbb56d22
+{"user":"guest","itemId":1744860774040,"itemName":"Irridescent Blue Lacerta Neckpiece","itemPrice":4200,"itemImage":"http://localhost:5000/Neckpieces/n1-a.jpg"}
+{"user":"guest","itemId":1744874049314,"itemName":"Irridescent Blue Lacerta Neckpiece","itemPrice":4200,"itemImage":"http://localhost:5000/Neckpieces/n1-a.jpg"}
+{"user":"guest","itemId":1744874064760,"itemName":"Oversized Polarised Sunglasses","itemPrice":4487,"itemImage":"http://localhost:5000/s&s/g2-a.jpg"}
+{"user":"guest","itemId":1744874074923,"itemName":"Glam Woman \n            Eau De Parfum","itemPrice":575,"itemImage":"http://localhost:5000/perfumes/p1-a.jpg"}
